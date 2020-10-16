@@ -20,7 +20,6 @@ try:
     # create a driver
     driver = webdriver.Firefox(firefox_profile=fp, options=fo)
 
-
     # open a page
     driver.get(URL)
 
@@ -33,13 +32,19 @@ try:
     tr = scholar_tbl.find_elements_by_tag_name("tr")
 
     for item in tr:
+        # nested tag here
         temp = item.find_element_by_tag_name("td a")
         link = temp.get_attribute("href")
         title = temp.text
+
         amount = item.find_element_by_css_selector("td.scholamt").text
         deadline = item.find_element_by_css_selector("td.scholdd").text
-        print(title, " ===> ", amount, " ===> ", deadline)
-        print(link, "\n")
+
+        # sleep to ensure IP address is not blocked
+        time.sleep(random.randint(1, 6))
+
+        # print(title, " ===> ", amount, " ===> ", deadline)
+        # print(link, "\n")
 
 finally:
     try:
