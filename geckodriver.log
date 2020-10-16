@@ -1,0 +1,621 @@
+1600713734948	geckodriver	INFO	Listening on 127.0.0.1:39253
+1600713735955	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofiletbfldz"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600713737853	Marionette	INFO	Listening on port 43325
+1600713737863	Marionette	WARN	TLS certificate errors will be ignored for this session
+1600714317061	Marionette	INFO	Stopped listening on port 43325
+1600714602364	geckodriver	INFO	Listening on 127.0.0.1:57403
+1600714602372	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileMx3rzF"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600714603888	Marionette	INFO	Listening on port 41521
+1600714603976	Marionette	WARN	TLS certificate errors will be ignored for this session
+1600714622952	Marionette	INFO	Stopped listening on port 41521
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1600715434417	geckodriver	INFO	Listening on 127.0.0.1:44951
+1600715434426	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileddfIDC"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600715436026	Marionette	INFO	Listening on port 38721
+1600715436032	Marionette	WARN	TLS certificate errors will be ignored for this session
+1600715653196	Marionette	INFO	Stopped listening on port 38721
+1600716110432	geckodriver	INFO	Listening on 127.0.0.1:42785
+1600716110439	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileCR4t1j"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600716111510	Marionette	INFO	Listening on port 39393
+1600716111542	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: Region.jsm: "Error fetching region" (new AbortError("The operation was aborted. ", (void 0), 689))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 343))
+JavaScript warning: https://pagead2.googlesyndication.com/bg/1_03cBvoBNT0he2HFJgLMT3GhFwSFAX6UTdHR299Cnk.js line 1 > eval line 7464 > eval line 1 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/1_03cBvoBNT0he2HFJgLMT3GhFwSFAX6UTdHR299Cnk.js line 1 > eval line 7464 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1600716145710	Marionette	INFO	Stopped listening on port 39393
+1601305833987	geckodriver	INFO	Listening on 127.0.0.1:44187
+1601305834999	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileWOG7zx"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601305837534	Marionette	INFO	Listening on port 36971
+1601305837605	Marionette	WARN	TLS certificate errors will be ignored for this session
+1601305840141	Marionette	INFO	Stopped listening on port 36971
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1031: Error: Sqlite.jsm has been shutdown. Cannot open connection to: /tmp/rust_mozprofileWOG7zx/protections.sqlite
+JavaScript error: , line 0: uncaught exception: undefined
+1601305861653	geckodriver	INFO	Listening on 127.0.0.1:48707
+1601305861666	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileawO461"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601305864186	Marionette	INFO	Listening on port 37171
+1601305864286	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.gstatic.com/mysidia/40b83293e978f3384c7d4517a94e2061.js?tag=video_mra/web_fig_och, line 177: SecurityError: The operation is insecure.
+1601305868124	Marionette	INFO	Stopped listening on port 37171
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1031: Error: Sqlite.jsm has been shutdown. Cannot open connection to: /tmp/rust_mozprofileawO461/protections.sqlite
+1601307278145	geckodriver	INFO	Listening on 127.0.0.1:53139
+1601307278154	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilemK7Cfb"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601307279678	Marionette	INFO	Listening on port 36339
+1601307279810	Marionette	WARN	TLS certificate errors will be ignored for this session
+1601307283090	Marionette	INFO	Stopped listening on port 36339
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x6B0029,name=PNecko::Msg_RemoveRequestContext) Channel closing: too late to send/recv, messages will be lost
+
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1031: Error: Sqlite.jsm has been shutdown. Cannot open connection to: /tmp/rust_mozprofilemK7Cfb/protections.sqlite
+1601307287238	geckodriver	INFO	Listening on 127.0.0.1:57919
+1601307287246	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofiled5jMlg"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601307289142	Marionette	INFO	Listening on port 41587
+1601307289154	Marionette	WARN	TLS certificate errors will be ignored for this session
+1601307292535	Marionette	INFO	Stopped listening on port 41587
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1031: Error: Sqlite.jsm has been shutdown. Cannot open connection to: /tmp/rust_mozprofiled5jMlg/protections.sqlite
+1601307338417	geckodriver	INFO	Listening on 127.0.0.1:33487
+1601307338425	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilez9cs9l"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601307340115	Marionette	INFO	Listening on port 45397
+1601307340130	Marionette	WARN	TLS certificate errors will be ignored for this session
+1601307343491	Marionette	INFO	Stopped listening on port 45397
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1031: Error: Sqlite.jsm has been shutdown. Cannot open connection to: /tmp/rust_mozprofilez9cs9l/protections.sqlite
+1601911986414	geckodriver	INFO	Listening on 127.0.0.1:46897
+1601911987422	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile0aCS6h"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601911989677	Marionette	INFO	Listening on port 40359
+1601911989729	Marionette	WARN	TLS certificate errors will be ignored for this session
+1601911993354	Marionette	INFO	Stopped listening on port 40359
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1031: Error: Sqlite.jsm has been shutdown. Cannot open connection to: /tmp/rust_mozprofile0aCS6h/protections.sqlite
+1602169277453	geckodriver	INFO	Listening on 127.0.0.1:36163
+1602169278466	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileNBmFJL"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602169280487	Marionette	INFO	Listening on port 36441
+1602169280571	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.gstatic.com/mysidia/151de576f759e6cd6a3a08d0a1a86702.js?tag=video_mra/web_fig_och, line 177: SecurityError: The operation is insecure.
+1602169284108	Marionette	INFO	Stopped listening on port 36441
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1031: Error: Sqlite.jsm has been shutdown. Cannot open connection to: /tmp/rust_mozprofileNBmFJL/protections.sqlite
+1602800852652	geckodriver	INFO	Listening on 127.0.0.1:43039
+1602800853672	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile0ZIYdl"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602800855602	Marionette	INFO	Listening on port 42317
+1602800855678	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.gstatic.com/mysidia/73cae2ad2e9438ed62e655fefa4fd91a.js?tag=video_mra/web_fig_och, line 179: SecurityError: The operation is insecure.
+1602800859524	Marionette	INFO	Stopped listening on port 42317
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1031: Error: Sqlite.jsm has been shutdown. Cannot open connection to: /tmp/rust_mozprofile0ZIYdl/protections.sqlite
+JavaScript error: , line 0: uncaught exception: undefined
+1602800894834	geckodriver	INFO	Listening on 127.0.0.1:56555
+1602800894846	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileM2nu08"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602800896444	Marionette	INFO	Listening on port 43173
+1602800896502	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.gstatic.com/mysidia/73cae2ad2e9438ed62e655fefa4fd91a.js?tag=video_mra/web_fig_och, line 179: SecurityError: The operation is insecure.
+1602800898933	Marionette	INFO	Stopped listening on port 43173
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1031: Error: Sqlite.jsm has been shutdown. Cannot open connection to: /tmp/rust_mozprofileM2nu08/protections.sqlite
+1602801271331	geckodriver	INFO	Listening on 127.0.0.1:57389
+1602801271344	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilea14Q1R"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602801272907	Marionette	INFO	Listening on port 41279
+1602801272966	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.gstatic.com/mysidia/73cae2ad2e9438ed62e655fefa4fd91a.js?tag=video_mra/web_fig_och, line 179: SecurityError: The operation is insecure.
+1602801275553	Marionette	INFO	Stopped listening on port 41279
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1031: Error: Sqlite.jsm has been shutdown. Cannot open connection to: /tmp/rust_mozprofilea14Q1R/protections.sqlite
+1602801295182	geckodriver	INFO	Listening on 127.0.0.1:43625
+1602801295195	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilec3aop1"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602801296726	Marionette	INFO	Listening on port 41283
+1602801296831	Marionette	WARN	TLS certificate errors will be ignored for this session
+1602801299090	Marionette	INFO	Stopped listening on port 41283
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1031: Error: Sqlite.jsm has been shutdown. Cannot open connection to: /tmp/rust_mozprofilec3aop1/protections.sqlite
+1602801348256	geckodriver	INFO	Listening on 127.0.0.1:42005
+1602801348269	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileYwLKrO"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602801349808	Marionette	INFO	Listening on port 40377
+1602801349874	Marionette	WARN	TLS certificate errors will be ignored for this session
+1602801352292	Marionette	INFO	Stopped listening on port 40377
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1031: Error: Sqlite.jsm has been shutdown. Cannot open connection to: /tmp/rust_mozprofileYwLKrO/protections.sqlite
+1602801391530	geckodriver	INFO	Listening on 127.0.0.1:59309
+1602801391543	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilerCqRJu"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602801393079	Marionette	INFO	Listening on port 41163
+1602801393150	Marionette	WARN	TLS certificate errors will be ignored for this session
+1602801395706	Marionette	INFO	Stopped listening on port 41163
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1031: Error: Sqlite.jsm has been shutdown. Cannot open connection to: /tmp/rust_mozprofilerCqRJu/protections.sqlite
+1602801412437	geckodriver	INFO	Listening on 127.0.0.1:55655
+1602801412451	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilekGtOsU"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602801413957	Marionette	INFO	Listening on port 45151
+1602801414057	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.gstatic.com/mysidia/73cae2ad2e9438ed62e655fefa4fd91a.js?tag=video_mra/web_fig_och, line 179: SecurityError: The operation is insecure.
+1602801416537	Marionette	INFO	Stopped listening on port 45151
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1031: Error: Sqlite.jsm has been shutdown. Cannot open connection to: /tmp/rust_mozprofilekGtOsU/protections.sqlite
+JavaScript error: , line 0: uncaught exception: undefined
+1602801433139	geckodriver	INFO	Listening on 127.0.0.1:52507
+1602801433152	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileL8g4XN"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602801434715	Marionette	INFO	Listening on port 37691
+1602801434777	Marionette	WARN	TLS certificate errors will be ignored for this session
+1602801437302	Marionette	INFO	Stopped listening on port 37691
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1031: Error: Sqlite.jsm has been shutdown. Cannot open connection to: /tmp/rust_mozprofileL8g4XN/protections.sqlite
+1602801685286	geckodriver	INFO	Listening on 127.0.0.1:53765
+1602801685299	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilezS1NU0"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602801686989	Marionette	INFO	Listening on port 42449
+1602801687028	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CrE1yZ0XDC5ogwV0DdLcRYcLenmcbaA1q0bi-X3sD0w.js line 1 > eval line 6177 > eval line 1 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CrE1yZ0XDC5ogwV0DdLcRYcLenmcbaA1q0bi-X3sD0w.js line 1 > eval line 6177 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1602801691501	Marionette	INFO	Stopped listening on port 42449
+1602801872560	geckodriver	INFO	Listening on 127.0.0.1:37025
+1602801872573	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofiles9C7gC"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602801874122	Marionette	INFO	Listening on port 39893
+1602801874205	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.gstatic.com/mysidia/73cae2ad2e9438ed62e655fefa4fd91a.js?tag=video_mra/web_fig_och, line 179: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CrE1yZ0XDC5ogwV0DdLcRYcLenmcbaA1q0bi-X3sD0w.js line 1 > eval line 5493 > eval line 1 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CrE1yZ0XDC5ogwV0DdLcRYcLenmcbaA1q0bi-X3sD0w.js line 1 > eval line 5493 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1602801878257	Marionette	INFO	Stopped listening on port 39893
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1602801883779	geckodriver	INFO	Listening on 127.0.0.1:53353
+1602801883784	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile8FO4On"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602801885255	Marionette	INFO	Listening on port 33635
+1602801885329	Marionette	WARN	TLS certificate errors will be ignored for this session
+1602801887925	Marionette	INFO	Stopped listening on port 33635
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1031: Error: Sqlite.jsm has been shutdown. Cannot open connection to: /tmp/rust_mozprofile8FO4On/protections.sqlite
+1602802382571	geckodriver	INFO	Listening on 127.0.0.1:52129
+1602802382576	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilevjNGpO"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602802384113	Marionette	INFO	Listening on port 36693
+1602802384183	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.gstatic.com/mysidia/73cae2ad2e9438ed62e655fefa4fd91a.js?tag=video_mra/web_fig_och, line 179: SecurityError: The operation is insecure.
+1602802386796	Marionette	INFO	Stopped listening on port 36693
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1031: Error: Sqlite.jsm has been shutdown. Cannot open connection to: /tmp/rust_mozprofilevjNGpO/protections.sqlite
+1602802595186	geckodriver	INFO	Listening on 127.0.0.1:33119
+1602802595199	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilewdAzqp"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602802596827	Marionette	INFO	Listening on port 40989
+1602802596903	Marionette	WARN	TLS certificate errors will be ignored for this session
+1602802600190	Marionette	INFO	Stopped listening on port 40989
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1031: Error: Sqlite.jsm has been shutdown. Cannot open connection to: /tmp/rust_mozprofilewdAzqp/protections.sqlite
+JavaScript error: , line 0: uncaught exception: undefined
+1602802729136	geckodriver	INFO	Listening on 127.0.0.1:33803
+1602802729150	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile5fyJXV"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602802730637	Marionette	INFO	Listening on port 38867
+1602802730661	Marionette	WARN	TLS certificate errors will be ignored for this session
+1602802733228	Marionette	INFO	Stopped listening on port 38867
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1031: Error: Sqlite.jsm has been shutdown. Cannot open connection to: /tmp/rust_mozprofile5fyJXV/protections.sqlite
+1602802743128	geckodriver	INFO	Listening on 127.0.0.1:56585
+1602802743141	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileYtWKgt"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602802744655	Marionette	INFO	Listening on port 33915
+1602802744746	Marionette	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1602802807597	geckodriver	INFO	Listening on 127.0.0.1:47879
+1602802807612	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileRWMs4I"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602802809082	Marionette	INFO	Listening on port 44059
+1602802809116	Marionette	WARN	TLS certificate errors will be ignored for this session
+1602802812095	Marionette	INFO	Stopped listening on port 44059
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1031: Error: Sqlite.jsm has been shutdown. Cannot open connection to: /tmp/rust_mozprofileRWMs4I/protections.sqlite
+1602803026744	geckodriver	INFO	Listening on 127.0.0.1:43611
+1602803026757	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofiledkNPnE"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602803028312	Marionette	INFO	Listening on port 46069
+1602803028389	Marionette	WARN	TLS certificate errors will be ignored for this session
+1602803031192	Marionette	INFO	Stopped listening on port 46069
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1031: Error: Sqlite.jsm has been shutdown. Cannot open connection to: /tmp/rust_mozprofiledkNPnE/protections.sqlite
+1602803050027	geckodriver	INFO	Listening on 127.0.0.1:32871
+1602803050040	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilePZn5LN"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602803051590	Marionette	INFO	Listening on port 38867
+1602803051651	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.gstatic.com/mysidia/73cae2ad2e9438ed62e655fefa4fd91a.js?tag=video_mra/web_fig_och, line 179: SecurityError: The operation is insecure.
+1602803054262	Marionette	INFO	Stopped listening on port 38867
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1031: Error: Sqlite.jsm has been shutdown. Cannot open connection to: /tmp/rust_mozprofilePZn5LN/protections.sqlite
+1602803202784	geckodriver	INFO	Listening on 127.0.0.1:54489
+1602803202797	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileFFLawY"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602803204357	Marionette	INFO	Listening on port 38275
+1602803204410	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.gstatic.com/mysidia/73cae2ad2e9438ed62e655fefa4fd91a.js?tag=video_mra/web_fig_och, line 179: SecurityError: The operation is insecure.
+1602803206744	Marionette	INFO	Stopped listening on port 38275
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1031: Error: Sqlite.jsm has been shutdown. Cannot open connection to: /tmp/rust_mozprofileFFLawY/protections.sqlite
+1602803314991	geckodriver	INFO	Listening on 127.0.0.1:41359
+1602803315004	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileYqWdNv"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602803316478	Marionette	INFO	Listening on port 38535
+1602803316513	Marionette	WARN	TLS certificate errors will be ignored for this session
+1602803319222	Marionette	INFO	Stopped listening on port 38535
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1031: Error: Sqlite.jsm has been shutdown. Cannot open connection to: /tmp/rust_mozprofileYqWdNv/protections.sqlite
+1602803366858	geckodriver	INFO	Listening on 127.0.0.1:41239
+1602803366867	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilesHganb"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602803368398	Marionette	INFO	Listening on port 42847
+1602803368489	Marionette	WARN	TLS certificate errors will be ignored for this session
+1602803372110	Marionette	INFO	Stopped listening on port 42847
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CrE1yZ0XDC5ogwV0DdLcRYcLenmcbaA1q0bi-X3sD0w.js line 1 > eval line 6433 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CrE1yZ0XDC5ogwV0DdLcRYcLenmcbaA1q0bi-X3sD0w.js line 1 > eval line 6433 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1602810451641	geckodriver	INFO	Listening on 127.0.0.1:32781
+1602810451646	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofiledRkw2B"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602810453155	Marionette	INFO	Listening on port 40091
+1602810453252	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CrE1yZ0XDC5ogwV0DdLcRYcLenmcbaA1q0bi-X3sD0w.js line 1 > eval line 404 > eval line 1 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CrE1yZ0XDC5ogwV0DdLcRYcLenmcbaA1q0bi-X3sD0w.js line 1 > eval line 404 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1602810457005	Marionette	INFO	Stopped listening on port 40091
+1602818460889	geckodriver	INFO	Listening on 127.0.0.1:39879
+1602818460897	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile8bQmUu"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602818462425	Marionette	INFO	Listening on port 46723
+1602818462502	Marionette	WARN	TLS certificate errors will be ignored for this session
+1602818464831	Marionette	INFO	Stopped listening on port 46723
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1031: Error: Sqlite.jsm has been shutdown. Cannot open connection to: /tmp/rust_mozprofile8bQmUu/protections.sqlite
+JavaScript error: , line 0: uncaught exception: undefined
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x39013F,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+1602818859587	geckodriver	INFO	Listening on 127.0.0.1:53563
+1602818859600	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileRYNqs1"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602818861121	Marionette	INFO	Listening on port 37641
+1602818861206	Marionette	WARN	TLS certificate errors will be ignored for this session
+1602818864615	Marionette	INFO	Stopped listening on port 37641
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1031: Error: Sqlite.jsm has been shutdown. Cannot open connection to: /tmp/rust_mozprofileRYNqs1/protections.sqlite
+1602818880474	geckodriver	INFO	Listening on 127.0.0.1:54913
+1602818880487	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile4pf9dq"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602818881595	Marionette	INFO	Listening on port 35631
+1602818881755	Marionette	WARN	TLS certificate errors will be ignored for this session
+1602818886688	Marionette	INFO	Stopped listening on port 35631
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1031: Error: Sqlite.jsm has been shutdown. Cannot open connection to: /tmp/rust_mozprofile4pf9dq/protections.sqlite
+1602818971028	geckodriver	INFO	Listening on 127.0.0.1:57453
+1602818971040	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofiletJSqgj"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602818972567	Marionette	INFO	Listening on port 43423
+1602818972645	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 5721 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 5721 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 3150 > eval line 1 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 3150 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1602818978899	Marionette	INFO	Stopped listening on port 43423
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1602819050170	geckodriver	INFO	Listening on 127.0.0.1:45629
+1602819050183	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilewF5HyV"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602819051688	Marionette	INFO	Listening on port 45781
+1602819051797	Marionette	WARN	TLS certificate errors will be ignored for this session
+1602819054642	Marionette	INFO	Stopped listening on port 45781
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1031: Error: Sqlite.jsm has been shutdown. Cannot open connection to: /tmp/rust_mozprofilewF5HyV/protections.sqlite
+JavaScript error: , line 0: uncaught exception: undefined
+1602819063603	geckodriver	INFO	Listening on 127.0.0.1:46515
+1602819063616	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileg5LMnG"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602819065079	Marionette	INFO	Listening on port 42773
+1602819065149	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 3178 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 3178 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 1393 > eval line 1 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 1393 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1602819071882	Marionette	INFO	Stopped listening on port 42773
+1602819185753	geckodriver	INFO	Listening on 127.0.0.1:51165
+1602819185766	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilex4i9nL"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602819187269	Marionette	INFO	Listening on port 37067
+1602819187398	Marionette	WARN	TLS certificate errors will be ignored for this session
+1602819191558	Marionette	INFO	Stopped listening on port 37067
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1031: Error: Sqlite.jsm has been shutdown. Cannot open connection to: /tmp/rust_mozprofilex4i9nL/protections.sqlite
+1602819215142	geckodriver	INFO	Listening on 127.0.0.1:37317
+1602819215155	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilehaSuy2"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602819216699	Marionette	INFO	Listening on port 34095
+1602819216793	Marionette	WARN	TLS certificate errors will be ignored for this session
+1602819219604	Marionette	INFO	Stopped listening on port 34095
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1031: Error: Sqlite.jsm has been shutdown. Cannot open connection to: /tmp/rust_mozprofilehaSuy2/protections.sqlite
+1602819357611	geckodriver	INFO	Listening on 127.0.0.1:40567
+1602819357624	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilezHbhdh"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602819359143	Marionette	INFO	Listening on port 42415
+1602819359229	Marionette	WARN	TLS certificate errors will be ignored for this session
+1602819361838	Marionette	INFO	Stopped listening on port 42415
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1031: Error: Sqlite.jsm has been shutdown. Cannot open connection to: /tmp/rust_mozprofilezHbhdh/protections.sqlite
+1602819626460	geckodriver	INFO	Listening on 127.0.0.1:51929
+1602819626473	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileDbDkNG"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602819628005	Marionette	INFO	Listening on port 46723
+1602819628078	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.gstatic.com/mysidia/73cae2ad2e9438ed62e655fefa4fd91a.js?tag=video_mra/web_fig_och, line 179: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 3711 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 3711 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1602819632946	Marionette	INFO	Stopped listening on port 46723
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1602819694477	geckodriver	INFO	Listening on 127.0.0.1:41153
+1602819694490	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileWTW6C9"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602819696043	Marionette	INFO	Listening on port 41377
+1602819696109	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.gstatic.com/mysidia/73cae2ad2e9438ed62e655fefa4fd91a.js?tag=video_mra/web_fig_och, line 179: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 618 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 618 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 7113 > eval line 1 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 7113 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1602819701061	Marionette	INFO	Stopped listening on port 41377
+1602819760835	geckodriver	INFO	Listening on 127.0.0.1:54975
+1602819760847	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileNx8OMQ"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602819762373	Marionette	INFO	Listening on port 35563
+1602819762458	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 5139 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 5139 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 711 > eval line 1 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 711 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1602819893806	geckodriver	INFO	Listening on 127.0.0.1:59951
+1602819893819	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile7ouQ55"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602819895274	Marionette	INFO	Listening on port 36091
+1602819895323	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.gstatic.com/mysidia/73cae2ad2e9438ed62e655fefa4fd91a.js?tag=video_mra/web_fig_och, line 179: SecurityError: The operation is insecure.
+1602819898290	Marionette	INFO	Stopped listening on port 36091
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1031: Error: Sqlite.jsm has been shutdown. Cannot open connection to: /tmp/rust_mozprofile7ouQ55/protections.sqlite
+1602819977260	geckodriver	INFO	Listening on 127.0.0.1:34643
+1602819977268	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileoGVh0S"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602819978785	Marionette	INFO	Listening on port 43175
+1602819978874	Marionette	WARN	TLS certificate errors will be ignored for this session
+1602819981783	Marionette	INFO	Stopped listening on port 43175
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1031: Error: Sqlite.jsm has been shutdown. Cannot open connection to: /tmp/rust_mozprofileoGVh0S/protections.sqlite
+1602820001623	geckodriver	INFO	Listening on 127.0.0.1:42751
+1602820001636	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile3k4LG5"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602820003109	Marionette	INFO	Listening on port 40993
+1602820003142	Marionette	WARN	TLS certificate errors will be ignored for this session
+1602820005615	Marionette	INFO	Stopped listening on port 40993
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1031: Error: Sqlite.jsm has been shutdown. Cannot open connection to: /tmp/rust_mozprofile3k4LG5/protections.sqlite
+1602820116043	geckodriver	INFO	Listening on 127.0.0.1:41851
+1602820116056	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileZvOD6L"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602820117641	Marionette	INFO	Listening on port 46623
+1602820117694	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 7209 > eval line 1 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 7209 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 6539 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 6539 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1602820125091	Marionette	INFO	Stopped listening on port 46623
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x39013F,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+1602820228635	geckodriver	INFO	Listening on 127.0.0.1:53281
+1602820228648	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofiledladp1"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602820230336	Marionette	INFO	Listening on port 41719
+1602820230354	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.gstatic.com/mysidia/73cae2ad2e9438ed62e655fefa4fd91a.js?tag=video_mra/web_fig_och, line 179: SecurityError: The operation is insecure.
+1602820233020	Marionette	INFO	Stopped listening on port 41719
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1031: Error: Sqlite.jsm has been shutdown. Cannot open connection to: /tmp/rust_mozprofiledladp1/protections.sqlite
+1602820370651	geckodriver	INFO	Listening on 127.0.0.1:41763
+1602820370664	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileaxYtaa"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602820372295	Marionette	INFO	Listening on port 45151
+1602820372368	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 7625 > eval line 1 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 7625 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 171 > eval line 1 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 171 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1602820379673	Marionette	INFO	Stopped listening on port 45151
+1602820539096	geckodriver	INFO	Listening on 127.0.0.1:32849
+1602820539109	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileszpPKK"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602820540802	Marionette	INFO	Listening on port 43121
+1602820540816	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.gstatic.com/mysidia/73cae2ad2e9438ed62e655fefa4fd91a.js?tag=video_mra/web_fig_och, line 179: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 3796 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 3796 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 6012 > eval line 1 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 6012 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1602820550124	Marionette	INFO	Stopped listening on port 43121
+1602820601597	geckodriver	INFO	Listening on 127.0.0.1:41163
+1602820601610	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileFyN0pP"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602820603199	Marionette	INFO	Listening on port 33087
+1602820603214	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 3463 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 3463 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 370 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 370 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1602820610698	Marionette	INFO	Stopped listening on port 33087
+1602820663259	geckodriver	INFO	Listening on 127.0.0.1:36721
+1602820663267	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileao2cFK"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602820664806	Marionette	INFO	Listening on port 45571
+1602820664885	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 5803 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 5803 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 5561 > eval line 1 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 5561 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1602820673289	Marionette	INFO	Stopped listening on port 45571
