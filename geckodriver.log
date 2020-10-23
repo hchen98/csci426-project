@@ -619,3 +619,532 @@ JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfR
 JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 5561 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
 * Can't use WebGL in headless mode (https://bugzil.la/1375585).
 1602820673289	Marionette	INFO	Stopped listening on port 45571
+1602994112537	geckodriver	INFO	Listening on 127.0.0.1:59237
+1602994113547	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileywU8nm"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602994115545	Marionette	INFO	Listening on port 42175
+1602994115557	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 3364 > eval line 1 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 3364 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 7457 > eval line 1 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 7457 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1602994504962	geckodriver	INFO	Listening on 127.0.0.1:52765
+1602994504975	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilecKUx3J"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602994506536	Marionette	INFO	Listening on port 44385
+1602994506595	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 3259 > eval line 1 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 3259 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 4745 > eval line 1 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 4745 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1602994542467	geckodriver	INFO	Listening on 127.0.0.1:55983
+1602994542472	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile516KDB"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602994544129	Marionette	INFO	Listening on port 33317
+1602994544177	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 3480 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 3480 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 2533 > eval line 1 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 2533 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1602995157858	Marionette	INFO	Stopped listening on port 33317
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1602995463824	geckodriver	INFO	Listening on 127.0.0.1:38203
+1602995463837	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile1kpkE1"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602995465359	Marionette	INFO	Listening on port 44717
+1602995465442	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 3891 > eval line 1 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 3891 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 4137 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 4137 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1602995513124	geckodriver	INFO	Listening on 127.0.0.1:33757
+1602995513138	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileKicpyI"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602995514798	Marionette	INFO	Listening on port 46237
+1602995514842	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x6B0029,name=PNecko::Msg_RemoveRequestContext) Channel closing: too late to send/recv, messages will be lost
+
+1602995543854	Marionette	INFO	Stopped listening on port 46237
+1602995553700	geckodriver	INFO	Listening on 127.0.0.1:52575
+1602995553708	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilenbk1NI"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602995555216	Marionette	INFO	Listening on port 43597
+1602995555317	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.gstatic.com/mysidia/73cae2ad2e9438ed62e655fefa4fd91a.js?tag=video_mra/web_fig_och, line 179: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 4952 > eval line 1 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 4952 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 1167 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 1167 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1602996177227	Marionette	INFO	Stopped listening on port 43597
+1603049200565	geckodriver	INFO	Listening on 127.0.0.1:43521
+1603049201589	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileFtnma1"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603049203525	Marionette	INFO	Listening on port 40985
+1603049203596	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+1603049533357	geckodriver	INFO	Listening on 127.0.0.1:56913
+1603049533363	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileJy6o7I"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603049534792	Marionette	INFO	Listening on port 42167
+1603049534867	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+1603049552117	geckodriver	INFO	Listening on 127.0.0.1:52679
+1603049552130	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilevfrnPH"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603049553648	Marionette	INFO	Listening on port 35145
+1603049553735	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+1603049661033	geckodriver	INFO	Listening on 127.0.0.1:58089
+1603049661046	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileyXQ1D0"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603049662726	Marionette	INFO	Listening on port 46581
+1603049662750	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+1603049793787	geckodriver	INFO	Listening on 127.0.0.1:47339
+1603049793800	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilekJlR9w"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603049795384	Marionette	INFO	Listening on port 36313
+1603049795461	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+1603049806909	geckodriver	INFO	Listening on 127.0.0.1:46841
+1603049806922	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile1etqb2"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603049808367	Marionette	INFO	Listening on port 38369
+1603049808427	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+1603049902133	geckodriver	INFO	Listening on 127.0.0.1:36707
+1603049902147	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile2ucAoF"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603049903690	Marionette	INFO	Listening on port 36971
+1603049903754	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.gstatic.com/mysidia/92df1902b0ce3ca0be33c698c6e3a014.js?tag=video_mra/hulk_v3, line 267: SecurityError: The operation is insecure.
+JavaScript error: https://www.gstatic.com/mysidia/73cae2ad2e9438ed62e655fefa4fd91a.js?tag=video_mra/web_fig_och, line 179: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 960 > eval line 1 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 960 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1603049932500	geckodriver	INFO	Listening on 127.0.0.1:40551
+1603049932514	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile8ppewB"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603049934037	Marionette	INFO	Listening on port 39057
+1603049934119	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 572 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 572 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1603050206700	geckodriver	INFO	Listening on 127.0.0.1:60171
+1603050206709	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileRh4IM7"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603050208289	Marionette	INFO	Listening on port 36017
+1603050208346	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.gstatic.com/mysidia/92df1902b0ce3ca0be33c698c6e3a014.js?tag=video_mra/hulk_v3, line 267: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 1501 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 1501 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1603050229315	geckodriver	INFO	Listening on 127.0.0.1:49225
+1603050229328	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilew8L4gO"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603050230879	Marionette	INFO	Listening on port 35545
+1603050230963	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.gstatic.com/mysidia/73cae2ad2e9438ed62e655fefa4fd91a.js?tag=video_mra/web_fig_och, line 179: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 4690 > eval line 1 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 4690 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1603050273843	geckodriver	INFO	Listening on 127.0.0.1:33281
+1603050273856	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileGgvto6"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603050275318	Marionette	INFO	Listening on port 35859
+1603050275360	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 3382 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 3382 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1603050325869	geckodriver	INFO	Listening on 127.0.0.1:33937
+1603050325882	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileN51VBG"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603050327533	Marionette	INFO	Listening on port 42679
+1603050327587	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 5264 > eval line 1 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 5264 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1603050695021	geckodriver	INFO	Listening on 127.0.0.1:50803
+1603050695034	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilenl5mqn"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603050696575	Marionette	INFO	Listening on port 36639
+1603050696638	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.gstatic.com/mysidia/92df1902b0ce3ca0be33c698c6e3a014.js?tag=video_mra/hulk_v3, line 267: SecurityError: The operation is insecure.
+JavaScript error: https://www.gstatic.com/mysidia/73cae2ad2e9438ed62e655fefa4fd91a.js?tag=video_mra/web_fig_och, line 179: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 7596 > eval line 1 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 7596 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1603050743320	geckodriver	INFO	Listening on 127.0.0.1:56211
+1603050743334	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileG3mfxy"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603050744981	Marionette	INFO	Listening on port 40717
+1603050745055	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 6415 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 6415 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1603051053422	geckodriver	INFO	Listening on 127.0.0.1:35237
+1603051053435	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile5n9qfO"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+Exiting due to channel error.
+Exiting due to channel error.
+1603051057181	geckodriver	INFO	Listening on 127.0.0.1:60355
+1603051057194	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilesB2o3a"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603051059010	Marionette	INFO	Listening on port 46543
+1603051059108	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 6952 > eval line 1 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 6952 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1603051283077	geckodriver	INFO	Listening on 127.0.0.1:44163
+1603051283090	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile3mTmhu"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603051284715	Marionette	INFO	Listening on port 35219
+1603051284795	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.gstatic.com/mysidia/73cae2ad2e9438ed62e655fefa4fd91a.js?tag=video_mra/web_fig_och, line 179: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 245 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 245 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1603051321964	geckodriver	INFO	Listening on 127.0.0.1:42707
+1603051321970	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileEEXw6U"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603051323583	Marionette	INFO	Listening on port 41083
+1603051323675	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 124 > eval line 1 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 124 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1603078653334	Marionette	INFO	Stopped listening on port 35145
+1603078653336	Marionette	INFO	Stopped listening on port 42167
+1603078653337	Marionette	INFO	Stopped listening on port 40985
+1603078653342	Marionette	INFO	Stopped listening on port 36313
+1603078653349	Marionette	INFO	Stopped listening on port 36971
+1603078653353	Marionette	INFO	Stopped listening on port 46581
+1603078653356	Marionette	INFO	Stopped listening on port 40717
+1603078653366	Marionette	INFO	Stopped listening on port 36017
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1603078653384	Marionette	INFO	Stopped listening on port 35859
+1603078653388	Marionette	INFO	Stopped listening on port 46543
+1603078653395	Marionette	INFO	Stopped listening on port 35219
+1603078653399	Marionette	INFO	Stopped listening on port 38369
+1603078653415	Marionette	INFO	Stopped listening on port 39057
+1603078653425	Marionette	INFO	Stopped listening on port 36639
+1603078653437	Marionette	INFO	Stopped listening on port 42679
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1603078653445	Marionette	INFO	Stopped listening on port 41083
+1603078653451	Marionette	INFO	Stopped listening on port 35545
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1603208814123	geckodriver	INFO	Listening on 127.0.0.1:57867
+1603208815145	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileyoy97o"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603208817085	Marionette	INFO	Listening on port 36653
+1603208817151	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.gstatic.com/mysidia/a2cf2b2fc486c28ec994797ab5a1a061.js?tag=video_mra/hulk_v3, line 260: SecurityError: The operation is insecure.
+JavaScript error: https://www.gstatic.com/mysidia/33e2d6f2d7828fdcf3657774139a913b.js?tag=video_mra/web_fig_och, line 170: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 5754 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 5754 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1603208880882	geckodriver	INFO	Listening on 127.0.0.1:50649
+1603208880888	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileiqOwfI"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603208882484	Marionette	INFO	Listening on port 33839
+1603208882562	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.gstatic.com/mysidia/33e2d6f2d7828fdcf3657774139a913b.js?tag=video_mra/web_fig_och, line 170: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 1108 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 1108 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1603209030099	geckodriver	INFO	Listening on 127.0.0.1:57713
+1603209030108	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileFFdB01"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603209031629	Marionette	INFO	Listening on port 32925
+1603209033152	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.gstatic.com/mysidia/33e2d6f2d7828fdcf3657774139a913b.js?tag=video_mra/web_fig_och, line 170: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 7126 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 7126 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1603209056147	geckodriver	INFO	Listening on 127.0.0.1:57633
+1603209056153	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilePbwtZk"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603209057790	Marionette	INFO	Listening on port 44801
+1603209057862	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.gstatic.com/mysidia/a2cf2b2fc486c28ec994797ab5a1a061.js?tag=video_mra/hulk_v3, line 260: SecurityError: The operation is insecure.
+JavaScript error: https://www.gstatic.com/mysidia/33e2d6f2d7828fdcf3657774139a913b.js?tag=video_mra/web_fig_och, line 170: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 1246 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 1246 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1603209095427	geckodriver	INFO	Listening on 127.0.0.1:54847
+1603209095440	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileqT2Wrj"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603209097032	Marionette	INFO	Listening on port 40371
+1603209097081	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.gstatic.com/mysidia/a2cf2b2fc486c28ec994797ab5a1a061.js?tag=video_mra/hulk_v3, line 260: SecurityError: The operation is insecure.
+JavaScript error: https://www.gstatic.com/mysidia/33e2d6f2d7828fdcf3657774139a913b.js?tag=video_mra/web_fig_och, line 170: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 2432 > eval line 1 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 2432 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1603209282180	geckodriver	INFO	Listening on 127.0.0.1:54591
+1603209282194	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile952sZZ"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603209283825	Marionette	INFO	Listening on port 42363
+1603209285312	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.gstatic.com/mysidia/a2cf2b2fc486c28ec994797ab5a1a061.js?tag=video_mra/hulk_v3, line 260: SecurityError: The operation is insecure.
+JavaScript error: https://www.gstatic.com/mysidia/33e2d6f2d7828fdcf3657774139a913b.js?tag=video_mra/web_fig_och, line 170: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 3214 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 3214 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1603209298734	geckodriver	INFO	Listening on 127.0.0.1:60449
+1603209298748	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileZ2kvQJ"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603209300341	Marionette	INFO	Listening on port 34871
+1603209300366	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.gstatic.com/mysidia/a2cf2b2fc486c28ec994797ab5a1a061.js?tag=video_mra/hulk_v3, line 260: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 4359 > eval line 1 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 4359 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1603209456524	geckodriver	INFO	Listening on 127.0.0.1:45175
+1603209456538	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileSA5uSI"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603209458032	Marionette	INFO	Listening on port 37397
+1603209458048	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 62 > eval line 1 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 62 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1603209516589	geckodriver	INFO	Listening on 127.0.0.1:57655
+1603209516603	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilelv4Euh"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603209518158	Marionette	INFO	Listening on port 38555
+1603209518227	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.gstatic.com/mysidia/a2cf2b2fc486c28ec994797ab5a1a061.js?tag=video_mra/hulk_v3, line 260: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 4160 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 4160 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1603209546621	geckodriver	INFO	Listening on 127.0.0.1:55239
+1603209546634	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileT0zbLf"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603209548201	Marionette	INFO	Listening on port 40565
+1603209548286	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.gstatic.com/mysidia/33e2d6f2d7828fdcf3657774139a913b.js?tag=video_mra/web_fig_och, line 170: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 6829 > eval line 1 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 6829 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1603209771895	geckodriver	INFO	Listening on 127.0.0.1:41095
+1603209771909	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileBhyKGf"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603209773499	Marionette	INFO	Listening on port 39675
+1603209773563	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.gstatic.com/mysidia/a2cf2b2fc486c28ec994797ab5a1a061.js?tag=video_mra/hulk_v3, line 260: SecurityError: The operation is insecure.
+JavaScript error: https://www.gstatic.com/mysidia/33e2d6f2d7828fdcf3657774139a913b.js?tag=video_mra/web_fig_och, line 170: SecurityError: The operation is insecure.
+1603209780057	Marionette	INFO	Stopped listening on port 39675
+1603210248331	geckodriver	INFO	Listening on 127.0.0.1:47225
+1603210248345	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileMREKEI"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603210249860	Marionette	INFO	Listening on port 39015
+1603210249986	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.gstatic.com/mysidia/a2cf2b2fc486c28ec994797ab5a1a061.js?tag=video_mra/hulk_v3, line 260: SecurityError: The operation is insecure.
+JavaScript error: https://www.gstatic.com/mysidia/33e2d6f2d7828fdcf3657774139a913b.js?tag=video_mra/web_fig_och, line 170: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 377 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 377 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1603210264606	geckodriver	INFO	Listening on 127.0.0.1:56601
+1603210264620	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilextK4eC"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603210265774	Marionette	INFO	Listening on port 41077
+1603210265933	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.gstatic.com/mysidia/33e2d6f2d7828fdcf3657774139a913b.js?tag=video_mra/web_fig_och, line 170: SecurityError: The operation is insecure.
+1603210272895	Marionette	INFO	Stopped listening on port 41077
+1603210783343	geckodriver	INFO	Listening on 127.0.0.1:41181
+1603210783357	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileqsSDwV"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603210784862	Marionette	INFO	Listening on port 45675
+1603210784996	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.gstatic.com/mysidia/a2cf2b2fc486c28ec994797ab5a1a061.js?tag=video_mra/hulk_v3, line 260: SecurityError: The operation is insecure.
+JavaScript error: https://www.gstatic.com/mysidia/33e2d6f2d7828fdcf3657774139a913b.js?tag=video_mra/web_fig_och, line 170: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 3700 > eval line 1 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 3700 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1603210872156	geckodriver	INFO	Listening on 127.0.0.1:33565
+1603210872162	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileaTcFPV"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603210873670	Marionette	INFO	Listening on port 39813
+1603210873798	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.gstatic.com/mysidia/a2cf2b2fc486c28ec994797ab5a1a061.js?tag=video_mra/hulk_v3, line 260: SecurityError: The operation is insecure.
+JavaScript error: https://www.gstatic.com/mysidia/33e2d6f2d7828fdcf3657774139a913b.js?tag=video_mra/web_fig_och, line 170: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 4558 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 4558 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1603210901717	geckodriver	INFO	Listening on 127.0.0.1:44433
+1603210901723	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilea8ZmGB"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603210903421	Marionette	INFO	Listening on port 32953
+1603210903469	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.gstatic.com/mysidia/a2cf2b2fc486c28ec994797ab5a1a061.js?tag=video_mra/hulk_v3, line 260: SecurityError: The operation is insecure.
+JavaScript error: https://www.gstatic.com/mysidia/33e2d6f2d7828fdcf3657774139a913b.js?tag=video_mra/web_fig_och, line 170: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 4122 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 4122 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1603210926356	geckodriver	INFO	Listening on 127.0.0.1:42899
+1603210926371	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilezoNk05"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603210927996	Marionette	INFO	Listening on port 38509
+1603210928091	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.gstatic.com/mysidia/a2cf2b2fc486c28ec994797ab5a1a061.js?tag=video_mra/hulk_v3, line 260: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 3526 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/36t2pzUCsky2p8StOfRDuZ2SQrRQGkwFUvrIpVyovYo.js line 1 > eval line 3526 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1603210954291	geckodriver	INFO	Listening on 127.0.0.1:60481
+1603210954297	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileqDGALc"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603210956090	Marionette	INFO	Listening on port 38335
+1603210956103	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.gstatic.com/mysidia/33e2d6f2d7828fdcf3657774139a913b.js?tag=video_mra/web_fig_och, line 170: SecurityError: The operation is insecure.
+1603210964255	Marionette	INFO	Stopped listening on port 38335
+1603211000630	geckodriver	INFO	Listening on 127.0.0.1:37689
+1603211000637	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilecK9VOY"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603211002484	Marionette	INFO	Listening on port 42717
+1603211002542	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.gstatic.com/mysidia/a2cf2b2fc486c28ec994797ab5a1a061.js?tag=video_mra/hulk_v3, line 260: SecurityError: The operation is insecure.
+JavaScript error: https://www.gstatic.com/mysidia/33e2d6f2d7828fdcf3657774139a913b.js?tag=video_mra/web_fig_och, line 170: SecurityError: The operation is insecure.
+1603211009784	Marionette	INFO	Stopped listening on port 42717
+1603211073121	geckodriver	INFO	Listening on 127.0.0.1:43827
+1603211073134	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileTBRIer"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603211074886	Marionette	INFO	Listening on port 42139
+1603211074939	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.gstatic.com/mysidia/a2cf2b2fc486c28ec994797ab5a1a061.js?tag=video_mra/hulk_v3, line 260: SecurityError: The operation is insecure.
+JavaScript error: https://www.gstatic.com/mysidia/33e2d6f2d7828fdcf3657774139a913b.js?tag=video_mra/web_fig_och, line 170: SecurityError: The operation is insecure.
+1603211081775	Marionette	INFO	Stopped listening on port 42139

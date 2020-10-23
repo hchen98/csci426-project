@@ -32,7 +32,7 @@ try:
     tr = scholar_tbl.find_elements_by_tag_name("tr")
 
     for item in tr:
-        # nested tag here
+        # nested tag here, locate <td> then <a>
         temp = item.find_element_by_tag_name("td a")
         link = temp.get_attribute("href")
         title = temp.text
@@ -43,8 +43,8 @@ try:
         # sleep to ensure IP address is not blocked
         time.sleep(random.randint(1, 6))
 
-        # print(title, " ===> ", amount, " ===> ", deadline)
-        # print(link, "\n")
+        print(title, " ===> ", amount, " ===> ", deadline)
+        print(link, "\n")
 
 finally:
     try:
