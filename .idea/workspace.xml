@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="754a5676-e82e-4ba3-ba49-8a6cfb431eac" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/csci426-project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csci426-project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Driver.py" beforeDir="false" afterPath="$PROJECT_DIR$/Driver.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cs_major_tbl.py" beforeDir="false" afterPath="$PROJECT_DIR$/samples/cs_major_tbl.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask.py" beforeDir="false" afterPath="$PROJECT_DIR$/samples/flask.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Driver.py" beforeDir="false" afterPath="$PROJECT_DIR$/Driver_multiprocessing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/geckodriver.log" beforeDir="false" afterPath="$PROJECT_DIR$/geckodriver.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simulate_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/samples/get_specific.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test_output.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +53,8 @@
       <updated>1602993031969</updated>
       <workItem from="1602993033154" duration="39000" />
       <workItem from="1604890382576" duration="666000" />
-      <workItem from="1604891061651" duration="29802000" />
+      <workItem from="1604891061651" duration="31488000" />
+      <workItem from="1605020585189" duration="12140000" />
     </task>
     <servers />
   </component>

@@ -1,9 +1,11 @@
+
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 import time
 import random
 import logging
 import threading
+import multiprocessing
 
 logging.basicConfig(format='%(asctime)s - %(message)s', level=logging.INFO)
 
@@ -13,6 +15,23 @@ LOGIN_URL = "https://www.scholarships.com/login"
 
 USERNAME = "csci426@protonmail.com"
 PASSWORD = "2QAaF5hjc$@k"
+
+
+def get_driver():
+    # config firefox profile
+    fp = webdriver.FirefoxProfile()
+    fp.set_preference("http.response.timeout", 5)
+    fp.set_preference("dom.max_scrit_run_time", 5)
+
+    fo = webdriver.FirefoxOptions()
+    # set headless so that no browser is displayed
+    fo.headless = True
+    fo.add_argument('--disable-extensions')
+    fo.add_argument('--disable-infobars')
+
+    # create a driver
+    global driver
+    driver = webdriver.Firefox(firefox_profile=fp, options=fo)
 
 
 def simulate_login():
@@ -155,61 +174,59 @@ def test_write2file(item):
         writer.close()
 
 
-try:
-    # config firefox profile
-    fp = webdriver.FirefoxProfile()
-    fp.set_preference("http.response.timeout", 5)
-    fp.set_preference("dom.max_scrit_run_time", 2)
-    fp.set_preference("javascript.enabled", False)
-
-    fo = webdriver.FirefoxOptions()
-    # set headless so that no browser is displayed
-    fo.headless = True
-    fo.add_argument('--disable-extensions')
-    fo.add_argument('--disable-infobars')
-    fo.add_argument('--disable-javascript')
-
-
-    # create a driver
-    global driver
-    driver = webdriver.Firefox(firefox_profile=fp, options=fo)
-
-    # simulation login
-    simulate_login()
-
-    # open the root page
-    driver.get(ROOT_URL)
-
-    # scraping level 1
-    level_1_tbl = search_level_tbl()
-    L1_link, L1_title = scraping_levels(level_1_tbl)
-
-    counter = 1
-    for x in range(0, len(L1_link)):
-        if "Military Affiliation" == L1_title[x]:
-            # special case, no sub-category
-            break
-
-        driver.get(L1_link[x])
-        # scraping level 2
-        level2_tbl = search_level_tbl()
-        L2_link, L2_title = scraping_levels(level2_tbl)
-        # for item in L2_title:
-        #     print(counter, ": ", item)
-        #     counter = counter + 1
-        for y in range(0, len(L2_link)):
-            driver.get(L2_link[y])
-            L3_link, L3_title = get_scholar_tbl()
-
-            # scraping for level 3
-            for z in range(0, len(L3_link)):
-                driver.get(L3_link[z])
-                amount, deadline, ava, dir_link, description, contact_info = get_specific()
-                logging.info("Logging at " + str(counter))
-                counter = counter + 1
-
-finally:
+def multi_process():
     try:
-        driver.close()
-    except:
-        pass
+        # open the root page
+        driver.get(ROOT_URL)
+
+        # scraping level 1
+        level_1_tbl = search_level_tbl()
+        L1_link, L1_title = scraping_levels(level_1_tbl)
+
+        counter = 1
+        for x in range(0, len(L1_link)):
+            if "Military Affiliation" == L1_title[x]:
+                # special case, no sub-category
+                break
+
+            driver.get(L1_link[x])
+            # scraping level 2
+            level2_tbl = search_level_tbl()
+            L2_link, L2_title = scraping_levels(level2_tbl)
+            # for item in L2_title:
+            #     print(counter, ": ", item)
+            #     counter = counter + 1
+            for y in range(0, len(L2_link)):
+                driver.get(L2_link[y])
+                L3_link, L3_title = get_scholar_tbl()
+
+                # scraping for level 3
+                for z in range(0, len(L3_link)):
+                    driver.get(L3_link[z])
+                    amount, deadline, ava, dir_link, description, contact_info = get_specific()
+                    logging.info("Logging at " + str(counter))
+                    counter = counter + 1
+
+    finally:
+        try:
+            driver.close()
+        except:
+            pass
+
+
+
+get_driver()
+# simulation login
+simulate_login()
+p1 = multiprocessing.Process(target=multi_process)
+p2 = multiprocessing.Process(target=multi_process)
+
+# starting process 1
+p1.start()
+# starting process 2
+p2.start()
+
+# wait until process 1 is finished
+p1.join()
+# wait until process 2 is finished
+p2.join()

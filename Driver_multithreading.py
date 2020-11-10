@@ -4,6 +4,7 @@ import time
 import random
 import logging
 import threading
+# import concurrent.futures
 
 logging.basicConfig(format='%(asctime)s - %(message)s', level=logging.INFO)
 
@@ -13,6 +14,23 @@ LOGIN_URL = "https://www.scholarships.com/login"
 
 USERNAME = "csci426@protonmail.com"
 PASSWORD = "2QAaF5hjc$@k"
+
+
+def get_driver():
+    # config firefox profile
+    fp = webdriver.FirefoxProfile()
+    fp.set_preference("http.response.timeout", 5)
+    fp.set_preference("dom.max_scrit_run_time", 5)
+
+    fo = webdriver.FirefoxOptions()
+    # set headless so that no browser is displayed
+    fo.headless = True
+    fo.add_argument('--disable-extensions')
+    fo.add_argument('--disable-infobars')
+
+    # create a driver
+    global driver
+    driver = webdriver.Firefox(firefox_profile=fp, options=fo)
 
 
 def simulate_login():
@@ -87,7 +105,7 @@ def scraping_scholar_tbl(tr_ele):
         scholar_link.append(L3_link)
         # print(temp.text, ":\n", L3_link, "\n\n")
         # sleep to ensure IP address is not blocked
-        time.sleep(random.randint(1, 6))
+        # time.sleep(random.randint(1, 6))
 
     return scholar_link, scholar_tit
 
@@ -141,7 +159,7 @@ def get_specific():
     test.append(contact_info)
 
     test_write2file(test)
-    return amount, deadline, ava, dir_link, description, contact_info
+    # return amount, deadline, ava, dir_link, description, contact_info
 
 
 def test_write2file(item):
@@ -152,64 +170,72 @@ def test_write2file(item):
             writer.write(str(x) + "\n")
 
         writer.write("======================================\n\n")
+        logging.info("Finished writing")
         writer.close()
 
 
+def thread_func():
+    try:
+        # open the root page
+        driver.get(ROOT_URL)
+
+        # scraping level 1
+        level_1_tbl = search_level_tbl()
+        L1_link, L1_title = scraping_levels(level_1_tbl)
+
+        counter = 1
+        for x in range(0, len(L1_link)):
+            if "Military Affiliation" == L1_title[x]:
+                # special case, no sub-category
+                break
+
+            driver.get(L1_link[x])
+            # scraping level 2
+            level2_tbl = search_level_tbl()
+            L2_link, L2_title = scraping_levels(level2_tbl)
+            # for item in L2_title:
+            #     print(counter, ": ", item)
+            #     counter = counter + 1
+            for y in range(0, len(L2_link)):
+                driver.get(L2_link[y])
+                L3_link, L3_title = get_scholar_tbl()
+
+                # scraping for level 3
+                for z in range(0, len(L3_link)):
+                    driver.get(L3_link[z])
+                    # amount, deadline, ava, dir_link, description, contact_info = get_specific()
+                    get_specific()
+                    logging.info("Logging at " + str(counter))
+                    counter = counter + 1
+
+    finally:
+        try:
+            driver.close()
+        except Exception as e:
+            logging.error("Error due to exception: \n", str(e))
+            pass
+
+
 try:
-    # config firefox profile
-    fp = webdriver.FirefoxProfile()
-    fp.set_preference("http.response.timeout", 5)
-    fp.set_preference("dom.max_scrit_run_time", 2)
-    fp.set_preference("javascript.enabled", False)
-
-    fo = webdriver.FirefoxOptions()
-    # set headless so that no browser is displayed
-    fo.headless = True
-    fo.add_argument('--disable-extensions')
-    fo.add_argument('--disable-infobars')
-    fo.add_argument('--disable-javascript')
-
-
-    # create a driver
-    global driver
-    driver = webdriver.Firefox(firefox_profile=fp, options=fo)
-
+    get_driver()
     # simulation login
     simulate_login()
 
-    # open the root page
-    driver.get(ROOT_URL)
+    t1 = threading.Thread(target=thread_func)
+    t2 = threading.Thread(target=thread_func)
+    t3 = threading.Thread(target=thread_func)
+    t4 = threading.Thread(target=thread_func)
 
-    # scraping level 1
-    level_1_tbl = search_level_tbl()
-    L1_link, L1_title = scraping_levels(level_1_tbl)
+    t1.start()
+    t2.start()
+    t3.start()
+    t4.start()
 
-    counter = 1
-    for x in range(0, len(L1_link)):
-        if "Military Affiliation" == L1_title[x]:
-            # special case, no sub-category
-            break
+    t1.join()
+    t2.join()
+    t3.join()
+    t4.join()
 
-        driver.get(L1_link[x])
-        # scraping level 2
-        level2_tbl = search_level_tbl()
-        L2_link, L2_title = scraping_levels(level2_tbl)
-        # for item in L2_title:
-        #     print(counter, ": ", item)
-        #     counter = counter + 1
-        for y in range(0, len(L2_link)):
-            driver.get(L2_link[y])
-            L3_link, L3_title = get_scholar_tbl()
 
-            # scraping for level 3
-            for z in range(0, len(L3_link)):
-                driver.get(L3_link[z])
-                amount, deadline, ava, dir_link, description, contact_info = get_specific()
-                logging.info("Logging at " + str(counter))
-                counter = counter + 1
-
-finally:
-    try:
-        driver.close()
-    except:
-        pass
+except:
+    logging.warning("Threads down")
