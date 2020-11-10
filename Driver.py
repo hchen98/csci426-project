@@ -1,10 +1,159 @@
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 import time
-from collections import defaultdict
+import random
+import logging
+import threading
+
+logging.basicConfig(format='%(asctime)s - %(message)s', level=logging.INFO)
 
 HOME_URL = "https://www.scholarships.com"
 ROOT_URL = "https://www.scholarships.com/financial-aid/college-scholarships/scholarship-directory"
+LOGIN_URL = "https://www.scholarships.com/login"
+
+USERNAME = "csci426@protonmail.com"
+PASSWORD = "2QAaF5hjc$@k"
+
+
+def simulate_login():
+    # simulation of login
+    driver.get(LOGIN_URL)
+
+    # simulate login
+    driver.find_element_by_id("Email").send_keys(USERNAME)
+    driver.find_element_by_name("Password").send_keys(PASSWORD)
+    driver.find_element_by_xpath('//input[@type="submit"]').click()
+
+
+def search_level_tbl():
+    # search scholarship categoery table
+    # OUTPUT: seleiunm <a> list
+
+    # locate the table of scholarship
+    root_tbl = driver.find_element_by_id("ullist")
+
+    # locate the element by categories
+    a_tag_tbl = root_tbl.find_elements_by_tag_name("a")
+    return a_tag_tbl
+
+
+def scraping_levels(sele_ele):
+    # scarping first level category
+    # INPUT: selenium obj <-- scholarship tbl
+    # OUTPUT: url and title (category)
+
+    level_link = []
+    level_title = []
+
+    for a_tag in sele_ele:
+        cate_link = a_tag.get_attribute("href")
+        cate_title = a_tag.text
+        level_link.append(cate_link)
+        level_title.append(cate_title)
+
+    return level_link, level_title
+
+
+def get_scholar_tbl():
+    # level 3 scholarship table
+    # OUTPUT: # OUTPUT: selenium <tr> list
+
+    link = []
+    title = []
+    # locate the info of scholarship
+    scholar_tbl = driver.find_element_by_tag_name("tbody")
+    tr = scholar_tbl.find_elements_by_tag_name("tr")
+    for t in tr:
+        x = t.find_element_by_tag_name("td a")
+        link.append(x.get_attribute("href"))
+        title.append(x.text)
+        # print(x.get_attribute("href"))
+
+    return link, title
+
+
+def scraping_scholar_tbl(tr_ele):
+    # get the item inside the scholar table on level 3
+    # INPUT: selenium <tr> ele
+
+    scholar_tit = []
+    scholar_link = []
+
+    for item in tr_ele:
+        # nested tag here, locate <td> then <a>
+        temp = driver.find_element_by_tag_name("td a")
+        L3_link = temp.get_attribute("href")
+        scholar_tit.append(temp.text)
+        scholar_link.append(L3_link)
+        # print(temp.text, ":\n", L3_link, "\n\n")
+        # sleep to ensure IP address is not blocked
+        time.sleep(random.randint(1, 6))
+
+    return scholar_link, scholar_tit
+
+
+def get_specific():
+    # get specific scholarship detail
+    # OUTPUT: scholarship attributes
+
+    test = []
+    award_info = driver.find_element_by_class_name("award-info-row")
+    temp = award_info.find_elements_by_tag_name("h3")
+
+    # get general info
+    amount = temp[0].text
+    deadline = temp[1].text
+    ava = temp[2].text
+
+    # get direct apply link
+    temp = driver.find_element_by_css_selector(".award-info-action-items [href]")
+    temp = temp.get_attribute("href")
+    # need to parse here since the site will open another window event with js
+    spliter = temp.split(",")
+    dir_link = spliter[0][26:-1]
+
+    # get abstract scholarship description
+    description = driver.find_element_by_class_name("scholdescrip").text
+
+    # scholarship contact info
+    temp2 = driver.find_element_by_id("ulScholDetails").text
+    lines = temp2.splitlines()
+    flag = False
+    contact_info = ""
+
+    for item in lines:
+        if (item == "Scholarship Committee"):
+            # special case:
+            # need to remove useless scholarship contact info
+            flag = True
+            continue
+
+        if (flag):
+            contact_info = contact_info + item + "\n"
+
+    # print(amount, "\n", deadline, "\n", ava, "\n", dir_link, "\n", description, "\n", contact_info, "\n\n")
+
+    test.append(amount)
+    test.append(deadline)
+    test.append(ava)
+    test.append(dir_link)
+    test.append(description)
+    test.append(contact_info)
+
+    test_write2file(test)
+    return amount, deadline, ava, dir_link, description, contact_info
+
+
+def test_write2file(item):
+    # testing func: write the scraping data to a txt
+    # INPUT: scraping array
+    with open("test_output.txt", "a+", encoding="utf-8") as writer:
+        for x in item:
+            writer.write(str(x) + "\n")
+
+        writer.write("======================================\n\n")
+        writer.close()
+
 
 try:
     # config firefox profile
@@ -19,49 +168,42 @@ try:
     fo.add_argument('--disable-infobars')
 
     # create a driver
+    global driver
     driver = webdriver.Firefox(firefox_profile=fp, options=fo)
 
-    # open a page
+    # simulation login
+    simulate_login()
+
+    # open the root page
     driver.get(ROOT_URL)
 
-    # locate the table of scholarship
-    root_tbl = driver.find_element_by_id("ullist")
+    # scraping level 1
+    level_1_tbl = search_level_tbl()
+    L1_link, L1_title = scraping_levels(level_1_tbl)
 
-    # locate the element by categories
-    level_1_tbl = root_tbl.find_elements_by_tag_name("a")
+    counter = 1
+    for x in range(0, len(L1_link)):
+        if "Military Affiliation" == L1_title[x]:
+            # special case, no sub-category
+            break
 
-    level1_link = []
-    level1_title = []
-    level2_link = []
-    level2_title = []
-    counter = 0
+        driver.get(L1_link[x])
+        # scraping level 2
+        level2_tbl = search_level_tbl()
+        L2_link, L2_title = scraping_levels(level2_tbl)
+        # for item in L2_title:
+        #     print(counter, ": ", item)
+        #     counter = counter + 1
+        for y in range(0, len(L2_link)):
+            driver.get(L2_link[y])
+            L3_link, L3_title = get_scholar_tbl()
 
-    for a_tag in level_1_tbl:
-        cate1_link = a_tag.get_attribute("href")
-        cate1_title = a_tag.text
-        # level1_link.append(cate1_link)
-        # level1_title.append(cate1_title)
-        # print(cate1_title)
-
-        # end level 1 crawling
-
-        driver.get(cate1_link)
-        cate2_tbl = driver.find_element_by_id("ullist")
-        level2_tbl = cate2_tbl.find_elements_by_tag_name("a")
-
-        for link in level2_tbl:
-            cate2_link = a_tag.get_attribute("href")
-            cate2_title = a_tag.text
-            # level2_link.append(cate2_link)
-            # level2_title.append(cate2_title)
-
-            # end level 2 crawling
-            driver.get(cate2_link)
-            cate3_tbl = driver.find_element_by_id()
-
-
-
-
+            # scraping for level 3
+            for z in range(0, len(L3_link)):
+                driver.get(L3_link[z])
+                amount, deadline, ava, dir_link, description, contact_info = get_specific()
+                logging.info("Logging at " + str(counter))
+                counter = counter + 1
 
 finally:
     try:

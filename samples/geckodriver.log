@@ -1,0 +1,23 @@
+1604940438774	geckodriver	INFO	Listening on 127.0.0.1:36765
+1604940439789	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile48cF7B"
+*** You are running in headless mode.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604940441615	Marionette	INFO	Listening on port 40771
+1604940441711	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.gstatic.com/mysidia/2afc3bdd3f6211fb3f350aeaa302bd31.js?tag=video_mra/hulk_v3, line 254: SecurityError: The operation is insecure.
+JavaScript error: https://www.gstatic.com/mysidia/7c516c76f1fb366b17a3e9571831221c.js?tag=video_mra/web_fig_och, line 164: SecurityError: The operation is insecure.
+JavaScript error: https://www.gstatic.com/mysidia/7c516c76f1fb366b17a3e9571831221c.js?tag=video_mra/web_fig_och, line 164: SecurityError: The operation is insecure.
+1604940449202	Marionette	INFO	Stopped listening on port 40771
+1604940581572	geckodriver	INFO	Listening on 127.0.0.1:56059
+1604940581580	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--disable-extensions" "--disable-infobars" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile2DZgAu"
+*** You are running in headless mode.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604940583073	Marionette	INFO	Listening on port 40503
+1604940583098	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.scholarships.com/js/jquery-2.1.1.js, line 1437: Error: Syntax error, unrecognized expression: unsupported pseudo: -webkit-autofill
+JavaScript error: https://www.gstatic.com/mysidia/2afc3bdd3f6211fb3f350aeaa302bd31.js?tag=video_mra/hulk_v3, line 254: SecurityError: The operation is insecure.
+JavaScript error: https://www.gstatic.com/mysidia/7c516c76f1fb366b17a3e9571831221c.js?tag=video_mra/web_fig_och, line 164: SecurityError: The operation is insecure.
+1604940590825	Marionette	INFO	Stopped listening on port 40503

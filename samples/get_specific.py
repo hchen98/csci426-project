@@ -32,6 +32,8 @@ URL_TEST = "https://www.scholarships.com/financial-aid/college-scholarships/scho
 
 driver.get(URL_TEST)
 
+
+# =================== start scraping =======================
 award_info = driver.find_element_by_class_name("award-info-row")
 temp = award_info.find_elements_by_tag_name("h3")
 
@@ -47,23 +49,23 @@ temp = temp.get_attribute("href")
 spliter = temp.split(",")
 dir_link = spliter[0][26:-1]
 
-scholar_adres = ""
-temp = driver.find_element_by_id("liAddress1Text").text
+# get abstract scholarship description
+description = driver.find_element_by_class_name("scholdescrip").text
 
-scholar_adres = scholar_adres + temp + "\n"
-temp = driver.find_element_by_id("liAddress2Text")
-if temp:
-  # if that specific id existis
-  scholar_adres = scholar_adres + temp.text + "\n"
-else:
-  pass
+# scholarship contact info
+temp2 = driver.find_element_by_id("ulScholDetails").text
+lines = temp2.splitlines()
+flag = False
+contact_info = ""
 
-temp = driver.find_element_by_id("liCityStateZIPText").text
-scholar_adres = scholar_adres + temp + "\n"
+for item in lines:
+  if (item == "Scholarship Committee"):
+    # special case:
+    # need to remove useless scholarship contact info
+    flag = True
+    continue
 
-# description = temp.find_element_by_class_name("scholdescrip").text
+  if (flag):
+    contact_info = contact_info + item + "\n"
+
 driver.close()
-# print("Amount: ", amount, "\nDeadline: ", deadline, "\n", ava, "\nLink: ", dir_link)
-# print(description)
-
-

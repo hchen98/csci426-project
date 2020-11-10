@@ -1,17 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="754a5676-e82e-4ba3-ba49-8a6cfb431eac" name="Default Changelist" comment="" />
+    <list default="true" id="754a5676-e82e-4ba3-ba49-8a6cfb431eac" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/csci426-project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csci426-project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Driver.py" beforeDir="false" afterPath="$PROJECT_DIR$/Driver.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cs_major_tbl.py" beforeDir="false" afterPath="$PROJECT_DIR$/samples/cs_major_tbl.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask.py" beforeDir="false" afterPath="$PROJECT_DIR$/samples/flask.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/geckodriver.log" beforeDir="false" afterPath="$PROJECT_DIR$/geckodriver.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulate_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/samples/get_specific.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JupyterTrust" id="42c13445-69bc-4b00-a7b7-9fc81f9ccd29" />
   <component name="ProjectId" id="1j2Cvjz9G7JyXI6ZQhIXrkOMdjW" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -19,8 +37,15 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ReactNative/NYIT-attendance-app/web_scraping/firebase.py" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/samples" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="754a5676-e82e-4ba3-ba49-8a6cfb431eac" name="Default Changelist" comment="" />
@@ -29,7 +54,34 @@
       <option name="presentableId" value="Default" />
       <updated>1602993031969</updated>
       <workItem from="1602993033154" duration="39000" />
+      <workItem from="1604890382576" duration="666000" />
+      <workItem from="1604891061651" duration="29802000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2475" y="179" width="800" height="719" key="#Plugins" timestamp="1604891256402">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2475" y="179" width="800" height="719" key="#Plugins/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1604891256402" />
+    <state x="2563" y="272" width="624" height="533" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1604890974160">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2563" y="272" width="624" height="533" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1604890974160" />
+    <state x="2905" y="295" width="416" height="536" key="FileChooserDialogImpl" timestamp="1604942558664">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2905" y="295" width="416" height="536" key="FileChooserDialogImpl/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1604942558664" />
+    <state x="2612" y="184" width="1022" height="737" key="SettingsEditor" timestamp="1604899602347">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2612" y="184" width="1022" height="737" key="SettingsEditor/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1604899602347" />
+    <state x="2490" y="144" width="770" height="789" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1604941491848">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2490" y="144" width="770" height="789" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1604941491848" />
   </component>
 </project>
