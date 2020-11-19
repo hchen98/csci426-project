@@ -7,9 +7,6 @@ Instructor: Dr. Cao
 
 Team Member: Michael Trzaskoma, Wentao Yang, Francis Cheng, and Hui (Henry) Chen
 </p>
-----
-
-
 
 ## Requirements:
 
