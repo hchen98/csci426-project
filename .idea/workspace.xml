@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="754a5676-e82e-4ba3-ba49-8a6cfb431eac" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Driver.py" beforeDir="false" afterPath="$PROJECT_DIR$/Driver_multiprocessing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/geckodriver.log" beforeDir="false" afterPath="$PROJECT_DIR$/geckodriver.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test_output.txt" afterDir="false" />
-    </list>
+    <list default="true" id="754a5676-e82e-4ba3-ba49-8a6cfb431eac" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,6 +49,7 @@
       <workItem from="1604890382576" duration="666000" />
       <workItem from="1604891061651" duration="31488000" />
       <workItem from="1605020585189" duration="12140000" />
+      <workItem from="1605797640058" duration="11000" />
     </task>
     <servers />
   </component>
