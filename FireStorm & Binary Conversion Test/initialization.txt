@@ -1,0 +1,4 @@
+#Make sure to have firebase admin module installed on your interpreter
+#Also that the json file is in the same folder as the python app
+
+pip install --upgrade firebase-admin
