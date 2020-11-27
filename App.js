@@ -1,6 +1,7 @@
-import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+// import { StyleSheet, Text, View } from "react-native";
+import { AppRegistry } from "react-native";
+import "react-native-gesture-handler";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
@@ -9,9 +10,8 @@ import FeatherIcon from "react-native-vector-icons/Feather";
 import MaterialCommunityIconsIcon from "react-native-vector-icons/MaterialCommunityIcons";
 
 import HomeNoSignScreen from "./components/HomeNoSignScreen";
-import HomeSignedScreen from "./components/AccSignedScreen";
 import SearchScreen from "./components/SearchScreen";
-import AccNoSignScreen from "./components/AccNoSignScreen";
+import AccScreen from "./components/AccScreen";
 import InputScreen1 from "./components/InputInfoScreen1";
 import InputScreen2 from "./components/InputInfoScreen2";
 
@@ -44,17 +44,21 @@ function TabScreens() {
         },
       })}
     >
-      <Tab.Screen name="Home" options={{ title: "Home Screen" }}>
-        {() => <HomeNoSignScreen />}
-      </Tab.Screen>
+      <Tab.Screen
+        name="Home"
+        options={{ title: "Home Screen" }}
+        component={HomeNoSignScreen}
+      />
       <Tab.Screen
         name="Search"
         component={SearchScreen}
         options={{ title: "Search Screen" }}
       />
-      <Tab.Screen name="Account" options={{ title: "Account Screen" }}>
-        {() => <AccNoSignScreen />}
-      </Tab.Screen>
+      <Tab.Screen
+        name="Account"
+        options={{ title: "Account Screen" }}
+        component={AccScreen}
+      />
     </Tab.Navigator>
   );
 }
@@ -64,9 +68,11 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name={"Home"} component={TabScreens} />
-        <Stack.Screen name={"Input Required Info"} component={InputScreen1} />
-        <Stack.Screen name={"Input Optional Info"} component={InputScreen2} />
+        <Stack.Screen name={"InputScreen1"} component={InputScreen1} />
+        <Stack.Screen name={"InputScreen2"} component={InputScreen2} />
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
+
+AppRegistry.registerComponent("App", () => App);

@@ -7,10 +7,11 @@ import {
   TextInput,
   TouchableOpacity
 } from "react-native";
-import { useNavigation } from '@react-navigation/native';
+// import { useNavigation } from '@react-navigation/native';
+import InputScreen2 from "./InputInfoScreen2";
 
-function InputInfoScreen1() {
-  const navigation = useNavigation();
+export default function InputScreen1({navigation}) {
+  // const navigation = useNavigation();
 
   return (
     <View style={styles.container}>
@@ -51,7 +52,7 @@ function InputInfoScreen1() {
           </View>
           <View style={styles.submit_grp}>
             <TouchableOpacity
-              onPress={() => navigation.navigate("InputScreen2")}
+              onPress={() => navigation.navigate(InputScreen2)}
               style={styles.btn_submit}
             >
               <Text style={styles.next}>Next</Text>
@@ -77,107 +78,102 @@ const styles = StyleSheet.create({
     marginTop: 63
   },
   requiredDetails: {
-    
-    color: "#121212",
+    fontWeight: "bold",
+    color: "black",
     lineHeight: 0,
     fontSize: 20,
     marginTop: 34,
     marginLeft: 20
   },
   input1_grp: {
-    width: 340,
+    width: "93%",
     height: 50,
     marginTop: 37,
     marginLeft: 10
   },
   txt_gender: {
-    
+    fontWeight: "bold",
     color: "#121212",
     fontSize: 15,
     marginLeft: 9
   },
   input1: {
-    
     color: "#121212",
     height: 30,
-    width: 323,
+    width: "95%",
     marginTop: 2,
     marginLeft: 9
   },
   input2_grp: {
-    width: 340,
+    width: "93%",
     height: 50,
     marginTop: 15,
     marginLeft: 10
   },
   txt_dob: {
-    
+    fontWeight: "bold",
     color: "#121212",
     fontSize: 15,
     marginLeft: 9
   },
   input2: {
-    
     color: "#121212",
     height: 30,
-    width: 323,
+    width: "95%",
     marginTop: 2,
     marginLeft: 9
   },
   input3_grp: {
-    width: 340,
+    width: "93%",
     height: 50,
     marginTop: 15,
     marginLeft: 10
   },
   txt_zip: {
-    
+    fontWeight: "bold",
     color: "#121212",
     fontSize: 15,
     marginLeft: 9
   },
   input3: {
-    
     color: "#121212",
     height: 30,
-    width: 323,
+    width: "95%",
     marginTop: 2,
     marginLeft: 9
   },
   input4_grp: {
-    width: 340,
+    width: "93%",
     height: 50,
     marginTop: 15,
     marginLeft: 10
   },
   txt_gpa: {
-    
+    fontWeight: "bold",
     color: "#121212",
     fontSize: 15,
     marginLeft: 9
   },
   input4: {
-    
     color: "#121212",
     height: 30,
-    width: 323,
+    width: "95%",
     marginTop: 2,
     marginLeft: 9
   },
   submit_grp: {
-    width: 330,
+    width: "93%",
     height: 40,
     marginTop: 20,
     marginLeft: 15
   },
   btn_submit: {
-    width: 330,
+    width: "100%",
     height: 40,
     backgroundColor: "rgba(0,149,47,1)",
     alignSelf: "center"
   },
   next: {
-    
     color: "rgba(255,255,255,1)",
     fontSize: 16,
     marginTop: 10,
@@ -185,4 +181,3 @@ const styles = StyleSheet.create({
   }
 });
 
-export default InpuInfo1;

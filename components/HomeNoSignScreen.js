@@ -5,7 +5,7 @@
 import * as React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
-export default function HomeNoSignScreen({ navigation }) {
+export default function HomeNoSignScreen( props ) {
   // navigation.setOptions({ title: 'Search Screen' })
 
   getAPIINFO = () => {

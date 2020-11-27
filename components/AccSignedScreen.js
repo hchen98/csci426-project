@@ -10,8 +10,9 @@ import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
 import EntypoIcon from "react-native-vector-icons/Entypo";
 import MaterialIconsIcon from "react-native-vector-icons/MaterialIcons";
 import { useNavigation } from "@react-navigation/native";
+// import InputScreen1 from "./InputInfoScreen1";
 
-function AccScreen({ usrinfo }) {
+export default function AccScreen({ usrinfo }) {
   const navigation = useNavigation();
   return (
     <View style={styles.container}>
@@ -31,7 +32,7 @@ function AccScreen({ usrinfo }) {
         </View>
 
         <TouchableOpacity
-          onPress={() => navigation.navigate("InputScreen1")}
+          onPress={() => navigation.navigate(InputScreen1)}
           style={styles.grp2}
         >
           <View style={styles.icon2Row}>
@@ -176,4 +177,3 @@ const styles = StyleSheet.create({
   },
 });
 
-export default AccScreen;
