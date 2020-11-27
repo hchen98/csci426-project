@@ -28,6 +28,7 @@ React Native:
     c. Use ```openssl rand -base64 32 | openssl sha1 -c``` to generate openssl key<br>
     d. Place "google-services.json" under android directory
   * Clear the Metro's cache: ```yarn start --reset-cache```
+  * Project package name: ``` com.csci426.rn ```
 
 <br>
 
