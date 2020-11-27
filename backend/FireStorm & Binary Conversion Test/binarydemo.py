@@ -7,29 +7,34 @@ def toString(list):
 
 #Hard coded index for every binary value, could be automated maybe?
 def catIndex(word):
+    # locating the user profile (single) element to sub-category
+    # INPUT: a user profile key word <-- str
+    # OUTPUT: sub-category position <-- int
+
     if word == "Accounting":
-        x = 0
+        index = 0
     if word == "Compuer Science":
-        x = 1
+        index = 1
     if word == "Male":
-        x = 2
+        index = 2
     if word == "Female":
-        x = 3
+        index = 3
     if word == "3.0":
-        x = 4
+        index = 4
     if word == "3.5":
-        x = 5 
+        index = 5 
     if word == "4.0":
-        x = 6
+        index = 6
     if word == "Italian":
-        x = 7
+        index = 7
     if word == "Spanish":
-        x = 8
+        index = 8
     if word == "Hindu":
-        x = 9
+        index = 9
     if word == "Judaism":
-        x = 10
-    return x
+        index = 10
+    return index
+
 
 #To update the binary string
 #The binary string is broken down into a list, the term will return an index,
@@ -41,16 +46,14 @@ def updateBin(binary, word):
     return (toString(list))
 
 #This is initializing the binary representation, we could just have a defualt and work off of that.
-def binRep(termList):
+def formBin(termList):
     binary = "00000000000"
-    for y in range(len(termList)):
-        term = termList[y]
-        binary = updateBin(binary, term)
+    for item in termList:
+        binary = updateBin(binary, item)
     return binary
 
-#Demo
-terms =['Accounting', 'Male', '3.0', 'Spanish', 'Judaism']
+# dummy entry: assume this is user profile in key words
+profile =['Accounting', 'Male', '3.0', 'Spanish', 'Judaism']
 
-
-
-print(binRep(terms))
+print(formBin(profile))
+# output: 10101000101

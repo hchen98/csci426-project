@@ -9,7 +9,7 @@ function LoginPage(props) {
   // init landing page for the Google Signin
   return (
     <View>
-      <Text style={styles.header}>Sign In With NYIT Credentials</Text>
+      <Text style={styles.header}>Sign In With Your Credentials</Text>
       <Button title="Sign in" onPress={() => props.signIn()} />
     </View>
   );
@@ -20,31 +20,35 @@ export default class signInPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      signedIn: false,
-      full_name: "",
-      last_name: "",
-      first_name: "",
-      email: "",
-      photoUrl: "",
+      usr_obj: {
+        signedIn: false,
+        full_name: "",
+        last_name: "",
+        first_name: "",
+        email: "",
+        photoUrl: "",
+      },
     };
   }
 
   signIn = async () => {
     try {
       const result = await Google.logInAsync({
-        // androidClientId: "<YOUR_CLIENT_ID_HERE>",
+        androidClientId: "117030962609-9mblopptuccmm9fqhi2uv7eeea9bk1vh.apps.googleusercontent.com",
         // iosClientId: "<YOUR_CLIENT_ID_HERE>",
         scopes: ["profile", "email"],
       });
 
       if (result.type === "success") {
         this.setState({
-          signedIn: true,
-          full_name: result.user.name,
-          last_name: result.user.familyName,
-          first_name: result.user.givenName,
-          photoUrl: result.user.photoUrl,
-          email: result.user.email,
+          usr_obj: {
+            signedIn: true,
+            full_name: result.user.name,
+            last_name: result.user.familyName,
+            first_name: result.user.givenName,
+            photoUrl: result.user.photoUrl,
+            email: result.user.email,
+          },
         });
       } else {
         console.log("\nLog failed due to: \n", result);
@@ -56,15 +60,17 @@ export default class signInPage extends React.Component {
   };
 
   render(){
-    if (this.state.signedIn){
+    if (this.state.usr_obj.signedIn){
       // return signed in acc screen
       return(
-        <AccsignedScreen/>
+        <AccsignedScreen usrinfo={this.state.usr_obj}/>
       );
     } else {
       // return default acc screen
       return(
-        <View></View>
+        <View style={styles.container}>
+          <LoginPage signIn={this.signIn}/>
+        </View>
       );
     }
   }

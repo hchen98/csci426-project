@@ -1,13 +1,10 @@
-// this use did not sign in
-// therefore, just display the option to
-// play around the scholarships that in category
+// this is experiment file
+// to test fetch func --> fetch info from the REST API
 
 import * as React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
-export default function HomeNoSignScreen({ navigation }) {
-  // navigation.setOptions({ title: 'Search Screen' })
-
+export default function test_fetch({ navigation }) {
   getAPIINFO = () => {
     fetch("https://879099766.pythonanywhere.com/api/v1/resources/books/all", {
       method: "GET",
@@ -29,7 +26,6 @@ export default function HomeNoSignScreen({ navigation }) {
     <View style={styles.buttonBar_itme}>
       <Text>This is Home no sign panel!</Text>
       <Text>Coming soon!</Text>
-      {/* {getAPIINFO} */}
     </View>
   );
 }

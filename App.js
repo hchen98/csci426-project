@@ -12,6 +12,8 @@ import HomeNoSignScreen from "./components/HomeNoSignScreen";
 import HomeSignedScreen from "./components/AccSignedScreen";
 import SearchScreen from "./components/SearchScreen";
 import AccNoSignScreen from "./components/AccNoSignScreen";
+import InputScreen1 from "./components/InputInfoScreen1";
+import InputScreen2 from "./components/InputInfoScreen2";
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -62,6 +64,8 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name={"Home"} component={TabScreens} />
+        <Stack.Screen name={"Input Required Info"} component={InputScreen1} />
+        <Stack.Screen name={"Input Optional Info"} component={InputScreen2} />
       </Stack.Navigator>
     </NavigationContainer>
   );
