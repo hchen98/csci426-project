@@ -8,7 +8,7 @@ import EntypoIcon from "react-native-vector-icons/Entypo";
 import MaterialIconsIcon from "react-native-vector-icons/MaterialIcons";
 import "react-native-gesture-handler";
 
-import GlobalState from "./GlobalState";
+// import GlobalState from "../experiments/GlobalState";
 import InputScreen1 from "./InputInfoScreen1";
 import InputScreen2 from "./InputInfoScreen2";
 

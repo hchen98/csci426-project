@@ -2,24 +2,23 @@ import React, { Component } from "react";
 import {
   StyleSheet,
   View,
-  StatusBar,
   Text,
   TextInput,
   TouchableOpacity,
+  Dimensions,
 } from "react-native";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 
 export default function InputScreen2({ navigation }) {
   return (
-    <KeyboardAwareScrollView
-      enableOnAndroid
-      enableAutomaticScroll
-      keyboardOpeningTime={0}
-      extraHeight={Platform.select({ android: 200 })}
-      style={styles.container}
-    >
-      <View style={styles.container}>
-        <StatusBar hidden />
+    <View style={styles.container}>
+      <KeyboardAwareScrollView
+        enableOnAndroid
+        enableAutomaticScroll
+        keyboardOpeningTime={0}
+        // extraHeight={Platform.select({ android: (Dimensions.get('window').height - 150 ) })}
+        style={styles.AwardView}
+      >
         <View style={styles.containerGrp1}>
           <View style={styles.containerBkground1}>
             <Text style={styles.optionalDetails}>Optional Details</Text>
@@ -95,12 +94,16 @@ export default function InputScreen2({ navigation }) {
             </View>
           </View>
         </View>
-      </View>
-    </KeyboardAwareScrollView>
+      </KeyboardAwareScrollView>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
+  AwardView: {
+    flex: 1,
+    minHeight: (Dimensions.get('window').height - 220)
+  },
   container: {
     flex: 1,
   },

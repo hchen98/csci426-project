@@ -65,14 +65,14 @@ function TabScreens() {
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name={"Home"} component={TabScreens} />
-        <Stack.Screen name={"InputScreen1"} component={InputScreen1} />
-        <Stack.Screen name={"InputScreen2"} component={InputScreen2} />
-      </Stack.Navigator>
-    </NavigationContainer>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name={"Home"} component={TabScreens} />
+          <Stack.Screen name={"InputScreen1"} component={InputScreen1} />
+          <Stack.Screen name={"InputScreen2"} component={InputScreen2} />
+        </Stack.Navigator>
+      </NavigationContainer>
   );
 }
 
-AppRegistry.registerComponent("App", () => App);
+// AppRegistry.registerComponent("App", () => App);

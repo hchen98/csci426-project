@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import {
   StyleSheet,
   View,
-  StatusBar,
   Text,
   TextInput,
   TouchableOpacity
@@ -15,7 +14,7 @@ export default function InputScreen1({navigation}) {
 
   return (
     <View style={styles.container}>
-      <StatusBar hidden />
+      {/* <StatusBar hidden /> */}
       <View style={styles.container_grp}>
         <View style={styles.container_bkground}>
           <Text style={styles.requiredDetails}>Required Details</Text>
