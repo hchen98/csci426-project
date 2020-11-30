@@ -29,6 +29,7 @@ React Native:
     d. Place "google-services.json" under android directory
   * Clear the Metro's cache: ```yarn start --reset-cache```
   * Project package name: ``` com.csci426.rn ```
+  * AWS EC2 - SSH method: <a href="http://simp.ly/p/M2jgxM">here </a>
 
 <br>
 
