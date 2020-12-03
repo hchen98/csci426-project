@@ -8,14 +8,9 @@ import {
   Text,
   FlatList,
   View,
-  Alert,
-  ScrollView,
-  TouchableOpacity,
 } from "react-native";
-import ViewSubCate from "./ViewSubCate";
 
 export default class ViewAllScholar extends React.Component {
-
   constructor(props) {
     super(props);
 
@@ -53,13 +48,6 @@ export default class ViewAllScholar extends React.Component {
     return <View style={styles.ItemSeparator} />;
   };
 
-  GetItem(item) {
-    // let data = item.value;
-    // console.log(typeof item);
-    const data = item;
-    this.props.navigation.navigate(ViewSubCate, {data});
-  }
-
   render() {
     return (
       <View style={styles.container}>
@@ -69,7 +57,15 @@ export default class ViewAllScholar extends React.Component {
           renderItem={({ item }) => (
             <Text
               style={styles.item}
-              onPress={this.GetItem.bind(this, item.key)}
+              onPress={() => {
+                // we are able to navigate to "ViewSubCate"
+                // since it is one of the stack screens in App.js
+                // therefore, no need to import in this screen
+                this.props.navigation.navigate('ViewSubCate', {
+                  title: (item.key + " List"),
+                  userkey: item.key,
+                });
+              }}
             > {item.key} </Text>
           )}
         />
@@ -81,7 +77,7 @@ export default class ViewAllScholar extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
+    // justifyContent: "center",
     backgroundColor: "white",
   },
   ItemSeparator: {

@@ -1,24 +1,22 @@
-import * as React from 'react';
-import { StyleSheet, Text, View, Alert } from 'react-native';
+import React, { Component } from "react";
+import { StyleSheet, Text, View, Alert } from "react-native";
 
-function test(props){
-  Alert.alert(props);
-}
+export default class ViewSubCate extends React.Component {
+  // navigation.setOptions({ headerTitle: 'Search Screen' })
 
-export default function ViewSubCate(props){
-  // navigation.setOptions({ title: 'Search Screen' })
-
-  return (
-    <View style={styles.buttonBar_itme}>
-        {test(props)}
-    </View>
-  );
+  render() {
+    return (
+      <View style={styles.buttonBar_itme}>
+        <Text>{this.props.route.params.userkey}</Text>
+      </View>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
   buttonBar_itme: {
-    flex: 1, 
-    justifyContent: 'center', 
-    alignItems: 'center',
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
   },
 });

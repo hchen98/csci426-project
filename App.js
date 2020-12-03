@@ -129,7 +129,12 @@ export default class App extends Component {
           </Stack.Screen>
           <Stack.Screen name={"InputScreen1"} component={InputScreen1} />
           <Stack.Screen name={"InputScreen2"} component={InputScreen2} />
-          <Stack.Screen name={"ViewSubCate"} component={ViewSubCate} />
+          <Stack.Screen
+            name={"ViewSubCate"}
+            component={ViewSubCate}
+            // pass down the screen header bar title
+            options={({ route }) => ({ title: route.params.title })}
+          />
           <Stack.Screen
             name={"ViewAllScholar"}
             component={ViewAllScholar}
