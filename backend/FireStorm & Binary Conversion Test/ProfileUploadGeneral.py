@@ -24,7 +24,7 @@ def updtUser(userEmail, gender, dob, zipC, gpa, major = ' ', race = ' ', religio
     list1.append(catState(zipC))
     list1.append(catGPA(gpa))
 
-    list2 = [race, religion, dissabilities]
+    list2 = [major, race, religion, dissabilities]
     for i in range(len(list2)):
         if list2[i] != ' ':
             list1.append(list2[i])
