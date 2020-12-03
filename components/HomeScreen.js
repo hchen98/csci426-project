@@ -1,101 +1,179 @@
 import React from "react";
 import {
   StyleSheet,
-  Text,
-  FlatList,
   View,
-  Alert,
-  TouchableOpacity, // for component navigate
+  Text,
+  ScrollView,
+  TouchableOpacity,
 } from "react-native";
-import { ScrollView } from "react-native-gesture-handler";
-// import { StackNavigator } from "react-native"; // for component navigate
+import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
 
 export default class HomeScreen extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      FlatListItems: [
-        { key: "Academic Major" },
-        { key: "ACT Score" },
-        { key: "Age" },
-        { key: "Artistic Ability" },
-        { key: "Athletic Ability" },
-        { key: "Deadline" },
-        { key: "Employer" },
-        { key: "Ethnicity" },
-        { key: "Financial Need" },
-        { key: "Gender" },
-        { key: "Grade Point Average" },
-        { key: "Honors Organization" },
-        { key: "Military Affiliation" },
-        { key: "Number of Scholarships Available" },
-        { key: "Physical Disabilities" },
-        { key: "Race" },
-        { key: "Religion" },
-        { key: "Residence State" },
-        { key: "SAT Score" },
-        { key: "Scholarship Amount" },
-        { key: "School Attendance State" },
-        { key: "School Year" },
-        { key: "Speical Attributes" },
-        { key: "Student Organization" },
-      ],
-    };
-  }
-
-  GetItem(item) {
-    Alert.alert(item);
-  }
-
   render() {
     return (
-      <ScrollView>
-        <View
-          style={{ flex: 1, backgroundColor: "light-dark", paddingTop: 20 }}
-        >
-          <Text style={{ fontSize: 24, fontWeight: "700" }}>Catagory</Text>
-
-          <View style={{ height: 60, marginTop: 20 }}>
-            <FlatList
-              horizontal
-              showsHorizontalScrollIndicator={false}
-              data={this.state.FlatListItems}
-              renderItem={({ item }) => (
-                <Text
-                  style={styles.item}
-                  onPress={this.GetItem.bind(this, item.key)}
-                >
-                  {" "}
-                  {item.key}{" "}
-                </Text>
-              )}
-            />
-          </View>
+      <View style={styles.container}>
+        <View style={styles.txtCategory_grp}>
+          <Text style={styles.category2}>Category</Text>
         </View>
-
-        <View style={{ flex: 2, backgroundColor: "gray", paddingTop: 20 }}>
-          <Text style={{ fontSize: 24, fontWeight: "700" }}>
-            Recommended Scholarship
-          </Text>
-          <View style={{ height: 60, marginTop: 20 }}>
-            <FlatList
-              horizontal
-              showsHorizontalScrollIndicator={false}
-              data={this.state.FlatListItems}
-              renderItem={({ item }) => (
-                <Text
-                  style={styles.item}
-                  onPress={this.GetItem.bind(this, item.key)}
-                >
-                  {" "}
-                  {item.key}{" "}
-                </Text>
-              )}
-            />
-          </View>
+        <View style={styles.scrollArea}>
+          <ScrollView
+            horizontal={true}
+            showsHorizontalScrollIndicator={false}
+            contentContainerStyle={styles.scrollArea_contentContainerStyle}
+          >
+            <TouchableOpacity
+              onPress={() =>
+                this.props.navigation.navigate("ViewSubCate", {
+                  title: "Academic Major List",
+                  itemKey: "Academic Major",
+                })
+              }
+              style={styles.btn}
+            >
+              <Text style={styles.btn_txt}>Academic {"\n"}Major</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() =>
+                this.props.navigation.navigate("ViewSubCate", {
+                  title: "Act Score List",
+                  itemKey: "ACT Score",
+                })
+              }
+              style={styles.btn2}
+            >
+              <Text style={styles.btn2_txt}>Act Score</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() =>
+                this.props.navigation.navigate("ViewSubCate", {
+                  title: "Age List",
+                  itemKey: "Age",
+                })
+              }
+              style={styles.btn3}
+            >
+              <Text style={styles.btn3_txt}>Age</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() =>
+                this.props.navigation.navigate("ViewSubCate", {
+                  title: "Artistic Ability List",
+                  itemKey: "Artistic Ability",
+                })
+              }
+              style={styles.btn4}
+            >
+              <Text style={styles.txtArtisticAbility}>
+                Artistic {"\n"}Ability
+              </Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() =>
+                this.props.navigation.navigate("ViewSubCate", {
+                  title: "Athletic Ability List",
+                  itemKey: "Athletic Ability",
+                })
+              }
+              style={styles.btn5}
+            >
+              <Text style={styles.txtAthleticAbility}>
+                Athletic {"\n"}Ability
+              </Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => this.props.navigation.navigate("ViewAllScholar")}
+              style={styles.btn6}
+            >
+              <FontAwesomeIcon
+                name="arrow-circle-right"
+                style={styles.icon}
+              ></FontAwesomeIcon>
+              <Text style={styles.viewAll}>View All</Text>
+            </TouchableOpacity>
+          </ScrollView>
         </View>
-      </ScrollView>
+        <View style={styles.txtrecommended_grp}>
+          <Text style={styles.recommended}>Recommended</Text>
+        </View>
+        <View style={styles.scrollArea2}>
+          <ScrollView
+            horizontal={true}
+            showsHorizontalScrollIndicator={false}
+            contentContainerStyle={styles.scrollArea2_contentContainerStyle}
+          >
+            <TouchableOpacity
+              onPress={() =>
+                this.props.navigation.navigate("ViewSubCate", {
+                  title: "Age List",
+                  itemKey: "Age",
+                })
+              }
+              style={styles.button}
+            >
+              <Text style={styles.placeHolder1}>Place{"\n"}Holder 1...</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() =>
+                this.props.navigation.navigate("ViewSubCate", {
+                  title: "Age List",
+                  itemKey: "Age",
+                })
+              }
+              style={styles.button2}
+            >
+              <Text style={styles.placeHolder2}>Place{"\n"}Holder 2...</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() =>
+                this.props.navigation.navigate("ViewSubCate", {
+                  title: "Age List",
+                  itemKey: "Age",
+                })
+              }
+              style={styles.button3}
+            >
+              <Text style={styles.placeHolder3}>Place{"\n"}Holder 3...</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() =>
+                this.props.navigation.navigate("ViewSubCate", {
+                  title: "Age List",
+                  itemKey: "Age",
+                })
+              }
+              style={styles.button4}
+            >
+              <Text style={styles.placeHolder4}>Place{"\n"}Holder 4...</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() =>
+                this.props.navigation.navigate("ViewSubCate", {
+                  title: "Age List",
+                  itemKey: "Age",
+                })
+              }
+              style={styles.button5}
+            >
+              <Text style={styles.placeHolder5}>Place{"\n"}Holder 5...</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() =>
+                this.props.navigation.navigate("ViewSubCate", {
+                  title: "Age List",
+                  itemKey: "Age",
+                })
+              }
+              style={styles.button6}
+            >
+              <FontAwesomeIcon
+                name="arrow-circle-right"
+                style={styles.icon1}
+              ></FontAwesomeIcon>
+              <Text style={styles.viewAll1}>View All</Text>
+            </TouchableOpacity>
+          </ScrollView>
+        </View>
+      </View>
     );
   }
 }
@@ -103,18 +181,359 @@ export default class HomeScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    backgroundColor: "gray",
   },
-  headerText: {
+  txtCategory_grp: {
+    height: 40,
+    justifyContent: "center",
+    marginTop: 30,
+  },
+  category2: {
+    color: "#121212",
     fontSize: 20,
-    textAlign: "center",
-    margin: 10,
+    marginLeft: 16,
     fontWeight: "bold",
   },
-  item: {
-    padding: 10,
+  scrollArea: {
+    height: 120,
+  },
+  scrollArea_contentContainerStyle: {
+    width: 710,
+    height: 120,
+    flexDirection: "row",
+  },
+  btn: {
+    width: 100,
+    height: 100,
+    backgroundColor: "#E6E6E6",
+    borderWidth: 0,
+    borderColor: "#000000",
+    borderRadius: 5,
+    shadowColor: "rgba(0,0,0,1)",
+    shadowOffset: {
+      width: 3,
+      height: 3,
+    },
+    elevation: 5,
+    shadowOpacity: 0.01,
+    shadowRadius: 0,
+    overflow: "hidden",
+    borderTopWidth: 0,
+    marginLeft: 18,
+    alignSelf: "center",
+  },
+  btn_txt: {
+    color: "#121212",
+    marginTop: 60,
+    marginLeft: 9,
+  },
+  btn2: {
+    width: 100,
+    height: 100,
+    backgroundColor: "#E6E6E6",
+    borderWidth: 0,
+    borderColor: "#000000",
+    borderRadius: 5,
+    shadowColor: "rgba(0,0,0,1)",
+    shadowOffset: {
+      width: 3,
+      height: 3,
+    },
+    elevation: 5,
+    shadowOpacity: 0.01,
+    shadowRadius: 0,
+    overflow: "hidden",
+    borderTopWidth: 0,
+    marginLeft: 12,
+    alignSelf: "center",
+  },
+  btn2_txt: {
+    color: "#121212",
+    height: 16,
+    marginTop: 75,
+    marginLeft: 9,
+  },
+  btn3: {
+    width: 100,
+    height: 100,
+    backgroundColor: "#E6E6E6",
+    borderWidth: 0,
+    borderColor: "#000000",
+    borderRadius: 5,
+    shadowColor: "rgba(0,0,0,1)",
+    shadowOffset: {
+      width: 3,
+      height: 3,
+    },
+    elevation: 5,
+    shadowOpacity: 0.01,
+    shadowRadius: 0,
+    overflow: "hidden",
+    borderTopWidth: 0,
+    marginLeft: 14,
+    alignSelf: "center",
+  },
+  btn3_txt: {
+    color: "#121212",
+    height: 18.5,
+    marginTop: 75,
+    marginLeft: 9,
+  },
+  btn4: {
+    width: 100,
+    height: 100,
+    backgroundColor: "#E6E6E6",
+    borderWidth: 0,
+    borderColor: "#000000",
+    borderRadius: 5,
+    shadowColor: "rgba(0,0,0,1)",
+    shadowOffset: {
+      width: 3,
+      height: 3,
+    },
+    elevation: 5,
+    shadowOpacity: 0.01,
+    shadowRadius: 0,
+    overflow: "hidden",
+    borderTopWidth: 0,
+    marginLeft: 14,
+    alignSelf: "center",
+  },
+  txtArtisticAbility: {
+    color: "#121212",
+    height: 35,
+    marginTop: 61,
+    marginLeft: 9,
+  },
+  btn5: {
+    width: 100,
+    height: 100,
+    backgroundColor: "#E6E6E6",
+    borderWidth: 0,
+    borderColor: "#000000",
+    borderRadius: 5,
+    shadowColor: "rgba(0,0,0,1)",
+    shadowOffset: {
+      width: 3,
+      height: 3,
+    },
+    elevation: 5,
+    shadowOpacity: 0.01,
+    shadowRadius: 0,
+    overflow: "hidden",
+    borderTopWidth: 0,
+    marginLeft: 17,
+    alignSelf: "center",
+  },
+  txtAthleticAbility: {
+    color: "#121212",
+    height: 34,
+    marginTop: 61,
+    marginLeft: 9,
+  },
+  btn6: {
+    width: 100,
+    height: 100,
+    backgroundColor: "#E6E6E6",
+    borderWidth: 0,
+    borderColor: "#000000",
+    borderRadius: 5,
+    shadowColor: "rgba(0,0,0,1)",
+    shadowOffset: {
+      width: 3,
+      height: 3,
+    },
+    elevation: 5,
+    shadowOpacity: 0.01,
+    shadowRadius: 0,
+    overflow: "hidden",
+    borderTopWidth: 0,
+    marginLeft: 21,
+    marginTop: 10,
+  },
+  icon: {
+    color: "rgba(128,128,128,1)",
+    fontSize: 35,
+    marginTop: 33,
+    alignSelf: "center",
+  },
+  viewAll: {
+    color: "#121212",
+    marginTop: 4,
+    alignSelf: "center",
+  },
+  txtrecommended_grp: {
+    height: 40,
+    justifyContent: "center",
+    marginTop: 25,
+  },
+  recommended: {
+    color: "#121212",
     fontSize: 20,
-    height: 45,
+    marginLeft: 16,
+    fontWeight: "bold",
+  },
+  scrollArea2: {
+    height: 120,
+  },
+  scrollArea2_contentContainerStyle: {
+    width: 710,
+    height: 120,
+    flexDirection: "row",
+  },
+  button: {
+    width: 100,
+    height: 100,
+    backgroundColor: "#E6E6E6",
+    borderWidth: 0,
+    borderColor: "#000000",
+    borderRadius: 5,
+    shadowColor: "rgba(0,0,0,1)",
+    shadowOffset: {
+      width: 3,
+      height: 3,
+    },
+    elevation: 5,
+    shadowOpacity: 0.01,
+    shadowRadius: 0,
+    overflow: "hidden",
+    borderTopWidth: 0,
+    marginLeft: 18,
+    alignSelf: "center",
+  },
+  placeHolder1: {
+    color: "#121212",
+    marginTop: 60,
+    marginLeft: 9,
+  },
+  button2: {
+    width: 100,
+    height: 100,
+    backgroundColor: "#E6E6E6",
+    borderWidth: 0,
+    borderColor: "#000000",
+    borderRadius: 5,
+    shadowColor: "rgba(0,0,0,1)",
+    shadowOffset: {
+      width: 3,
+      height: 3,
+    },
+    elevation: 5,
+    shadowOpacity: 0.01,
+    shadowRadius: 0,
+    overflow: "hidden",
+    borderTopWidth: 0,
+    marginLeft: 12,
+    alignSelf: "center",
+  },
+  placeHolder2: {
+    color: "#121212",
+    marginTop: 59,
+    marginLeft: 8,
+  },
+  button3: {
+    width: 100,
+    height: 100,
+    backgroundColor: "#E6E6E6",
+    borderWidth: 0,
+    borderColor: "#000000",
+    borderRadius: 5,
+    shadowColor: "rgba(0,0,0,1)",
+    shadowOffset: {
+      width: 3,
+      height: 3,
+    },
+    elevation: 5,
+    shadowOpacity: 0.01,
+    shadowRadius: 0,
+    overflow: "hidden",
+    borderTopWidth: 0,
+    marginLeft: 14,
+    alignSelf: "center",
+  },
+  placeHolder3: {
+    color: "#121212",
+    marginTop: 59,
+    marginLeft: 9,
+  },
+  button4: {
+    width: 100,
+    height: 100,
+    backgroundColor: "#E6E6E6",
+    borderWidth: 0,
+    borderColor: "#000000",
+    borderRadius: 5,
+    shadowColor: "rgba(0,0,0,1)",
+    shadowOffset: {
+      width: 3,
+      height: 3,
+    },
+    elevation: 5,
+    shadowOpacity: 0.01,
+    shadowRadius: 0,
+    overflow: "hidden",
+    borderTopWidth: 0,
+    marginLeft: 15,
+    alignSelf: "center",
+  },
+  placeHolder4: {
+    color: "#121212",
+    marginTop: 59,
+    marginLeft: 9,
+  },
+  button5: {
+    width: 100,
+    height: 100,
+    backgroundColor: "#E6E6E6",
+    borderWidth: 0,
+    borderColor: "#000000",
+    borderRadius: 5,
+    shadowColor: "rgba(0,0,0,1)",
+    shadowOffset: {
+      width: 3,
+      height: 3,
+    },
+    elevation: 5,
+    shadowOpacity: 0.01,
+    shadowRadius: 0,
+    overflow: "hidden",
+    borderTopWidth: 0,
+    marginLeft: 17,
+    alignSelf: "center",
+  },
+  placeHolder5: {
+    color: "#121212",
+    marginTop: 59,
+    marginLeft: 9,
+  },
+  button6: {
+    width: 100,
+    height: 100,
+    backgroundColor: "#E6E6E6",
+    borderWidth: 0,
+    borderColor: "#000000",
+    borderRadius: 5,
+    shadowColor: "rgba(0,0,0,1)",
+    shadowOffset: {
+      width: 3,
+      height: 3,
+    },
+    elevation: 5,
+    shadowOpacity: 0.01,
+    shadowRadius: 0,
+    overflow: "hidden",
+    borderTopWidth: 0,
+    marginLeft: 18,
+    marginTop: 10,
+  },
+  icon1: {
+    color: "rgba(128,128,128,1)",
+    fontSize: 35,
+    marginTop: 33,
+    alignSelf: "center",
+  },
+  viewAll1: {
+    color: "#121212",
+    marginTop: 4,
+    alignSelf: "center",
   },
 });

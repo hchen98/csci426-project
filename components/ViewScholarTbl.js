@@ -1,3 +1,6 @@
+// DO NOT USE THIS FILE UNLESS OTHERWISE 
+// THIS MESSAGE IS REMOVED!!!
+
 import React from "react";
 import { StyleSheet, Text, View, ActivityIndicator } from "react-native";
 import { FlatList } from "react-native-gesture-handler";
@@ -6,14 +9,16 @@ import firebase from "../db/firebaseDB";
 // disable the yellow warning message box
 console.disableYellowBox = true;
 
-export default class ViewSubCate extends React.Component {
+export default class ViewScholarTbl extends React.Component {
   // navigation.setOptions({ headerTitle: 'Search Screen' })
   constructor(props) {
     super(props);
     this.firestoreRef = firebase
       .firestore()
       .collection("scholar_dir")
-      .doc(this.props.route.params.itemKey);
+      // .where("Terms", "==", this.props.route.params.itemKey);
+      // since "Terms" attribute is a dict, we have to use 'in'
+      .where("Terms", "in", this.props.route.params.itemKey);
 
     this.state = {
       isLoading: true,
@@ -36,11 +41,10 @@ export default class ViewSubCate extends React.Component {
     // temp => ("sub category title", ["i", "j", "k"])
     const valArr = temp[this.state.subCate];
     this.setState({
-      scholarArr: valArr,
+      scholarArr: valArr, 
       isLoading: false,
     });
-    console.log("The subcategory is: " + this.state.subCate);
-    // console.log(this.state.scholarArr);
+    console.info("Data retrived from FireStore!");
   }
 
   FlatListItemSeparator = () => {
@@ -67,7 +71,7 @@ export default class ViewSubCate extends React.Component {
                 // we are able to navigate to "ViewSubCate"
                 // since it is one of the stack screens in App.js
                 // therefore, no need to import in this screen
-                this.props.navigation.navigate('ViewScholarTbl', {
+                this.props.navigation.navigate('ViewSubCate', {
                   title: (item + " List"),
                   itemKey: item,
                 });

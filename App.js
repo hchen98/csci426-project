@@ -10,13 +10,14 @@ import { Ionicons } from "@expo/vector-icons";
 import FeatherIcon from "react-native-vector-icons/Feather";
 import MaterialCommunityIconsIcon from "react-native-vector-icons/MaterialCommunityIcons";
 
-import HomeScreen2 from "./components/HomeScreen2";
+import HomeScreen from "./components/HomeScreen";
 import SearchScreen from "./components/SearchScreen";
 import AccScreen from "./components/AccScreen";
 import InputScreen1 from "./components/InputInfoScreen1";
 import InputScreen2 from "./components/InputInfoScreen2";
 import ViewAllScholar from "./components/ViewAllScholar";
 import ViewSubCate from "./components/ViewSubCate";
+import ViewScholarTbl from "./components/ViewScholarTbl";
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -32,7 +33,6 @@ function LoginPage(props) {
 }
 
 function TabScreens({ usr }) {
-  console.log("Tab Screen Called: " + usr);
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
@@ -61,7 +61,7 @@ function TabScreens({ usr }) {
       <Tab.Screen
         name="Home"
         options={{ title: "Home" }}
-        component={HomeScreen2}
+        component={HomeScreen}
       />
       <Tab.Screen
         name="Search"
@@ -127,8 +127,16 @@ export default class App extends Component {
           <Stack.Screen name={"Home"}>
             {() => <TabScreens usr={this.state.usrProfile} />}
           </Stack.Screen>
-          <Stack.Screen name={"InputScreen1"} component={InputScreen1} />
-          <Stack.Screen name={"InputScreen2"} component={InputScreen2} />
+          <Stack.Screen
+            name={"InputScreen1"}
+            component={InputScreen1}
+            options={{ title: "Required Info" }}
+          />
+          <Stack.Screen
+            name={"InputScreen2"}
+            component={InputScreen2}
+            options={{ title: "Optional Info" }}
+          />
           <Stack.Screen
             name={"ViewSubCate"}
             component={ViewSubCate}
@@ -139,6 +147,11 @@ export default class App extends Component {
             name={"ViewAllScholar"}
             component={ViewAllScholar}
             options={{ title: "Scholarship Categories" }}
+          />
+          <Stack.Screen
+            name={"ViewScholarTbl"}
+            component={ViewScholarTbl}
+            options={({ route }) => ({ title: route.params.title })}
           />
         </Stack.Navigator>
       </NavigationContainer>

@@ -63,7 +63,7 @@ export default class ViewAllScholar extends React.Component {
                 // therefore, no need to import in this screen
                 this.props.navigation.navigate('ViewSubCate', {
                   title: (item.key + " List"),
-                  userkey: item.key,
+                  itemKey: item.key,
                 });
               }}
             > {item.key} </Text>
