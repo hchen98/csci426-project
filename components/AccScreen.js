@@ -11,9 +11,7 @@ import { useNavigation } from "@react-navigation/native";
 import { withNavigation } from "react-navigation";
 
 // import GlobalState from "../experiments/GlobalState";
-import Banner from "./Banner";
-import InputScreen1 from "./InputInfoScreen1";
-import InputScreen2 from "./InputInfoScreen2";
+import AddProfile from "./ui/AddProfile";
 
 export default function AccScreen({ usr_info }) {
   // init things for the log in
@@ -37,7 +35,7 @@ export default function AccScreen({ usr_info }) {
           </View>
         </View>
 
-        <Banner/ >
+        <AddProfile/ >
 
         <TouchableOpacity
           // onPress={() => navigation.navigate("Untitled")}

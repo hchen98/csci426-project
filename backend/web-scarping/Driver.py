@@ -284,7 +284,7 @@ try:
     for x in range(0, len(L1_link)):
         if "Military Affiliation" == L1_title[x]:
             # special case, no sub-category
-            break
+            continue
         driver.get(L1_link[x])
         # scraping level 2
         level2_tbl = search_level_tbl()
@@ -300,12 +300,11 @@ try:
             break
 
         driver.get(L1_link[x])
+        
         # scraping level 2
         level2_tbl = search_level_tbl()
         L2_link, L2_title = scraping_levels(level2_tbl)
-        # for item in L2_title:
-        #     print(counter, ": ", item)
-        #     counter = counter + 1
+        
         for y in range(0, len(L2_link)):
             driver.get(L2_link[y])
             L3_link, L3_title = get_scholar_tbl()

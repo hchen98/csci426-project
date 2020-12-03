@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import {
   StyleSheet,
   View,
@@ -6,11 +6,9 @@ import {
   TextInput,
   TouchableOpacity
 } from "react-native";
-// import { useNavigation } from '@react-navigation/native';
 import InputScreen2 from "./InputInfoScreen2";
 
 export default function InputScreen1({navigation}) {
-  // const navigation = useNavigation();
 
   return (
     <View style={styles.container}>

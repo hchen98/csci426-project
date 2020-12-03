@@ -10,12 +10,13 @@ import { Ionicons } from "@expo/vector-icons";
 import FeatherIcon from "react-native-vector-icons/Feather";
 import MaterialCommunityIconsIcon from "react-native-vector-icons/MaterialCommunityIcons";
 
-import HomeSignedScreen from "./components/HomeSignedScreen";
-// import HomeNoSignScreen from "./components/HomeNoSignScreen";
+import HomeScreen2 from "./components/HomeScreen2";
 import SearchScreen from "./components/SearchScreen";
 import AccScreen from "./components/AccScreen";
 import InputScreen1 from "./components/InputInfoScreen1";
 import InputScreen2 from "./components/InputInfoScreen2";
+import ViewAllScholar from "./components/ViewAllScholar";
+import ViewSubCate from "./components/ViewSubCate";
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -59,15 +60,15 @@ function TabScreens({ usr }) {
     >
       <Tab.Screen
         name="Home"
-        options={{ title: "Home Screen" }}
-        component={HomeSignedScreen}
+        options={{ title: "Home" }}
+        component={HomeScreen2}
       />
       <Tab.Screen
         name="Search"
         component={SearchScreen}
-        options={{ title: "Search Screen" }}
+        options={{ title: "Search" }}
       />
-      <Tab.Screen name="Account" options={{ title: "Account Screen" }}>
+      <Tab.Screen name="Account">
         {() => <AccScreen usr_info={usr} />}
       </Tab.Screen>
     </Tab.Navigator>
@@ -119,25 +120,31 @@ export default class App extends Component {
   };
 
   render() {
-    if (this.state.usrProfile.signedIn) {
-      return (
-        <NavigationContainer>
-          <Stack.Navigator>
-            <Stack.Screen name={"Home"}>
-              {() => <TabScreens usr={this.state.usrProfile} />}
-            </Stack.Screen>
-            <Stack.Screen name={"InputScreen1"} component={InputScreen1} />
-            <Stack.Screen name={"InputScreen2"} component={InputScreen2} />
-          </Stack.Navigator>
-        </NavigationContainer>
-      );
-    } else {
-      return (
-        <View style={styles.container}>
-          <LoginPage signIn={this.signIn} />
-        </View>
-      );
-    }
+    // if (this.state.usrProfile.signedIn) {
+    return (
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name={"Home"}>
+            {() => <TabScreens usr={this.state.usrProfile} />}
+          </Stack.Screen>
+          <Stack.Screen name={"InputScreen1"} component={InputScreen1} />
+          <Stack.Screen name={"InputScreen2"} component={InputScreen2} />
+          <Stack.Screen name={"ViewSubCate"} component={ViewSubCate} />
+          <Stack.Screen
+            name={"ViewAllScholar"}
+            component={ViewAllScholar}
+            options={{ title: "Scholarship Categories" }}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
+    );
+    // } else {
+    //   return (
+    //     <View style={styles.container}>
+    //       <LoginPage signIn={this.signIn} />
+    //     </View>
+    //   );
+    // }
   }
 }
 
