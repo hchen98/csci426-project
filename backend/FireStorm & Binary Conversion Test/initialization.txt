@@ -2,3 +2,6 @@
 #Also that the json file is in the same folder as the python app
 
 pip install --upgrade firebase-admin
+
+#For zipcode module
+pip install pyzipcode
