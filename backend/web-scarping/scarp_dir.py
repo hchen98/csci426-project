@@ -6,7 +6,7 @@ from selenium.webdriver.firefox.options import Options
 import time
 import random
 import logging
-import threading
+# import threading
 from google.cloud import firestore
 import firebase_admin
 from firebase_admin import credentials
@@ -160,21 +160,22 @@ try:
         L2_link, L2_title = scraping_levels(level2_tbl)
 
         for y in range(0, len(L2_link)):
+            print(L2_link[y], "\n", L2_title)
+            print("=======================================")
+            # scholarship_dist[L1_title[x]] = (L2_title)
 
-            scholarship_dist[L1_title[x]] = (L2_title)
-
-    cred = credentials.Certificate('/home/hui/Desktop/google-service-account_CSCI426.json')
-    firebase_admin.initialize_app(cred)
-    db = firestore.client()
+    # cred = credentials.Certificate('/home/hui/Desktop/google-service-account_CSCI426.json')
+    # firebase_admin.initialize_app(cred)
+    # db = firestore.client()
 
 
-    scholarship_list = list(scholarship_dist)
-    for i in range(0, len(scholarship_list)):
-        # Insert the data!
-        doc_name = scholarship_list[i]
-        insert_collection(db, doc_name, scholarship_dist[doc_name])
+    # scholarship_list = list(scholarship_dist)
+    # for i in range(0, len(scholarship_list)):
+    #     # Insert the data!
+    #     doc_name = scholarship_list[i]
+    #     insert_collection(db, doc_name, scholarship_dist[doc_name])
 
-    print("Data Insert!")
+    # print("Data Insert!")
     
 finally:
     try:

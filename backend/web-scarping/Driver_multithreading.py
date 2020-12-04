@@ -3,8 +3,23 @@ from selenium.webdriver.firefox.options import Options
 import time
 import random
 import logging
-import threading
-# import concurrent.futures
+# import threading
+from queue import Queue
+import concurrent.futures
+
+################# RECENTLY ADDED ####################
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import firestore
+
+cred = credentials.Certificate(
+    "testing-845eb-firebase-adminsdk-cckoe-bf65029977.json")
+firebase_admin.initialize_app(cred)
+
+db = firestore.client()
+
+scholar_ref = db.collection("OfficialScholar")
+######################################################
 
 logging.basicConfig(format='%(asctime)s - %(message)s', level=logging.INFO)
 
@@ -14,23 +29,6 @@ LOGIN_URL = "https://www.scholarships.com/login"
 
 USERNAME = "csci426@protonmail.com"
 PASSWORD = "2QAaF5hjc$@k"
-
-
-def get_driver():
-    # config firefox profile
-    fp = webdriver.FirefoxProfile()
-    fp.set_preference("http.response.timeout", 5)
-    fp.set_preference("dom.max_scrit_run_time", 5)
-
-    fo = webdriver.FirefoxOptions()
-    # set headless so that no browser is displayed
-    fo.headless = True
-    fo.add_argument('--disable-extensions')
-    fo.add_argument('--disable-infobars')
-
-    # create a driver
-    global driver
-    driver = webdriver.Firefox(firefox_profile=fp, options=fo)
 
 
 def simulate_login():
@@ -105,7 +103,7 @@ def scraping_scholar_tbl(tr_ele):
         scholar_link.append(L3_link)
         # print(temp.text, ":\n", L3_link, "\n\n")
         # sleep to ensure IP address is not blocked
-        # time.sleep(random.randint(1, 6))
+        time.sleep(random.randint(1, 6))
 
     return scholar_link, scholar_tit
 
@@ -124,7 +122,8 @@ def get_specific():
     ava = temp[2].text
 
     # get direct apply link
-    temp = driver.find_element_by_css_selector(".award-info-action-items [href]")
+    temp = driver.find_element_by_css_selector(
+        ".award-info-action-items [href]")
     temp = temp.get_attribute("href")
     # need to parse here since the site will open another window event with js
     spliter = temp.split(",")
@@ -159,7 +158,7 @@ def get_specific():
     test.append(contact_info)
 
     test_write2file(test)
-    # return amount, deadline, ava, dir_link, description, contact_info
+    return amount, deadline, ava, dir_link, description, contact_info
 
 
 def test_write2file(item):
@@ -170,72 +169,179 @@ def test_write2file(item):
             writer.write(str(x) + "\n")
 
         writer.write("======================================\n\n")
-        logging.info("Finished writing")
         writer.close()
 
 
-def thread_func():
-    try:
-        # open the root page
-        driver.get(ROOT_URL)
-
-        # scraping level 1
-        level_1_tbl = search_level_tbl()
-        L1_link, L1_title = scraping_levels(level_1_tbl)
-
-        counter = 1
-        for x in range(0, len(L1_link)):
-            if "Military Affiliation" == L1_title[x]:
-                # special case, no sub-category
-                break
-
-            driver.get(L1_link[x])
-            # scraping level 2
-            level2_tbl = search_level_tbl()
-            L2_link, L2_title = scraping_levels(level2_tbl)
-            # for item in L2_title:
-            #     print(counter, ": ", item)
-            #     counter = counter + 1
-            for y in range(0, len(L2_link)):
-                driver.get(L2_link[y])
-                L3_link, L3_title = get_scholar_tbl()
-
-                # scraping for level 3
-                for z in range(0, len(L3_link)):
-                    driver.get(L3_link[z])
-                    # amount, deadline, ava, dir_link, description, contact_info = get_specific()
-                    get_specific()
-                    logging.info("Logging at " + str(counter))
-                    counter = counter + 1
-
-    finally:
-        try:
-            driver.close()
-        except Exception as e:
-            logging.error("Error due to exception: \n", str(e))
-            pass
+########################### RECENTLY ADDED ###########################################
+#Firestore methods used
 
 
-try:
-    get_driver()
+#Inputs new scholarship into the firestore
+#Input -> All attributes of scholarship
+#Output -> None
+def addScholarship(docdirect, name, amount, deadline, ava, dir_link,
+                   description, contact_info, binary):
+    docdirect.add({
+        u'Name': name,
+        u'Amount': amount,
+        u'Deadline': deadline,
+        u'Awards Available': ava,
+        u'Direct Link': dir_link,
+        u'Description': description,
+        u'Contact Info': contact_info,
+        u'Binary': binary,
+        u'Terms': {}
+    })
+
+
+#Updates the term array in firestore
+#Input-> id to locate the scholarship, term
+#Output-> None
+def updateTerms(schol_id, term):
+    scholar_ref.document(schol_id).update(
+        {u'Terms': firestore.ArrayUnion([term])})
+
+
+#Get id of the scholarship generated by firestore
+#Input -> name of the scholarship, treated as a primary key
+#Output -> id of the scholarship
+def get_ScholID(name):
+    doc_id = 'None'
+    doc_find = scholar_ref.where(u'Name', u'==', name).stream()
+    for i in doc_find:
+        doc_id = i.id
+    return str(doc_id)
+
+
+#splits the string to array
+#input -> string
+#output -> char array
+def split(word):
+    return [char for char in word]
+
+
+#converts list to string
+#Input -> list
+#output -> array
+def toString(list):
+    str = ""
+    return (str.join(list))
+
+
+#Finds the index of the word based on a table generated from the driver
+#Input -> string, the word
+#output -> int, the index
+def catIndex(word):
+    ind = refList.index(word)
+    return ind
+
+
+#Updates the binary based on the word in firestore
+#Input -> int, string, the id of the scholarship and the term
+#Output -> none
+def updateBin(id, word):
+    userBin = scholar_ref.document(id).get().to_dict().get('Binary')
+    ind = catIndex(word)
+    list = split(userBin)
+    list[ind] = "1"
+    binaryStr = toString(list)
+    scholar_ref.document(id).update({'Binary': binaryStr})
+
+
+#String to generate the inital binary array of 504 bits because I'm lazy to type it out =D
+binaryInitial = '0' * 504
+#######################################################
+
+
+def intialDriver():
+    # config firefox profile
+    fp = webdriver.FirefoxProfile()
+    fp.set_preference("http.response.timeout", 5)
+    fp.set_preference("dom.max_scrit_run_time", 2)
+    fp.set_preference("javascript.enabled", False)
+
+    fo = webdriver.FirefoxOptions()
+    # set headless so that no browser is displayed
+    fo.headless = True
+    fo.add_argument('--disable-extensions')
+    fo.add_argument('--disable-infobars')
+    fo.add_argument('--disable-javascript')
+
+    # create a driver
+    global driver
+    driver = webdriver.Firefox(firefox_profile=fp, options=fo)
+    # return driver
+
+
+def categoryScraping():
+    # initialize the browser driver
+    intialDriver()
+
     # simulation login
     simulate_login()
 
-    t1 = threading.Thread(target=thread_func)
-    t2 = threading.Thread(target=thread_func)
-    t3 = threading.Thread(target=thread_func)
-    t4 = threading.Thread(target=thread_func)
+    # open the root page
+    driver.get(ROOT_URL)
 
-    t1.start()
-    t2.start()
-    t3.start()
-    t4.start()
-
-    t1.join()
-    t2.join()
-    t3.join()
-    t4.join()
+    # scraping level 1
+    level_1_tbl = search_level_tbl()
+    L1_link, L1_title = scraping_levels(level_1_tbl)
+    return L1_link, L1_title
 
 
-except:
-    logging.warning("Threads down")
+def thread_func(L1_link, L1_title):
+    counter = 1
+    refList = []
+    if "Military Affiliation" == L1_title:
+        # special case, no sub-category
+        driver.get(L1_link)
+        military_link, military_title = get_scholar_tbl()
+        for item in military_link:
+            driver.get(item)
+            get_specific()
+    else:
+        driver.get(L1_link)
+
+        # scraping level 2
+        level2_tbl = search_level_tbl()
+        L2_link, L2_title = scraping_levels(level2_tbl)
+        refList.extend(L2_title)
+        for y in range(0, len(L2_link)):
+            driver.get(L2_link[y])
+            L3_link, L3_title = get_scholar_tbl()
+
+            # scraping for level 3
+            for z in range(0, len(L3_link)):
+                driver.get(L3_link[z])
+                get_specific()
+
+                # amount, deadline, ava, dir_link, description, contact_info = get_specific()
+
+                # ################# RECENTLY ADDED #################
+                # #If statement for if id exists
+                # id= get_ScholID(L3_title[z])
+                # if id == 'None':
+                #     addScholarship(scholar_ref, L3_title[z], amount, deadline, ava, dir_link, description, contact_info, binaryInitial)
+                #     id = get_ScholID(L3_title[z])
+                # #Updates term list and binary string
+                # updateTerms(id, L2_title[y])
+                # updateBin(id, L2_title[y])
+                # #################################################
+
+                logging.info("Logging at " + str(counter))
+                counter = counter + 1
+
+
+if __name__ == "__main__":
+    L1_link, L1_title = categoryScraping()
+    category_size = len(L1_link)
+    link = Queue(maxsize=category_size)
+    link = L1_link
+    titile = Queue(maxsize=category_size)
+    title = L1_title
+
+    with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+        while link.full():
+            i = link.get()
+            j = title.get()
+            executor.submit(thread_func, i, j)
