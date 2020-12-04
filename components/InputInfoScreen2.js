@@ -232,7 +232,7 @@ export default class InputScreen2 extends React.Component {
                       this.state.major,
                       this.state.race,
                       this.state.religion,
-                      this.state.Disabilities,
+                      this.state.disability,
                       this.state.Sat,
                       this.state.Act,
                       this.state.address01,
