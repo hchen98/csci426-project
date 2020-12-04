@@ -17,7 +17,7 @@ table_Ref = db.collection("Index Table").document("Terms")
 refList = table_Ref.get().to_dict().get('Terms')
 
 #Used to initiation user or update their information, specify when using optional attributes
-def updtUser(userEmail, gender, dob, zipC, gpa, major = ' ', race = ' ', religion = ' ', dissabilities = ' ', sat = ' ', act = ' ', address1 = ' ', address2 = ' ' ):
+def updtUser(userEmail, gender, dob, zipC, gpa, major = ' ', race = ' ', religion = ' ', dissabilities = ' ', sat = ' ', act = ' ', address1 = ' ', address2 = ' ', address3 = ' ' ):
     
     list1 = [gender]
     list1.append(catAge(dob))
@@ -43,12 +43,14 @@ def updtUser(userEmail, gender, dob, zipC, gpa, major = ' ', race = ' ', religio
         u'Zip' : zipC,
         u'GPA' : gpa,
         u'Major': major,
+	u'Race' : race,
         u'Relgion' : religion,
         u'Dissabilities' : dissabilities,
         u'SAT Score': sat,
         u'ACT Score' : act,
         u'Address 1' : address1,
         u'Address 2' : address2,
+	u'Address 3' : address3,
         u'Binary' : binary, 
         u'Terms' : list1
 })
