@@ -12,13 +12,11 @@ export default class InputScreen1 extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      required_info: {
-        email: this.props.route.params.email,
-        gender: "",
-        dob: "",
-        zip: "",
-        gpa: "",
-      },
+      email: this.props.email,
+      gender: "",
+      dob: "",
+      zip: "",
+      gpa: "",
     };
     this.handleGender = this.handleGender.bind(this);
     this.handleDOB = this.handleDOB.bind(this);
@@ -28,33 +26,25 @@ export default class InputScreen1 extends React.Component {
 
   handleGender(text) {
     this.setState({
-      required_info: {
-        gender: text,
-      },
+      gender: text,
     });
   }
 
   handleDOB(text) {
     this.setState({
-      required_info: {
-        dob: text,
-      },
+      dob: text,
     });
   }
 
   handleZip(text) {
     this.setState({
-      required_info: {
-        zip: text,
-      },
+      zip: text,
     });
   }
 
   handleGPA(text) {
     this.setState({
-      required_info: {
-        gpa: text,
-      },
+      gpa: text,
     });
   }
 
@@ -104,7 +94,11 @@ export default class InputScreen1 extends React.Component {
               <TouchableOpacity
                 onPress={() =>
                   this.props.navigation.navigate("InputScreen2", {
-                    requiredInfo: this.state.required_info,
+                    email: this.state.email,
+                    gender: this.state.gender,
+                    dob: this.state.dob,
+                    zip: this.state.zip,
+                    gpa: this.state.gpa,
                   })
                 }
                 style={styles.btn_submit}

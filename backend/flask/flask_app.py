@@ -30,7 +30,8 @@ def assignProfile():
 
     # AA01 profile set code used in RN
     response = "AA01"
-    response.status_code = 202
+    response = jsonify(response)
+    response.statue_code = 202
     return response
 
 

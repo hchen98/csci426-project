@@ -120,49 +120,49 @@ export default class App extends Component {
   };
 
   render() {
-    // if (this.state.usrProfile.signedIn) {
-    return (
-      <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen name={"Home"}>
-            {() => <TabScreens usr={this.state.usrProfile} />}
-          </Stack.Screen>
-          <Stack.Screen
-            name={"InputScreen1"}
-            component={InputScreen1}
-            options={{ title: "Required Info" }}
-          />
-          <Stack.Screen
-            name={"InputScreen2"}
-            component={InputScreen2}
-            options={{ title: "Optional Info" }}
-          />
-          <Stack.Screen
-            name={"ViewSubCate"}
-            component={ViewSubCate}
-            // pass down the screen header bar title
-            options={({ route }) => ({ title: route.params.title })}
-          />
-          <Stack.Screen
-            name={"ViewAllScholar"}
-            component={ViewAllScholar}
-            options={{ title: "Scholarship Categories" }}
-          />
-          <Stack.Screen
-            name={"ViewScholarTbl"}
-            component={ViewScholarTbl}
-            options={({ route }) => ({ title: route.params.title })}
-          />
-        </Stack.Navigator>
-      </NavigationContainer>
-    );
-    // } else {
-    //   return (
-    //     <View style={styles.container}>
-    //       <LoginPage signIn={this.signIn} />
-    //     </View>
-    //   );
-    // }
+    if (this.state.usrProfile.signedIn) {
+      return (
+        <NavigationContainer>
+          <Stack.Navigator>
+            <Stack.Screen name={"Home"}>
+              {() => <TabScreens usr={this.state.usrProfile} />}
+            </Stack.Screen>
+            <Stack.Screen
+              name={"InputScreen1"}
+              component={InputScreen1}
+              options={{ title: "Required Info" }}
+            />
+            <Stack.Screen
+              name={"InputScreen2"}
+              component={InputScreen2}
+              options={{ title: "Optional Info" }}
+            />
+            <Stack.Screen
+              name={"ViewSubCate"}
+              component={ViewSubCate}
+              // pass down the screen header bar title
+              options={({ route }) => ({ title: route.params.title })}
+            />
+            <Stack.Screen
+              name={"ViewAllScholar"}
+              component={ViewAllScholar}
+              options={{ title: "Scholarship Categories" }}
+            />
+            <Stack.Screen
+              name={"ViewScholarTbl"}
+              component={ViewScholarTbl}
+              options={({ route }) => ({ title: route.params.title })}
+            />
+          </Stack.Navigator>
+        </NavigationContainer>
+      );
+    } else {
+      return (
+        <View style={styles.container}>
+          <LoginPage signIn={this.signIn} />
+        </View>
+      );
+    }
   }
 }
 

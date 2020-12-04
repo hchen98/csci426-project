@@ -15,8 +15,11 @@ export default class InputScreen2 extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      profile_required: this.props.route.params.requiredInfo,
-      profile_opt: {
+        email: this.props.route.params.email,
+        gender: this.props.route.params.gender,
+        dob: this.props.route.params.dob,
+        zip: this.props.route.params.zip,
+        gpa: this.props.route.params.gpa,
         major: "",
         race: "",
         religion: "",
@@ -26,7 +29,6 @@ export default class InputScreen2 extends React.Component {
         address01: "",
         address02: "",
         address03: "",
-      },
     };
     this.handleAcamajor = this.handleAcamajor.bind(this);
     this.handleRace = this.handleRace.bind(this);
@@ -41,101 +43,121 @@ export default class InputScreen2 extends React.Component {
 
   handleAcamajor(text) {
     this.setState({
-      profile_opt: {
         major: text,
-      },
     });
   }
 
   handleRace(text) {
     this.setState({
-      profile_opt: {
         race: text,
-      },
     });
   }
 
   handleReligion(text) {
     this.setState({
-      profile_opt: {
         religion: text,
-      },
     });
   }
 
   handleDisability(text) {
     this.setState({
-      profile_opt: {
         Disabilities: text,
-      },
     });
   }
 
   handleSAT(text) {
     this.setState({
-      profile_opt: {
         Sat: text,
-      },
     });
   }
 
   handleACT(text) {
     this.setState({
-      profile_opt: {
         Act: text,
-      },
     });
   }
 
   handleAdd01(text) {
     this.setState({
-      profile_opt: {
         address01: text,
-      },
     });
   }
 
   handleAdd02(text) {
     this.setState({
-      profile_opt: {
         address02: text,
-      },
     });
   }
 
   handleAdd03(text) {
     this.setState({
-      profile_opt: {
         address03: text,
-      },
     });
   }
 
   upload2sever = () => {
-    fetch("https://879099766.pythonanywhere.com/api/v1/csci426", {
+    fetch("http://3.137.203.74:8080/api/v1/csci426/profileInput", {
       method: "POST",
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        signedIn: usr_obj.signedIn,
-        full_name: usr_obj.full_name,
-        last_name: usr_obj.last_name,
-        first_name: usr_obj.first_name,
-        photoUrl: usr_obj.photoUrl,
-        email: usr_obj.email,
+        'Email': this.state.email,
+        'Gender': this.state.gender,
+        'dob': this.state.dob,
+        'Zip': this.state.zip,
+        'GPA': this.state.gpa,
+        'Major': this.state.major,
+        'Race': this.state.race,
+        'Religion': this.state.religion,
+        'Disabilities': this.state.Disabilities,
+        'SAT Score': this.state.Sat,
+        'ACT Score': this.state.Act,
+        "Address 1": this.state.address01,
+        "Address 2": this.state.address02,
+        "Address 3": this.state.address03,
       }),
 
       // bodu: usr_obj
     })
-      .then((response) => {
-        if(response.status == 202){
-          Alert.alert("Status Code: " + response.text() 
-                      + "\n" + 
-                      "Your data have been successfully inserted!");
-        }
-      })
+    .then((response) => response.json())
+    .then((json) => {
+      console.log(this.props.requiredInfo);
+      console.log({
+        Email: this.state.email,
+        Gender: this.state.gender,
+        dob: this.state.dob,
+        Zip: this.state.zip,
+        GPA: this.state.gpa,
+        Major: this.state.major,
+        Race: this.state.race,
+        Religion: this.state.religion,
+        Disabilities: this.state.Disabilities,
+        'SAT Score': this.state.Sat,
+        'ACT Score': this.state.Act,
+        'Address 1': this.state.address01,
+        'Address 2': this.state.address02,
+        'Address 3': this.state.address03,
+      });
+      console.log("=================================="),
+      console.log("");
+      console.log("Server Response");
+      console.log(json);
+    })
+      // .then((response) => {
+      //   if (response.status == 202) {
+      //     Alert.alert(
+      //       "Status Code: " +
+      //         response.text() +
+      //         "\n" +
+      //         "Your data have been successfully inserted!"
+      //     );
+      //     console.log(response.json())
+      //   } else {
+      //     Alert.alert("An error occured!");
+      //   }
+      // })
       .catch((error) => {
         console.log(error);
       });
@@ -227,19 +249,7 @@ export default class InputScreen2 extends React.Component {
               </View>
               <View style={styles.submit_grp}>
                 <TouchableOpacity
-                  onPress={() =>
-                    this.p2info(
-                      this.state.major,
-                      this.state.race,
-                      this.state.religion,
-                      this.state.disability,
-                      this.state.Sat,
-                      this.state.Act,
-                      this.state.address01,
-                      this.state.address02,
-                      this.state.address03
-                    )
-                  }
+                  onPress={() => this.upload2sever()}
                   style={styles.txt_submit}
                 >
                   <Text style={styles.btn_submit}>Submit</Text>
