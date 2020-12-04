@@ -8,52 +8,8 @@ import {
 } from "react-native";
 import InputScreen2 from "./InputInfoScreen2";
 
-export default class InputScreen1 extends React.Component {
+export default function InputScreen1({navigation}) {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      gender: '',
-      dob: '',
-      zip: '',
-      gpa: '',
-
-    }
-    this.handleGender = this.handleGender.bind(this)
-    this.handleDOB = this.handleDOB.bind(this)
-    this.handleZip = this.handleZip.bind(this)
-    this.handleGPA = this.handleGPA.bind(this)
-  }
-
-  handleGender(text) {
-    this.setState({
-      gender: text
-    })
-  }
-
-  handleDOB(text) {
-    this.setState({
-      dob: text
-    })
-  }
-
-  handleZip(text) {
-    this.setState({
-      zip: text
-    })
-  }
-
-  handleGPA(text) {
-    this.setState({
-      gpa: text
-    })
-  }
-
-  p1info = (gender, dob, zip, gpa) => {
-    alert('Gender: ' + gender + "\n" + 'Data of Birth: ' + dob + "\n" + "Zip Code: " + zip + "\n" + "GPA: " + gpa)
-  }
-
-render(){
   return (
     <View style={styles.container}>
       {/* <StatusBar hidden /> */}
@@ -63,7 +19,6 @@ render(){
           <View style={styles.input1_grp}>
             <Text style={styles.txt_gender}>Gender</Text>
             <TextInput
-              onChangeText = {this.handleGender}
               placeholder="placeholder"
               style={styles.input1}
             ></TextInput>
@@ -71,7 +26,6 @@ render(){
           <View style={styles.input2_grp}>
             <Text style={styles.txt_dob}>Date of Birth</Text>
             <TextInput
-              onChangeText = {this.handleDOB}
               placeholder="mm/dd/yyyy"
               keyboardType="numeric"
               style={styles.input2}
@@ -80,7 +34,6 @@ render(){
           <View style={styles.input3_grp}>
             <Text style={styles.txt_zip}>Zip Code</Text>
             <TextInput
-              onChangeText = {this.handleZip}
               placeholder="00001"
               keyboardType="numeric"
               style={styles.input3}
@@ -89,7 +42,6 @@ render(){
           <View style={styles.input4_grp}>
             <Text style={styles.txt_gpa}>GPA</Text>
             <TextInput
-              onChangeText = {this.handleGPA}
               placeholder="4.0"
               keyboardType="numeric"
               style={styles.input4}
@@ -97,7 +49,7 @@ render(){
           </View>
           <View style={styles.submit_grp}>
             <TouchableOpacity
-              onPress={() => this.p1info(this.state.gender, this.state.dob, this.state.zip, this.state.gpa)}
+              onPress={() => navigation.navigate(InputScreen2)}
               style={styles.btn_submit}
             >
               <Text style={styles.next}>Next</Text>
@@ -107,7 +59,6 @@ render(){
       </View>
     </View>
   );
-  }
 }
 
 const styles = StyleSheet.create({
@@ -226,3 +177,4 @@ const styles = StyleSheet.create({
     alignSelf: "center"
   }
 });
+

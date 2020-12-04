@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import {
   StyleSheet,
   View,
@@ -6,10 +6,108 @@ import {
   TextInput,
   TouchableOpacity,
   Dimensions,
+  Alert
 } from "react-native";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
+import { act } from "react-test-renderer";
 
-export default function InputScreen2({ navigation }) {
+
+export default class InputScreen2 extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      acamajor: '',
+      race: '',
+      religion: '',
+      disability: '',
+      Sat: '',
+      Act: '',
+      address01: '',
+      address02: '',
+      address03: ''
+    }
+    this.handleAcamajor = this.handleAcamajor.bind(this)
+    this.handleRace = this.handleRace.bind(this)
+    this.handleReligion = this.handleReligion.bind(this)
+    this.handleDisability = this.handleDisability.bind(this)
+    this.handleSAT = this.handleSAT.bind(this)
+    this.handleACT = this.handleACT.bind(this)
+    this.handleAdd01 = this.handleAdd01.bind(this)
+    this.handleAdd02 = this.handleAdd02.bind(this)
+    this.handleAdd03 = this.handleAdd03.bind(this)
+  }
+
+  handleAcamajor(text) {
+    this.setState({
+      acamajor: text
+    })
+  }
+
+  handleRace(text) {
+    this.setState({
+      race: text
+    })
+  }
+
+  handleReligion(text) {
+    this.setState({
+      religion: text
+    })
+  }
+
+  handleDisability(text) {
+    this.setState({
+      disability: text
+    })
+  }
+
+  handleSAT(text) {
+    this.setState({
+      Sat: text
+    })
+  }
+
+  handleACT(text) {
+    this.setState({
+      Act: text
+    })
+  }
+
+  handleAdd01(text) {
+    this.setState({
+      address01: text
+    })
+  }
+
+  handleAdd02(text) {
+    this.setState({
+      address02: text
+    })
+  }
+
+  handleAdd03(text) {
+    this.setState({
+      address03: text
+    })
+  }
+
+  p2info = (acamajor, race, religion, disability, Sat, Act, address01, address02, address03) => 
+  {
+    alert("Academic Major: " + acamajor + "\n" 
+          + "Race: " + race + "\n" 
+          + "Religion: " + religion + "\n"
+          + "Disabilities: " + disability + "\n"
+          + "SAT: " + Sat + "\n"
+          + "ACT: " + Act + "\n"
+          + "Address01: " + address01 + "\n" 
+          + "Address02: " + address02 + "\n"
+          + "Address03: " + address03)
+  }
+
+
+
+render() {  
   return (
     <View style={styles.container}>
       <KeyboardAwareScrollView
@@ -25,6 +123,7 @@ export default function InputScreen2({ navigation }) {
             <View style={styles.grp1}>
               <Text style={styles.txt_major}>Academic Major</Text>
               <TextInput
+                onChangeText = {this.handleAcamajor}
                 placeholder="placeholder"
                 style={styles.input1}
               ></TextInput>
@@ -32,6 +131,7 @@ export default function InputScreen2({ navigation }) {
             <View style={styles.grp2}>
               <Text style={styles.txt_race}>Race</Text>
               <TextInput
+                onChangeText = {this.handleRace}
                 placeholder="placeholder"
                 keyboardType="default"
                 style={styles.input2}
@@ -40,6 +140,7 @@ export default function InputScreen2({ navigation }) {
             <View style={styles.grp3}>
               <Text style={styles.txt_religion}>Religion</Text>
               <TextInput
+                onChangeText = {this.handleReligion}
                 placeholder="placeholder"
                 keyboardType="default"
                 style={styles.input3}
@@ -48,6 +149,7 @@ export default function InputScreen2({ navigation }) {
             <View style={styles.grp4}>
               <Text style={styles.txt_disability}>Disabilities</Text>
               <TextInput
+                onChangeText = {this.handleDisability}
                 placeholder="placeholder"
                 keyboardType="default"
                 style={styles.input5}
@@ -56,11 +158,13 @@ export default function InputScreen2({ navigation }) {
             <View style={styles.grp5}>
               <Text style={styles.txt_testScore}>Test Score(s)</Text>
               <TextInput
+                onChangeText = {this.handleSAT}
                 placeholder="SAT"
                 keyboardType="numeric"
                 style={styles.input6}
               ></TextInput>
               <TextInput
+                onChangeText = {this.handleACT}
                 placeholder="ACT"
                 keyboardType="numeric"
                 style={styles.input7}
@@ -69,16 +173,19 @@ export default function InputScreen2({ navigation }) {
             <View style={styles.grp6}>
               <Text style={styles.txt_adres}>Residential Address</Text>
               <TextInput
+                onChangeText = {this.handleAdd01}
                 placeholder="placeholder"
                 keyboardType="default"
                 style={styles.input8}
               ></TextInput>
               <TextInput
+                onChangeText = {this.handleAdd02}
                 placeholder="placeholder"
                 keyboardType="default"
                 style={styles.input9}
               ></TextInput>
               <TextInput
+                onChangeText = {this.handleAdd03}
                 placeholder="placeholder"
                 keyboardType="default"
                 style={styles.input10}
@@ -86,7 +193,9 @@ export default function InputScreen2({ navigation }) {
             </View>
             <View style={styles.submit_grp}>
               <TouchableOpacity
-                onPress={() => navigation.navigate("")}
+                onPress={() => this.p2info(this.state.acamajor, this.state.race, this.state.religion,
+                  this.state.disability, this.state.Sat, this.state.Act, this.state.address01,
+                  this.state.address02, this.state.address03)}
                 style={styles.txt_submit}
               >
                 <Text style={styles.btn_submit}>Submit</Text>
@@ -97,7 +206,7 @@ export default function InputScreen2({ navigation }) {
       </KeyboardAwareScrollView>
     </View>
   );
-}
+}}
 
 const styles = StyleSheet.create({
   AwardView: {
