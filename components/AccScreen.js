@@ -35,7 +35,7 @@ export default function AccScreen({ usr_info }) {
           </View>
         </View>
 
-        <AddProfile/ >
+        <AddProfile email={user_info.email}/ >
 
         <TouchableOpacity
           // onPress={() => navigation.navigate("Untitled")}

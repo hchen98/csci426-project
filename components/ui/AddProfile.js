@@ -5,14 +5,16 @@ import MaterialIconsIcon from "react-native-vector-icons/MaterialIcons";
 import { useNavigation } from "@react-navigation/native";
 import InputScreen1 from "../InputInfoScreen1";
 
-export default function AddProfile() {
+export default function AddProfile(props) {
   const navigation = useNavigation();
+  const email = props.email;
 
   return (
     <TouchableOpacity
       onPress={() =>
         navigation.navigate(InputScreen1, {
           title: "Input Required Info",
+          email: email,
         })
       }
       style={styles.grp2}

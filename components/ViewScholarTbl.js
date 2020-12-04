@@ -5,6 +5,7 @@ import React from "react";
 import { StyleSheet, Text, View, ActivityIndicator } from "react-native";
 import { FlatList } from "react-native-gesture-handler";
 import firebase from "../db/firebaseDB";
+// import firebase from "../db/firebaseDB_test";
 
 // disable the yellow warning message box
 console.disableYellowBox = true;
@@ -108,6 +109,6 @@ const styles = StyleSheet.create({
     padding: 10,
     margin: 10,
     fontSize: 18,
-    height: 45,
+    height: 40,
   },
 });

@@ -7,7 +7,8 @@ import {
   ActivityIndicator,
   View,
 } from "react-native";
-import firebase from "../db/firebaseDB";
+// import firebase from "../db/firebaseDB";
+import firebase from "../db/firebaseDB_test";
 
 class AddUserScreen extends Component {
   constructor() {

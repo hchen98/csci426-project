@@ -43,7 +43,7 @@ def updtUser(userEmail, gender, dob, zipC, gpa, major = ' ', race = ' ', religio
         u'Zip' : zipC,
         u'GPA' : gpa,
         u'Major': major,
-        u'Relgion' : religion,
+        u'Religion' : religion,
         u'Dissabilities' : dissabilities,
         u'SAT Score': sat,
         u'ACT Score' : act,

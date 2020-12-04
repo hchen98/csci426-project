@@ -9,6 +9,23 @@ import {
 import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
 
 export default class HomeScreen extends React.Component {
+  getAPIINFO = () => {
+    fetch("http://3.137.203.74:8080/api/v1/resources/books/all", {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((json) => {
+        console.log(json);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   render() {
     return (
       <View style={styles.container}>

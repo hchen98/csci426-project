@@ -1,28 +1,82 @@
 from flask import Flask
 from flask import request, jsonify
 
-
 app = Flask(__name__)
 # app.config["DEBUG"] = True
 
+profil_input = {
+    'Email': "",
+    'Gender': "",
+    'dob': "",
+    'Zip': "",
+    'GPA': "",
+    'Major': "",
+    'Race': "",
+    'Religion': "",
+    'Disabilities': "",
+    'SAT Score': "",
+    'ACT Score': "",
+    'Address 1': "",
+    'Address 2': "",
+    'Address 3': "",
+}
+
+
+@app.route('/api/v1/csci426/profileInput', methods=['POST'])
+def assignProfile():
+    global user_profile
+    data = request.json
+    profil_input = data
+
+    # AA01 profile set code used in RN
+    response = "AA01"
+    response.status_code = 202
+    return response
+
+
+
+# =========================== TEST ===========================
+# REST API test sample
+
 # Create some test data for our catalog in the form of a list of dictionaries.
-books = [
-    {'id': 0,
-     'title': 'A Fire Upon the Deep',
-     'author': 'Vernor Vinge',
-     'first_sentence': 'The coldsleep itself was dreamless.',
-     'year_published': '1992'},
-    {'id': 1,
-     'title': 'The Ones Who Walk Away From Omelas',
-     'author': 'Ursula K. Le Guin',
-     'first_sentence': 'With a clamor of bells that set the swallows soaring, the Festival of Summer came to the city Omelas, bright-towered by the sea.',
-     'published': '1973'},
-    {'id': 2,
-     'title': 'Dhalgren',
-     'author': 'Samuel R. Delany',
-     'first_sentence': 'to wound the autumnal city.',
-     'published': '1975'}
-]
+books = [{
+    'id': 0,
+    'title': 'A Fire Upon the Deep',
+    'author': 'Vernor Vinge',
+    'first_sentence': 'The coldsleep itself was dreamless.',
+    'year_published': '1992'
+}, {
+    'id': 1,
+    'title': 'The Ones Who Walk Away From Omelas',
+    'author': 'Ursula K. Le Guin',
+    'first_sentence':
+    'With a clamor of bells that set the swallows soaring, the Festival of Summer came to the city Omelas, bright-towered by the sea.',
+    'published': '1973'
+}, {
+    'id': 2,
+    'title': 'Dhalgren',
+    'author': 'Samuel R. Delany',
+    'first_sentence': 'to wound the autumnal city.',
+    'published': '1975'
+}]
+
+userAcc = {
+    'signedIn': False,
+    'full_name': "",
+    'last_name': "",
+    'first_name': "",
+    'email': "",
+    'photoUrl': "",
+}
+
+
+@app.route('/api/v1/csci426/test', methods=['POST'])
+def assignUsrAcc():
+    global userAcc
+    data = request.json
+    userAcc = data
+    return jsonify(userAcc)
+
 
 @app.route('/', methods=['GET'])
 def home():
@@ -38,6 +92,7 @@ def api_all():
     response = jsonify(books)
     response.status_code = 202
     return response
+
 
 @app.route('/api/v1/resources/books', methods=['GET'])
 def api_bookID():
@@ -68,13 +123,4 @@ def api_bookID():
 
 
 if __name__ == '__main__':
-   app.run()
-
-
-
-
-
-
-
-
-
+    app.run()
