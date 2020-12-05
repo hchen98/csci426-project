@@ -25,15 +25,15 @@ def updtUser(userEmail,
              gpa,
              major=' ',
              race=' ',
+             ethnicity=' ',
              religion=' ',
              dissabilities=' ',
              sat=' ',
-             act=' ',
              address1=' ',
              address2=' ',
              address3=' '):
 
-    list1 = [gender]
+    list1 = [gender, ethnicity]
     list1.append(catAge(dob))
     list1.append(catState(zipC))
     list1.append(catGPA(gpa))
@@ -45,8 +45,6 @@ def updtUser(userEmail,
 
     if (sat != ' '):
         list1.append(catSat(sat))
-    if (act != ' '):
-        list1.append(catAct(act))
 
     binary = setBin(list1)
 
@@ -59,9 +57,9 @@ def updtUser(userEmail,
         u'Major': major,
         u'Religion': religion,
         u'Race': race,
+        u'Ethnicity': ethnicity,
         u'Dissabilities': dissabilities,
         u'SAT Score': sat,
-        u'ACT Score': act,
         u'Address 1': address1,
         u'Address 2': address2,
         u'Address 3': address3,
@@ -187,20 +185,6 @@ def catSat(sat):
     return str
 
 
-def catAct(act):
-    str = ' '
-    if (float(act) >= 10) & (float(act) <= 15):
-        str = 'ACT Scores From 10 To 15'
-    elif (float(act) >= 16) & (float(act) <= 20):
-        str = 'ACT Scores From 16 To 20'
-    elif (float(act) >= 21) & (float(act) <= 25):
-        str = 'ACT Scores From 21 To 25'
-    elif (float(act) >= 26) & (float(act) <= 30):
-        str = 'ACT Scores From 26 To 30'
-    elif (float(act) >= 31):
-        str = 'ACT Scores Greater Than 31'
-    return str
-
 
 #splits the string to array
 #input -> string
@@ -239,6 +223,6 @@ def setBin(list):
 #Input -> int, string, the id of the scholarship and the term
 #Output -> none
 
-listA = table_Ref.get().to_dict().get('Terms')
+#listA = table_Ref.get().to_dict().get('Terms')
 #print(setBin(['Accounting']))
-updtUser('some email', 'Male', '5/11/1999', '10308', '3.6', sat='1400')
+#updtUser('some email', 'Male', '5/11/1999', '10308', '3.6', sat='1400')
