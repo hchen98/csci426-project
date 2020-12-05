@@ -8,7 +8,7 @@ import random
 import logging
 import threading
 
-################# RECENTLY Changed####################
+################# Firestore Addition ####################
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
@@ -176,7 +176,7 @@ def test_write2file(item):
         writer.close()
 
 
-########################### RECENTLY ADDED ###########################################
+########################### Firestore Addition ###########################################
 #Firestore methods used
 
 
@@ -243,6 +243,19 @@ def updateBin(id, word):
 
 #String to generate the inital binary array of 504 bits because I'm lazy to type it out =D
 binaryInitial = '0' * 807
+
+############# RECENT ADDITION ####################################
+#Checks the string and changes / to &
+#Input -> String
+#Output -> Changed string if at all
+def charCheck(string):
+    charList = split(string)
+    for i in range(len(charList)):
+        if charList[i] == '/':
+            charList[i] = ' & '
+    newString = ''
+    newString = newString.join(charList)
+    return newString
 #######################################################
 
 try:
@@ -297,16 +310,17 @@ try:
                 amount, deadline, ava, dir_link, description, contact_info = get_specific(
                 )
 
-                ################# RECENTLY Changed #################
+                ################# RECENTLY Updated #################
                 #If statement for if scholarship exists
                 #Id is now just the name of the scholarship for less reads
+                L3_title[z] = charCheck(L3_title[z])
                 scholarship = scholar_ref.document(L3_title[z]).get()
                 if scholarship.exists == False:
                     addScholarship(L3_title[z], amount, deadline, ava,
                                    dir_link, description, contact_info,
                                    binaryInitial)
 
-#Updates term list and binary string, now with scholarship name
+                #Updates term list and binary string, now with scholarship name
                 updateTerms(L3_title[z], L2_title[y])
                 updateBin(L3_title[z], L2_title[y])
                 #################################################
