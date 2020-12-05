@@ -35,6 +35,12 @@ def comparison(user_bin, input_bin):
     cos_sim = dot(queryList, inputList)/(norm(queryList)*norm(inputList))
     return cos_sim
 
+#The key for sorting the list or results
+#Input -> dictionary 
+#Output -> value of specified field
+def sortKey(e):
+    return e['Val']
+
 
 #For filtereing after a query is done, returns a list of id's that we can loop through to pull info of those scholarships
 #Input -> Query generator object, string user id, filtering float number
@@ -45,15 +51,22 @@ def filter_results(userId):
     userTerms = user.get('Terms')
     query  = scholar_ref.where(u'Terms', u'array_contains_any', userTerms).stream()
     filteredScholar = []
-    userBin = user.get('Binary') 
+    userBin = user.get('Binary')
     for i in query:
         scholarBin = i.get('Binary')
-        if binCompare(userBin, scholarBin) == True:
-            value = comparison(scholarBin, userBin)
-            if(value > filterVal):
-                scholarid = i.id
-                filteredScholar.append(scholarid)
+        #if binCompare(userBin, scholarBin) == True:
+        value = comparison(scholarBin, userBin)
+        if(value >= filterVal):
+            scholarInfo = {
+                'ID' : i.id,
+                'Amount' : i.get('Amount'),
+                'Deadline': i.get('Deadline'),
+                'Val': value
+                }
+            filteredScholar.append(scholarInfo)
+            filteredScholar.sort(key = sortKey, reverse= True)
     return filteredScholar
+
 
 #Method to compare and see hard conditions
 #Input - > 2 strings, user binary, scholarship binary
