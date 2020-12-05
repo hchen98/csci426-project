@@ -61,8 +61,9 @@ function TabScreens({ usr }) {
       <Tab.Screen
         name="Home"
         options={{ title: "Home" }}
-        component={HomeScreen}
-      />
+      >
+        {() => <HomeScreen email={usr.email}/>}
+      </Tab.Screen>
       <Tab.Screen
         name="Search"
         component={SearchScreen}

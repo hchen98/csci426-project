@@ -9,7 +9,9 @@ import {
   Alert,
 } from "react-native";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
-import { act } from "react-test-renderer";
+import { NavigationActions } from 'react-navigation';
+// import App from "../App";
+// import { useNavigation } from '@react-navigation/native';
 
 export default class InputScreen2 extends React.Component {
   constructor(props) {
@@ -39,6 +41,7 @@ export default class InputScreen2 extends React.Component {
     this.handleAdd01 = this.handleAdd01.bind(this);
     this.handleAdd02 = this.handleAdd02.bind(this);
     this.handleAdd03 = this.handleAdd03.bind(this);
+    // this.navigation = useNavigation();
   }
 
   handleAcamajor(text) {
@@ -121,43 +124,21 @@ export default class InputScreen2 extends React.Component {
 
       // bodu: usr_obj
     })
-    .then((response) => response.json())
-    .then((json) => {
-      console.log(this.props.requiredInfo);
-      console.log({
-        Email: this.state.email,
-        Gender: this.state.gender,
-        dob: this.state.dob,
-        Zip: this.state.zip,
-        GPA: this.state.gpa,
-        Major: this.state.major,
-        Race: this.state.race,
-        Religion: this.state.religion,
-        Disabilities: this.state.Disabilities,
-        'SAT Score': this.state.Sat,
-        'ACT Score': this.state.Act,
-        'Address 1': this.state.address01,
-        'Address 2': this.state.address02,
-        'Address 3': this.state.address03,
-      });
-      console.log("=================================="),
-      console.log("");
-      console.log("Server Response");
-      console.log(json);
-    })
-      // .then((response) => {
-      //   if (response.status == 202) {
-      //     Alert.alert(
-      //       "Status Code: " +
-      //         response.text() +
-      //         "\n" +
-      //         "Your data have been successfully inserted!"
-      //     );
-      //     console.log(response.json())
-      //   } else {
-      //     Alert.alert("An error occured!");
-      //   }
-      // })
+      .then((response) => {
+        if (response.status == 202) {
+          Alert.alert(
+            "Your data have been successfully \ninserted! " +
+            "You will be navigated back!"
+          );
+
+          setTimeout(() => {
+            this.props.navigation.goBack()
+          }, 2500)
+          // console.log(response.json())
+        } else {
+          Alert.alert("An error occured!");
+        }
+      })
       .catch((error) => {
         console.log(error);
       });

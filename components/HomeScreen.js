@@ -7,8 +7,43 @@ import {
   TouchableOpacity,
 } from "react-native";
 import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
+import firebase from "../db/firebaseDB";
+// import firebase from "../db/firebaseDB_test";
 
 export default class HomeScreen extends React.Component {
+  constructor(props) {
+    super(props);
+    this.firestoreRef = firebase
+      .firestore()
+      .collection("Users")
+      .where("Email", "==", this.props.email);
+    this.state = {
+      isLoading: true,
+      isExist: true,
+    };
+  }
+
+  componentDidMount() {
+    this.unsubscribe = this.firestoreRef.onSnapshot(this.getDoc);
+  }
+
+  componentWillUnmount() {
+    this.unsubscribe();
+  }
+
+  getDoc = (querySnapshot) => {
+    if (querySnapshot.empty) {
+      // there's NO such user profile record
+      this.setState({
+        isExist: false,
+      });
+    } else {
+      // there's such user profile record
+      // a fetch() here where to retrive recommended info from the server.
+      // the fetch should display first 5 items as the grid cards
+    }
+  };
+
   getAPIINFO = () => {
     fetch("http://3.137.203.74:8080/api/v1/resources/books/all", {
       method: "GET",
@@ -109,87 +144,104 @@ export default class HomeScreen extends React.Component {
             </TouchableOpacity>
           </ScrollView>
         </View>
-        <View style={styles.txtrecommended_grp}>
-          <Text style={styles.recommended}>Recommended</Text>
-        </View>
-        <View style={styles.scrollArea2}>
-          <ScrollView
-            horizontal={true}
-            showsHorizontalScrollIndicator={false}
-            contentContainerStyle={styles.scrollArea2_contentContainerStyle}
-          >
-            <TouchableOpacity
-              onPress={() =>
-                this.props.navigation.navigate("ViewSubCate", {
-                  title: "Age List",
-                  itemKey: "Age",
-                })
-              }
-              style={styles.button}
-            >
-              <Text style={styles.placeHolder1}>Place{"\n"}Holder 1...</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() =>
-                this.props.navigation.navigate("ViewSubCate", {
-                  title: "Age List",
-                  itemKey: "Age",
-                })
-              }
-              style={styles.button2}
-            >
-              <Text style={styles.placeHolder2}>Place{"\n"}Holder 2...</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() =>
-                this.props.navigation.navigate("ViewSubCate", {
-                  title: "Age List",
-                  itemKey: "Age",
-                })
-              }
-              style={styles.button3}
-            >
-              <Text style={styles.placeHolder3}>Place{"\n"}Holder 3...</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() =>
-                this.props.navigation.navigate("ViewSubCate", {
-                  title: "Age List",
-                  itemKey: "Age",
-                })
-              }
-              style={styles.button4}
-            >
-              <Text style={styles.placeHolder4}>Place{"\n"}Holder 4...</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() =>
-                this.props.navigation.navigate("ViewSubCate", {
-                  title: "Age List",
-                  itemKey: "Age",
-                })
-              }
-              style={styles.button5}
-            >
-              <Text style={styles.placeHolder5}>Place{"\n"}Holder 5...</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() =>
-                this.props.navigation.navigate("ViewSubCate", {
-                  title: "Age List",
-                  itemKey: "Age",
-                })
-              }
-              style={styles.button6}
-            >
-              <FontAwesomeIcon
-                name="arrow-circle-right"
-                style={styles.icon1}
-              ></FontAwesomeIcon>
-              <Text style={styles.viewAll1}>View All</Text>
-            </TouchableOpacity>
-          </ScrollView>
-        </View>
+
+        {this.state.isExist ? (
+          <View>
+            <View style={styles.txtrecommended_grp}>
+              <Text style={styles.recommended}>Recommended</Text>
+            </View>
+            <View style={styles.scrollArea2}>
+              <ScrollView
+                horizontal={true}
+                showsHorizontalScrollIndicator={false}
+                contentContainerStyle={styles.scrollArea2_contentContainerStyle}
+              >
+                <TouchableOpacity
+                  onPress={() =>
+                    this.props.navigation.navigate("ViewSubCate", {
+                      title: "Age List",
+                      itemKey: "Age",
+                    })
+                  }
+                  style={styles.button}
+                >
+                  <Text style={styles.placeHolder1}>
+                    Place{"\n"}Holder 1...
+                  </Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() =>
+                    this.props.navigation.navigate("ViewSubCate", {
+                      title: "Age List",
+                      itemKey: "Age",
+                    })
+                  }
+                  style={styles.button2}
+                >
+                  <Text style={styles.placeHolder2}>
+                    Place{"\n"}Holder 2...
+                  </Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() =>
+                    this.props.navigation.navigate("ViewSubCate", {
+                      title: "Age List",
+                      itemKey: "Age",
+                    })
+                  }
+                  style={styles.button3}
+                >
+                  <Text style={styles.placeHolder3}>
+                    Place{"\n"}Holder 3...
+                  </Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() =>
+                    this.props.navigation.navigate("ViewSubCate", {
+                      title: "Age List",
+                      itemKey: "Age",
+                    })
+                  }
+                  style={styles.button4}
+                >
+                  <Text style={styles.placeHolder4}>
+                    Place{"\n"}Holder 4...
+                  </Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() =>
+                    this.props.navigation.navigate("ViewSubCate", {
+                      title: "Age List",
+                      itemKey: "Age",
+                    })
+                  }
+                  style={styles.button5}
+                >
+                  <Text style={styles.placeHolder5}>
+                    Place{"\n"}Holder 5...
+                  </Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() =>
+                    this.props.navigation.navigate("ViewSubCate", {
+                      title: "Age List",
+                      itemKey: "Age",
+                    })
+                  }
+                  style={styles.button6}
+                >
+                  <FontAwesomeIcon
+                    name="arrow-circle-right"
+                    style={styles.icon1}
+                  ></FontAwesomeIcon>
+                  <Text style={styles.viewAll1}>View All</Text>
+                </TouchableOpacity>
+              </ScrollView>
+            </View>
+          </View>
+        ) : (
+          <View></View>
+        )}
       </View>
     );
   }

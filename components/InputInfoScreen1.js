@@ -6,7 +6,7 @@ import {
   TextInput,
   TouchableOpacity,
 } from "react-native";
-import InputScreen2 from "./InputInfoScreen2";
+// import InputScreen2 from "./InputInfoScreen2";
 
 export default class InputScreen1 extends React.Component {
   constructor(props) {
@@ -93,7 +93,7 @@ export default class InputScreen1 extends React.Component {
             <View style={styles.submit_grp}>
               <TouchableOpacity
                 onPress={() =>
-                  this.props.navigation.navigate("InputScreen2", {
+                  this.props.navigation.navigate('InputScreen2', {
                     email: this.state.email,
                     gender: this.state.gender,
                     dob: this.state.dob,
