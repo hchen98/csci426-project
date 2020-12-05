@@ -5,7 +5,7 @@ import random
 import logging
 import threading
 
-################# RECENTLY Changed####################
+################# Firestore Addition ####################
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
@@ -173,7 +173,7 @@ def test_write2file(item):
         writer.close()
 
 
-########################### RECENTLY ADDED ###########################################
+########################### Firestore Addition ###########################################
 #Firestore methods used
 
 
@@ -240,6 +240,24 @@ def updateBin(id, word):
 
 #String to generate the inital binary array of 504 bits because I'm lazy to type it out =D
 binaryInitial = '0' * 807
+
+############# RECENT ADDITION ####################################
+def findOccurence(s, char):
+    return [i for i, letter in enumerate(s) if letter == char]
+
+def charCheck(string):
+    inputStr = string
+    charList = split(string)
+    indexList = findOccurence(string, '/')
+    if len(indexList) > 0:
+        for i in range(len(indexList)):
+            index = indexList[i]
+            charList[index] = ' & '
+        inputStr = ''
+        inputStr = inputStr.join(charList)
+        return inputStr
+    else:
+        return inputStr
 #######################################################
 
 try:
@@ -294,9 +312,10 @@ try:
                 amount, deadline, ava, dir_link, description, contact_info = get_specific(
                 )
 
-                ################# RECENTLY Changed #################
+                ################# RECENTLY Updated #################
                 #If statement for if scholarship exists
                 #Id is now just the name of the scholarship for less reads
+                L3_title[z] = charCheck(L3_title[z])
                 scholarship = scholar_ref.document(L3_title[z]).get()
                 if scholarship.exists == False:
                     addScholarship(L3_title[z], amount, deadline, ava,
