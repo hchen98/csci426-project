@@ -242,22 +242,14 @@ def updateBin(id, word):
 binaryInitial = '0' * 807
 
 ############# RECENT ADDITION ####################################
-def findOccurence(s, char):
-    return [i for i, letter in enumerate(s) if letter == char]
-
 def charCheck(string):
-    inputStr = string
     charList = split(string)
-    indexList = findOccurence(string, '/')
-    if len(indexList) > 0:
-        for i in range(len(indexList)):
-            index = indexList[i]
-            charList[index] = ' & '
-        inputStr = ''
-        inputStr = inputStr.join(charList)
-        return inputStr
-    else:
-        return inputStr
+    for i in range(len(charList)):
+        if charList[i] == '/':
+            charList[i] = ' & '
+    newString = ''
+    newString = newString.join(charList)
+    return newString
 #######################################################
 
 try:
