@@ -22,6 +22,9 @@ db = firestore.client()
 scholar_ref = db.collection("ScholarshipHub")
 table_ref = db.collection("Index Table").document("Terms")
 refList = table_ref.get().to_dict().get('Terms')
+#New 
+categoryList = ['Academic Major', 'Age', 'Ethnicity', 'Gender', 'Grade Point Average', 'Physical Disabilities', 'Race', 'Religion', 'Residence State', 'SAT Score', 'Military Affiliation']
+subCatList = ['Business', 'Nursing/Nurse Practitioner', 'Psychology/Counseling', 'Biology', 'Engineering', 'Education', 'Communications', 'Accounting', 'Finance', 'Criminal Justice', 'Anthropology', 'Computer Science', 'English', 'Economics', 'Political Science']
 ######################################################
 
 logging.basicConfig(format='%(asctime)s - %(message)s', level=logging.INFO)
@@ -290,10 +293,13 @@ try:
 
     counter = 1
     for x in range(0, len(L1_link)):
-        if "Military Affiliation" == L1_title[x]:
+        #if "Military Affiliation" == L1_title[x]:
             # special case, no sub-category
+        #    continue
+        #New
+        if categoryList.count(L1_title[x]) == 0:
             continue
-
+            
         driver.get(L1_link[x])
 
         # scraping level 2
@@ -301,21 +307,29 @@ try:
         L2_link, L2_title = scraping_levels(level2_tbl)
 
         for y in range(0, len(L2_link)):
+            #New
+            if (L1_title[x] == 'Academic Major') & (subCatList.count(L2_title[y]) == 0):
+                continue
+                
             driver.get(L2_link[y])
             L3_link, L3_title = get_scholar_tbl()
-
+            
+            #New
+            if len(L3_link) > 15: 
+                limit = 15
+            else:
+                limit = len(L3_link)
+                
             # scraping for level 3
-            for z in range(0, len(L3_link)):
-                driver.get(L3_link[z])
-                amount, deadline, ava, dir_link, description, contact_info = get_specific(
-                )
-
+            for z in range(0, limit):
                 ################# RECENTLY Updated #################
                 #If statement for if scholarship exists
                 #Id is now just the name of the scholarship for less reads
                 L3_title[z] = charCheck(L3_title[z])
                 scholarship = scholar_ref.document(L3_title[z]).get()
                 if scholarship.exists == False:
+                    driver.get(L3_link[z])
+                    amount, deadline, ava, dir_link, description, contact_info = get_specific()
                     addScholarship(L3_title[z], amount, deadline, ava,
                                    dir_link, description, contact_info,
                                    binaryInitial)
