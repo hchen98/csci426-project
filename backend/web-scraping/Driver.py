@@ -10,12 +10,13 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
 
-cred = credentials.Certificate("testing-845eb-firebase-adminsdk-cckoe-bf65029977.json")
+cred = credentials.Certificate(
+    "testing-845eb-firebase-adminsdk-cckoe-bf65029977.json")
 firebase_admin.initialize_app(cred)
 
 db = firestore.client()
 
-scholar_ref =db.collection("ScholarshipHub")
+scholar_ref = db.collection("ScholarshipHub")
 table_ref = db.collection("Index Table").document("Terms")
 refList = table_ref.get().to_dict().get('Terms')
 ######################################################
@@ -119,9 +120,11 @@ def get_specific():
     amount = temp[0].text
     deadline = temp[1].text
     ava = temp[2].text
+    ava_wrd, ava_num = ava.split(":")
 
     # get direct apply link
-    temp = driver.find_element_by_css_selector(".award-info-action-items [href]")
+    temp = driver.find_element_by_css_selector(
+        ".award-info-action-items [href]")
     temp = temp.get_attribute("href")
     # need to parse here since the site will open another window event with js
     spliter = temp.split(",")
@@ -146,17 +149,17 @@ def get_specific():
         if (flag):
             contact_info = contact_info + item + "\n"
 
-    # print(amount, "\n", deadline, "\n", ava, "\n", dir_link, "\n", description, "\n", contact_info, "\n\n")
+    # print(amount, "\n", deadline, "\n", ava_num, "\n", dir_link, "\n", description, "\n", contact_info, "\n\n")
 
     test.append(amount)
     test.append(deadline)
-    test.append(ava)
+    test.append(ava_num)
     test.append(dir_link)
     test.append(description)
     test.append(contact_info)
 
     test_write2file(test)
-    return amount, deadline, ava, dir_link, description, contact_info
+    return amount, deadline, ava_num, dir_link, description, contact_info
 
 
 def test_write2file(item):
@@ -168,41 +171,43 @@ def test_write2file(item):
 
         writer.write("======================================\n\n")
         writer.close()
-        
-        
+
+
 ########################### RECENTLY ADDED ###########################################
 #Firestore methods used
+
 
 #Inputs new scholarship into the firestore
 #Input -> All attributes of scholarship
 #Output -> None
-def addScholarship(name, amount, deadline, ava, dir_link, description, contact_info, binary):
+def addScholarship(name, amount, deadline, ava, dir_link, description,
+                   contact_info, binary):
     scholar_ref.document(name).set({
-    u'Name' : name,
-    u'Amount' : amount,
-    u'Deadline' : deadline,
-    u'Awards Available' : ava,
-    u'Direct Link' : dir_link,
-    u'Description' : description,
-    u'Contact Info': contact_info,
-    u'Binary' : binary,
-    u'Terms' : {   
-    }
-})
+        u'Name': name,
+        u'Amount': amount,
+        u'Deadline': deadline,
+        u'Awards Available': ava,
+        u'Direct Link': dir_link,
+        u'Description': description,
+        u'Contact Info': contact_info,
+        u'Binary': binary,
+        u'Terms': {}
+    })
 
-    
+
 #Updates the term array in firestore
 #Input-> id to locate the scholarship, term
 #Output-> None
 def updateTerms(schol_id, term):
-    scholar_ref.document(schol_id).update({u'Terms': firestore.ArrayUnion([term])})
+    scholar_ref.document(schol_id).update(
+        {u'Terms': firestore.ArrayUnion([term])})
 
 
-#splits the string to array    
+#splits the string to array
 #input -> string
 #output -> char array
 def split(word):
-	return [char for char in word]
+    return [char for char in word]
 
 
 #converts list to string
@@ -228,15 +233,14 @@ def updateBin(id, word):
     scholarBin = scholar_ref.document(id).get().to_dict().get('Binary')
     ind = catIndex(word)
     list = split(scholarBin)
-    list[ind] = "1" 
+    list[ind] = "1"
     binaryStr = toString(list)
-    scholar_ref.document(id).update({'Binary' : binaryStr})
+    scholar_ref.document(id).update({'Binary': binaryStr})
 
-    
+
 #String to generate the inital binary array of 504 bits because I'm lazy to type it out =D
-binaryInitial = '0'* 807
+binaryInitial = '0' * 807
 #######################################################
-
 
 try:
     # config firefox profile
@@ -252,7 +256,6 @@ try:
     fo.add_argument('--disable-infobars')
     fo.add_argument('--disable-javascript')
 
-
     # create a driver
     global driver
     driver = webdriver.Firefox(firefox_profile=fp, options=fo)
@@ -267,20 +270,20 @@ try:
     level_1_tbl = search_level_tbl()
     L1_link, L1_title = scraping_levels(level_1_tbl)
 
-    ################ Table now on Firestore ##########################  
-    
+    ################ Table now on Firestore ##########################
+
     counter = 1
     for x in range(0, len(L1_link)):
         if "Military Affiliation" == L1_title[x]:
             # special case, no sub-category
-            break
+            continue
 
         driver.get(L1_link[x])
-        
+
         # scraping level 2
         level2_tbl = search_level_tbl()
         L2_link, L2_title = scraping_levels(level2_tbl)
-        
+
         for y in range(0, len(L2_link)):
             driver.get(L2_link[y])
             L3_link, L3_title = get_scholar_tbl()
@@ -288,20 +291,23 @@ try:
             # scraping for level 3
             for z in range(0, len(L3_link)):
                 driver.get(L3_link[z])
-                amount, deadline, ava, dir_link, description, contact_info = get_specific()
-                
+                amount, deadline, ava, dir_link, description, contact_info = get_specific(
+                )
+
                 ################# RECENTLY Changed #################
-                #If statement for if scholarship exists 
+                #If statement for if scholarship exists
                 #Id is now just the name of the scholarship for less reads
                 scholarship = scholar_ref.document(L3_title[z]).get()
                 if scholarship.exists == False:
-                    addScholarship(L3_title[z], amount, deadline, ava, dir_link, description, contact_info, binaryInitial)
-                
-		#Updates term list and binary string, now with scholarship name
+                    addScholarship(L3_title[z], amount, deadline, ava,
+                                   dir_link, description, contact_info,
+                                   binaryInitial)
+
+#Updates term list and binary string, now with scholarship name
                 updateTerms(L3_title[z], L2_title[y])
                 updateBin(L3_title[z], L2_title[y])
                 #################################################
-                
+
                 logging.info("Logging at " + str(counter))
                 counter = counter + 1
 

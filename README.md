@@ -45,7 +45,13 @@ Backend
   # install dependency
   pip install -r requirements.txt
   
-  # activate environement
+  # add flask app to the environment variable/ path
+  export FLASK_APP=flask_app.py
+
+  # run the flask with port 8080 publically
+  flask run --host=0.0.0.0 --port=8080
+
+  # activate environement for debugging
   source csci426/bin/activate
   ```
 
