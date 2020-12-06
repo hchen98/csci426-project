@@ -24,7 +24,7 @@ table_ref = db.collection("Index Table").document("Terms")
 refList = table_ref.get().to_dict().get('Terms')
 #New 
 # categoryList = ['Ethnicity', 'Gender', 'Grade Point Average', 'Physical Disabilities', 'Race', 'Religion', 'Residence State', 'SAT Score', 'Military Affiliation']
-categoryList = ['Physical Disabilities', 'Race', 'Religion', 'Residence State', 'SAT Score']
+categoryList = ['Residence State', 'SAT Score']
 
 #oldcategoryList = ['Academic Major', 'Age', 'Ethnicity', 'Gender', 'Grade Point Average', 'Physical Disabilities', 'Race', 'Religion', 'Residence State', 'SAT Score', 'Military Affiliation']
 
@@ -318,6 +318,8 @@ try:
             if(L1_title[x] == 'Ethnicity') & (y < 84):
                 continue
                 
+            if(L1_title[x] == 'Residence State') & (L2_title[y] != 'Wyoming'):
+                continue    
             driver.get(L2_link[y])
             L3_link, L3_title = get_scholar_tbl()
             
