@@ -11,7 +11,7 @@ import { useNavigation } from "@react-navigation/native";
 import { withNavigation } from "react-navigation";
 
 // import GlobalState from "../experiments/GlobalState";
-import AddProfile from "./ui/AddProfile";
+import AddProfile from "../ui/AddProfile";
 
 export default function AccScreen({ usr_info }) {
   // init things for the log in

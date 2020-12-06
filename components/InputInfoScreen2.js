@@ -27,7 +27,7 @@ export default class InputScreen2 extends React.Component {
         religion: "",
         Disabilities: "",
         Sat: "",
-        Act: "",
+        ethnicity: "",
         address01: "",
         address02: "",
         address03: "",
@@ -37,7 +37,7 @@ export default class InputScreen2 extends React.Component {
     this.handleReligion = this.handleReligion.bind(this);
     this.handleDisability = this.handleDisability.bind(this);
     this.handleSAT = this.handleSAT.bind(this);
-    this.handleACT = this.handleACT.bind(this);
+    this.handleethnicity = this.handleethnicity.bind(this);
     this.handleAdd01 = this.handleAdd01.bind(this);
     this.handleAdd02 = this.handleAdd02.bind(this);
     this.handleAdd03 = this.handleAdd03.bind(this);
@@ -74,9 +74,9 @@ export default class InputScreen2 extends React.Component {
     });
   }
 
-  handleACT(text) {
+  handleethnicity(text) {
     this.setState({
-        Act: text,
+      ethnicity: text,
     });
   }
 
@@ -116,7 +116,7 @@ export default class InputScreen2 extends React.Component {
         'Religion': this.state.religion,
         'Disabilities': this.state.Disabilities,
         'SAT Score': this.state.Sat,
-        'ACT Score': this.state.Act,
+        'ethnicity': this.state.ethnicity,
         "Address 1": this.state.address01,
         "Address 2": this.state.address02,
         "Address 3": this.state.address03,
@@ -131,10 +131,8 @@ export default class InputScreen2 extends React.Component {
             "You will be navigated back!"
           );
 
-          setTimeout(() => {
-            this.props.navigation.goBack()
-          }, 2500)
-          // console.log(response.json())
+          setTimeout(() => { this.props.navigation.goBack() }, 2500)
+          console.log(response.json())
         } else {
           Alert.alert("An error occured!");
         }
@@ -151,7 +149,7 @@ export default class InputScreen2 extends React.Component {
           enableOnAndroid
           enableAutomaticScroll
           keyboardOpeningTime={0}
-          // extraHeight={Platform.select({ android: (Dimensions.get('window').height - 150 ) })}
+          // extraHeight={Platform.select({ android: (Dimensions.get('window').height + 450 ) })}
           style={styles.AwardView}
         >
           <View style={styles.containerGrp1}>
@@ -193,21 +191,24 @@ export default class InputScreen2 extends React.Component {
                 ></TextInput>
               </View>
               <View style={styles.grp5}>
-                <Text style={styles.txt_testScore}>Test Score(s)</Text>
+                <Text style={styles.txt_testScore}>Test Score</Text>
                 <TextInput
                   onChangeText={this.handleSAT}
                   placeholder="SAT"
                   keyboardType="numeric"
                   style={styles.input6}
                 ></TextInput>
-                <TextInput
-                  onChangeText={this.handleACT}
-                  placeholder="ACT"
-                  keyboardType="numeric"
-                  style={styles.input7}
-                ></TextInput>
               </View>
               <View style={styles.grp6}>
+                <Text style={styles.txt_testScore}>Ethnicity</Text>
+                <TextInput
+                    onChangeText={this.handleethnicity}
+                    placeholder="ethnicity"
+                    keyboardType="default"
+                    style={styles.input7}
+                  ></TextInput>
+              </View>
+              <View style={styles.grp7}>
                 <Text style={styles.txt_adres}>Residential Address</Text>
                 <TextInput
                   onChangeText={this.handleAdd01}
@@ -257,9 +258,9 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   containerBkground1: {
-    height: 656,
+    height: 685,
     backgroundColor: "rgba(255,255,255,1)",
-    marginTop: 62,
+    marginTop: 20,
   },
   optionalDetails: {
     fontWeight: "bold",
@@ -346,8 +347,14 @@ const styles = StyleSheet.create({
   },
   grp5: {
     width: "95%",
-    height: 85,
-    marginTop: 19,
+    height: 50,
+    marginTop: 20,
+    marginLeft: 10,
+  },
+  grp6: {
+    width: "95%",
+    height: 50,
+    marginTop: 20,
     marginLeft: 10,
   },
   txt_testScore: {
@@ -370,7 +377,7 @@ const styles = StyleSheet.create({
     marginTop: 5,
     marginLeft: 9,
   },
-  grp6: {
+  grp7: {
     width: "93%",
     height: 120,
     marginTop: 20,

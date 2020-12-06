@@ -10,7 +10,7 @@ import { Ionicons } from "@expo/vector-icons";
 import FeatherIcon from "react-native-vector-icons/Feather";
 import MaterialCommunityIconsIcon from "react-native-vector-icons/MaterialCommunityIcons";
 
-import HomeScreen from "./components/HomeScreen";
+import HomeContainer from "./components/HomeContainer";
 import SearchScreen from "./components/SearchScreen";
 import AccScreen from "./components/AccScreen";
 import InputScreen1 from "./components/InputInfoScreen1";
@@ -18,6 +18,7 @@ import InputScreen2 from "./components/InputInfoScreen2";
 import ViewAllScholar from "./components/ViewAllScholar";
 import ViewSubCate from "./components/ViewSubCate";
 import ViewScholarTbl from "./components/ViewScholarTbl";
+import ViewScholarDetail from "./components/ViewScholarDetail";
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -32,7 +33,7 @@ function LoginPage(props) {
   );
 }
 
-function TabScreens({ usr }) {
+function TabScreens({ usr, navigation }) {
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
@@ -58,17 +59,16 @@ function TabScreens({ usr }) {
         },
       })}
     >
-      <Tab.Screen
-        name="Home"
-        options={{ title: "Home" }}
-      >
-        {() => <HomeScreen email={usr.email}/>}
+      <Tab.Screen name="Home" options={{ title: "Home" }}>
+        {() => <HomeContainer email={usr.email} />}
       </Tab.Screen>
+
       <Tab.Screen
         name="Search"
         component={SearchScreen}
         options={{ title: "Search" }}
       />
+
       <Tab.Screen name="Account">
         {() => <AccScreen usr_info={usr} />}
       </Tab.Screen>
@@ -125,35 +125,48 @@ export default class App extends Component {
       return (
         <NavigationContainer>
           <Stack.Navigator>
+            
             <Stack.Screen name={"Home"}>
-              {() => <TabScreens usr={this.state.usrProfile} />}
+              {() => <TabScreens usr={this.state.usrProfile} navigation={this.props.navigation}/>}
             </Stack.Screen>
+            
             <Stack.Screen
               name={"InputScreen1"}
               component={InputScreen1}
               options={{ title: "Required Info" }}
             />
+            
             <Stack.Screen
               name={"InputScreen2"}
               component={InputScreen2}
               options={{ title: "Optional Info" }}
             />
+            
             <Stack.Screen
               name={"ViewSubCate"}
               component={ViewSubCate}
               // pass down the screen header bar title
               options={({ route }) => ({ title: route.params.title })}
             />
+            
             <Stack.Screen
               name={"ViewAllScholar"}
               component={ViewAllScholar}
               options={{ title: "Scholarship Categories" }}
             />
+            
             <Stack.Screen
               name={"ViewScholarTbl"}
               component={ViewScholarTbl}
               options={({ route }) => ({ title: route.params.title })}
             />
+            
+            <Stack.Screen
+              name={"ViewScholarDetail"}
+              component={ViewScholarDetail}
+              options={({ route }) => ({ title: route.params.title })}
+            />
+          
           </Stack.Navigator>
         </NavigationContainer>
       );
@@ -167,7 +180,7 @@ export default class App extends Component {
   }
 }
 
-// AppRegistry.registerComponent("App", () => App);
+AppRegistry.registerComponent("App", () => App);
 const styles = StyleSheet.create({
   container: {
     flex: 1,

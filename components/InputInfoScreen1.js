@@ -124,7 +124,7 @@ const styles = StyleSheet.create({
   container_bkground: {
     height: 400,
     backgroundColor: "rgba(255,255,255,1)",
-    marginTop: 63,
+    marginTop: 20,
   },
   requiredDetails: {
     fontWeight: "bold",

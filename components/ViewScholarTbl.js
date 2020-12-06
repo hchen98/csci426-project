@@ -1,114 +1,50 @@
-// DO NOT USE THIS FILE UNLESS OTHERWISE 
-// THIS MESSAGE IS REMOVED!!!
+import React, { Component } from "react";
+import { StyleSheet, ScrollView, TouchableOpacity, Text } from "react-native";
 
-import React from "react";
-import { StyleSheet, Text, View, ActivityIndicator } from "react-native";
-import { FlatList } from "react-native-gesture-handler";
-import firebase from "../db/firebaseDB";
-// import firebase from "../db/firebaseDB_test";
-
-// disable the yellow warning message box
-console.disableYellowBox = true;
-
-export default class ViewScholarTbl extends React.Component {
-  // navigation.setOptions({ headerTitle: 'Search Screen' })
-  constructor(props) {
-    super(props);
-    this.firestoreRef = firebase
-      .firestore()
-      .collection("scholar_dir")
-      // .where("Terms", "==", this.props.route.params.itemKey);
-      // since "Terms" attribute is a dict, we have to use 'in'
-      .where("Terms", "in", this.props.route.params.itemKey);
-
-    this.state = {
-      isLoading: true,
-      scholarArr: [],
-      subCate: this.props.route.params.itemKey,
-    };
-  }
-
-  componentDidMount(){
-    this.unsubscribe = this.firestoreRef.onSnapshot(this.getDoc)
-  }
-
-  componentWillUnmount(){
-    this.unsubscribe();
-  }
-
-  getDoc = (querySnapshot) => {
-    const temp = querySnapshot.data();
-    // now the temp is key val pair
-    // temp => ("sub category title", ["i", "j", "k"])
-    const valArr = temp[this.state.subCate];
-    this.setState({
-      scholarArr: valArr, 
-      isLoading: false,
-    });
-    console.info("Data retrived from FireStore!");
-  }
-
-  FlatListItemSeparator = () => {
-    return <View style={styles.ItemSeparator} />;
-  };
-
-  render() {
-    if(this.state.isLoading){
-      return(
-        <View style={styles.preloader}>
-          <ActivityIndicator size="large" color="#9E9E9E" />
-        </View>
-      );
-    }
-    return (
-      <View style={styles.container}>
-        <FlatList
-          data={this.state.scholarArr}
-          ItemSeparatorComponent={this.FlatListItemSeparator}
-          renderItem={({ item }) => (
-            <Text
-              style={styles.item}
-              onPress={() => {
-                // we are able to navigate to "ViewSubCate"
-                // since it is one of the stack screens in App.js
-                // therefore, no need to import in this screen
-                this.props.navigation.navigate('ViewSubCate', {
-                  title: (item + " List"),
-                  itemKey: item,
-                });
-              }}
-            > {item} </Text>
-          )}
-        >
-        </FlatList>
-      </View>
-    );
-  }
+export default function ViewScholarTbl(props) {
+  return (
+    <ScrollView horizontal={false} style={styles.container}>
+      <TouchableOpacity
+        onPress={() => props.navigation.navigate('ViewScholarDetail')}
+        style={styles.button}
+      >
+        <Text style={styles.item_title}>
+          Scholarship title here...........................................
+        </Text>
+        <Text style={styles.item_subTitle}>Availability: ##</Text>
+        <Text style={styles.item_deadline}>Deadline: mm/dd/yyyy</Text>
+      </TouchableOpacity>
+    </ScrollView>
+  );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: "white",
+    backgroundColor: "#E6E6E6",
+    width: 360,
+    height: 740
   },
-  preloader: {
-    left: 0,
-    right: 0,
-    top: 0,
-    bottom: 0,
-    position: "absolute",
-    alignItems: "center",
-    justifyContent: "center",
+  button: {
+    height: 80,
+    backgroundColor: "rgba(255,255,255,1)"
   },
-  ItemSeparator: {
-    height: 1,
-    width: "100%",
-    backgroundColor: "black",
+  item_title: {
+    color: "#121212",
+    fontSize: 16,
+    marginTop: 16,
+    marginLeft: 13
   },
-  item: {
-    padding: 10,
-    margin: 10,
-    fontSize: 18,
-    height: 40,
+  item_subTitle: {
+    color: "#121212",
+    fontSize: 12,
+    marginTop: 24,
+    marginLeft: 13
   },
+  item_deadline: {
+    color: "#121212",
+    fontSize: 12,
+    marginTop: 18,
+    marginLeft: 230
+  }
 });
+
