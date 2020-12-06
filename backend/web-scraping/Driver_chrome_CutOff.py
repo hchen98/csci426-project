@@ -23,7 +23,8 @@ scholar_ref = db.collection("ScholarshipHub")
 table_ref = db.collection("Index Table").document("Terms")
 refList = table_ref.get().to_dict().get('Terms')
 #New 
-categoryList = ['Ethnicity', 'Gender', 'Grade Point Average', 'Physical Disabilities', 'Race', 'Religion', 'Residence State', 'SAT Score', 'Military Affiliation']
+# categoryList = ['Ethnicity', 'Gender', 'Grade Point Average', 'Physical Disabilities', 'Race', 'Religion', 'Residence State', 'SAT Score', 'Military Affiliation']
+categoryList = ['Physical Disabilities', 'Race', 'Religion', 'Residence State', 'SAT Score']
 
 #oldcategoryList = ['Academic Major', 'Age', 'Ethnicity', 'Gender', 'Grade Point Average', 'Physical Disabilities', 'Race', 'Religion', 'Residence State', 'SAT Score', 'Military Affiliation']
 

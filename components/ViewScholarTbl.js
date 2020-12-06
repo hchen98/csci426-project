@@ -1,11 +1,14 @@
 import React, { Component } from "react";
 import { StyleSheet, ScrollView, TouchableOpacity, Text } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
-export default function ViewScholarTbl(props) {
+function ViewScholarTbl() {
+  const navigation = useNavigation();
+
   return (
     <ScrollView horizontal={false} style={styles.container}>
       <TouchableOpacity
-        onPress={() => props.navigation.navigate('ViewScholarDetail')}
+        onPress={() => navigation.navigate('ViewScholarDetail')}
         style={styles.button}
       >
         <Text style={styles.item_title}>
@@ -21,12 +24,13 @@ export default function ViewScholarTbl(props) {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "#E6E6E6",
-    width: 360,
+    width: "100%",
     height: 740
   },
   button: {
     height: 80,
-    backgroundColor: "rgba(255,255,255,1)"
+    backgroundColor: "rgba(255,255,255,1)",
+    width: "100%",
   },
   item_title: {
     color: "#121212",
@@ -48,3 +52,4 @@ const styles = StyleSheet.create({
   }
 });
 
+export default ViewScholarTbl;
