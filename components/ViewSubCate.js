@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, ActivityIndicator } from "react-native";
 import { FlatList } from "react-native-gesture-handler";
 import firebase from "../db/firebaseDB";
 // import firebase from "../db/firebaseDB_test";
+// import ViewScholarTbl from "./ViewScholarTbl";
 
 // disable the yellow warning message box
 console.disableYellowBox = true;
@@ -34,7 +35,7 @@ export default class ViewSubCate extends React.Component {
   getDoc = (querySnapshot) => {
     const temp = querySnapshot.data();
     // now the temp is key val pair
-    // temp => ("sub category title", ["i", "j", "k"])
+    // temp => ("sub category title", ["i", "j", "k", ..., "n"])
     const valArr = temp[this.state.subCate];
     this.setState({
       scholarArr: valArr,
