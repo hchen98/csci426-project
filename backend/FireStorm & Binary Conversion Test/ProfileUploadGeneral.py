@@ -33,12 +33,12 @@ def updtUser(userEmail,
              address2=' ',
              address3=' '):
 
-    list1 = [gender, ethnicity]
+    list1 = [gender]
     list1.append(catAge(dob))
     list1.append(catState(zipC))
     list1.append(catGPA(gpa))
 
-    list2 = [major, race, religion, dissabilities]
+    list2 = [major, race, religion, dissabilities, ethnicity]
     for i in range(len(list2)):
         if list2[i] != ' ':
             list1.append(list2[i])

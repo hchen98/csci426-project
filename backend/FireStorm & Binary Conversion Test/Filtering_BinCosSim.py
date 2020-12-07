@@ -54,17 +54,17 @@ def filter_results(userId):
     userBin = user.get('Binary')
     for i in query:
         scholarBin = i.get('Binary')
-        #if binCompare(userBin, scholarBin) == True:
-        value = comparison(scholarBin, userBin)
-        if(value >= filterVal):
-            scholarInfo = {
-                'ID' : i.id,
-                'Amount' : i.get('Amount'),
-                'Deadline': i.get('Deadline'),
-                'Val': value
-                }
-            filteredScholar.append(scholarInfo)
-            filteredScholar.sort(key = sortKey, reverse= True)
+        if binCompare(userBin, scholarBin) == True:
+            value = comparison(scholarBin, userBin)
+            if(value >= filterVal):
+                scholarInfo = {
+                    'ID' : i.id,
+                    'Amount' : i.get('Amount'),
+                    'Deadline': i.get('Deadline'),
+                    'Val': value
+                    }
+                filteredScholar.append(scholarInfo)
+                filteredScholar.sort(key = sortKey, reverse= True)
     return filteredScholar
 
 
