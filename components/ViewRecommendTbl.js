@@ -65,11 +65,11 @@ export default class ViewRecommendTbl extends React.Component {
 
   getAPIINFO = () => {
     console.log("Email: " + this.state.email);
-    // let URL =
-    //   "http://3.137.203.74:8080/api/v1/csci426/getRecommend?email=" +
-    //   this.state.email;
     let URL =
-      "http://3.137.203.74:8080/api/v1/csci426/getRecommend?email=miketrz@gmail.com";
+      "http://3.137.203.74:8080/api/v1/csci426/getRecommend?email=" +
+      this.state.email;
+    // let URL =
+    //   "http://3.137.203.74:8080/api/v1/csci426/getRecommend?email=miketrz@gmail.com";
     const scholarArr = [];
 
     fetch(URL, {
