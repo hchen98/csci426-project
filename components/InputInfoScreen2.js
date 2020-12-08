@@ -99,6 +99,22 @@ export default class InputScreen2 extends React.Component {
   }
 
   upload2sever = () => {
+    console.log({
+      "Email": this.state.email,
+      "Gender": this.state.gender,
+      "dob": this.state.dob,
+      "Zip": this.state.zip,
+      "GPA": this.state.gpa,
+      "Major": this.state.major,
+      "Race": this.state.race,
+      "ethnicity": this.state.ethnicity,
+      "Religion": this.state.religion,
+      "Disabilities": this.state.Disabilities,
+      "SAT Score": this.state.Sat,
+      "Address 1": this.state.address01,
+      "Address 2": this.state.address02,
+      "Address 3": this.state.address03,
+    });
     fetch("http://3.137.203.74:8080/api/v1/csci426/profileInput", {
       method: "POST",
       headers: {
