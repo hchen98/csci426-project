@@ -23,15 +23,15 @@ def updtUser(userEmail,
              dob,
              zipC,
              gpa,
-             major=' ',
-             race=' ',
-             ethnicity=' ',
-             religion=' ',
-             dissabilities=' ',
-             sat=' ',
-             address1=' ',
-             address2=' ',
-             address3=' '):
+             major='',
+             race='',
+             ethnicity='',
+             religion='',
+             dissabilities='',
+             sat='',
+             address1='',
+             address2='',
+             address3=''):
 
     list1 = [gender]
     list1.append(catAge(dob))
@@ -40,10 +40,10 @@ def updtUser(userEmail,
 
     list2 = [major, race, religion, dissabilities, ethnicity]
     for i in range(len(list2)):
-        if list2[i] != ' ':
+        if list2[i] != '':
             list1.append(list2[i])
 
-    if (sat != ' '):
+    if (sat != ''):
         list1.append(catSat(sat))
 
     binary = setBin(list1)
