@@ -195,7 +195,7 @@ def catSat(sat):
 #splits the string to array
 #input -> string
 #output -> char array
-def split(word):
+def splitStr(word):
     return [char for char in word]
 
 
@@ -217,7 +217,7 @@ def catIndex(word):
 
 def setBin(list):
     binaryInitial = '0' * 807
-    usrList = split(binaryInitial)
+    usrList = splitStr(binaryInitial)
     for i in range(len(list)):
         ind = catIndex(list[i])
         usrList[ind] = "1"
@@ -245,7 +245,7 @@ def setBin(list):
 #Split method
 #Input -> String, ideally the binary string
 #Output -> integer list to be used for CosSim
-def split(word):
+def splitInt(word):
     stringlist = [char for char in word]
     intlist = [int(i) for i in stringlist]
     return intlist
@@ -255,8 +255,8 @@ def split(word):
 #Input -> two strings, user binary and scholarship binary
 #Output -> float value, result of CosSim
 def comparison(user_bin, input_bin):
-    queryList = split(user_bin)
-    inputList = split(input_bin)
+    queryList = splitInt(user_bin)
+    inputList = splitInt(input_bin)
     cos_sim = dot(queryList, inputList)/(norm(queryList)*norm(inputList))
     return cos_sim
 
@@ -297,8 +297,8 @@ def filter_results(userId):
 #Input - > 2 strings, user binary, scholarship binary
 #Output - > boolean, true if good, false if bad
 def binCompare(user_bin, scholar_bin):
-    userList = split(user_bin)
-    scholarList = split(scholar_bin)
+    userList = splitInt(user_bin)
+    scholarList = splitInt(scholar_bin)
     for y in range(len(userList)):
         if userList[y] < scholarList[y]:
             return False
