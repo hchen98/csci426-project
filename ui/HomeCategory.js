@@ -38,12 +38,12 @@ export default function HomeCategory() {
             onPress={() => {
               navigation.navigate("ViewSubCate", {
                 title: "Act Score List",
-                itemKey: "ACT Score",
+                itemKey: "Grade Point Average",
               });
             }}
             style={styles.btn2}
           >
-            <Text style={styles.btn2_txt}>Act Score</Text>
+            <Text style={styles.btn2_txt}>GPA</Text>
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => {

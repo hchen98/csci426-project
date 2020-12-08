@@ -9,7 +9,7 @@ import {
   Alert,
 } from "react-native";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
-import { NavigationActions } from 'react-navigation';
+import { NavigationActions } from "react-navigation";
 // import App from "../App";
 // import { useNavigation } from '@react-navigation/native';
 
@@ -17,20 +17,20 @@ export default class InputScreen2 extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-        email: this.props.route.params.email,
-        gender: this.props.route.params.gender,
-        dob: this.props.route.params.dob,
-        zip: this.props.route.params.zip,
-        gpa: this.props.route.params.gpa,
-        major: "",
-        race: "",
-        religion: "",
-        Disabilities: "",
-        Sat: "",
-        ethnicity: "",
-        address01: "",
-        address02: "",
-        address03: "",
+      email: this.props.route.params.email,
+      gender: this.props.route.params.gender,
+      dob: this.props.route.params.dob,
+      zip: this.props.route.params.zip,
+      gpa: this.props.route.params.gpa,
+      major: "",
+      race: "",
+      religion: "",
+      Disabilities: "",
+      Sat: "",
+      ethnicity: "",
+      address01: "",
+      address02: "",
+      address03: "",
     };
     this.handleAcamajor = this.handleAcamajor.bind(this);
     this.handleRace = this.handleRace.bind(this);
@@ -46,31 +46,31 @@ export default class InputScreen2 extends React.Component {
 
   handleAcamajor(text) {
     this.setState({
-        major: text,
+      major: text,
     });
   }
 
   handleRace(text) {
     this.setState({
-        race: text,
+      race: text,
     });
   }
 
   handleReligion(text) {
     this.setState({
-        religion: text,
+      religion: text,
     });
   }
 
   handleDisability(text) {
     this.setState({
-        Disabilities: text,
+      Disabilities: text,
     });
   }
 
   handleSAT(text) {
     this.setState({
-        Sat: text,
+      Sat: text,
     });
   }
 
@@ -82,19 +82,19 @@ export default class InputScreen2 extends React.Component {
 
   handleAdd01(text) {
     this.setState({
-        address01: text,
+      address01: text,
     });
   }
 
   handleAdd02(text) {
     this.setState({
-        address02: text,
+      address02: text,
     });
   }
 
   handleAdd03(text) {
     this.setState({
-        address03: text,
+      address03: text,
     });
   }
 
@@ -106,17 +106,17 @@ export default class InputScreen2 extends React.Component {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        'Email': this.state.email,
-        'Gender': this.state.gender,
-        'dob': this.state.dob,
-        'Zip': this.state.zip,
-        'GPA': this.state.gpa,
-        'Major': this.state.major,
-        'Race': this.state.race,
-        'Religion': this.state.religion,
-        'Disabilities': this.state.Disabilities,
-        'SAT Score': this.state.Sat,
-        'ethnicity': this.state.ethnicity,
+        Email: this.state.email,
+        Gender: this.state.gender,
+        dob: this.state.dob,
+        Zip: this.state.zip,
+        GPA: this.state.gpa,
+        Major: this.state.major,
+        Race: this.state.race,
+        ethnicity: this.state.ethnicity,
+        Religion: this.state.religion,
+        Disabilities: this.state.Disabilities,
+        "SAT Score": this.state.Sat,
         "Address 1": this.state.address01,
         "Address 2": this.state.address02,
         "Address 3": this.state.address03,
@@ -124,15 +124,24 @@ export default class InputScreen2 extends React.Component {
 
       // bodu: usr_obj
     })
+      // .then((response) => response.json())
+      // .then((json) => {
+      //   console.log("Email: " + this.state.email);
+      //   console.log(json);
+      // })
+
       .then((response) => {
         if (response.status == 202) {
+          
           Alert.alert(
             "Your data have been successfully \ninserted! " +
-            "You will be navigated back!"
+              "You will be navigated back!"
           );
 
-          setTimeout(() => { this.props.navigation.goBack() }, 2500)
-          console.log(response.json())
+          setTimeout(() => {
+            this.props.navigation.goBack();
+          }, 2500);
+
         } else {
           Alert.alert("An error occured!");
         }
@@ -159,7 +168,7 @@ export default class InputScreen2 extends React.Component {
                 <Text style={styles.txt_major}>Academic Major</Text>
                 <TextInput
                   onChangeText={this.handleAcamajor}
-                  placeholder="placeholder"
+                  placeholder="Major here"
                   style={styles.input1}
                 ></TextInput>
               </View>
@@ -167,7 +176,7 @@ export default class InputScreen2 extends React.Component {
                 <Text style={styles.txt_race}>Race</Text>
                 <TextInput
                   onChangeText={this.handleRace}
-                  placeholder="placeholder"
+                  placeholder="Race here"
                   keyboardType="default"
                   style={styles.input2}
                 ></TextInput>
@@ -176,7 +185,7 @@ export default class InputScreen2 extends React.Component {
                 <Text style={styles.txt_religion}>Religion</Text>
                 <TextInput
                   onChangeText={this.handleReligion}
-                  placeholder="placeholder"
+                  placeholder="Religion here"
                   keyboardType="default"
                   style={styles.input3}
                 ></TextInput>
@@ -185,7 +194,7 @@ export default class InputScreen2 extends React.Component {
                 <Text style={styles.txt_disability}>Disabilities</Text>
                 <TextInput
                   onChangeText={this.handleDisability}
-                  placeholder="placeholder"
+                  placeholder="Disabilities here"
                   keyboardType="default"
                   style={styles.input5}
                 ></TextInput>
@@ -202,29 +211,29 @@ export default class InputScreen2 extends React.Component {
               <View style={styles.grp6}>
                 <Text style={styles.txt_testScore}>Ethnicity</Text>
                 <TextInput
-                    onChangeText={this.handleethnicity}
-                    placeholder="ethnicity"
-                    keyboardType="default"
-                    style={styles.input7}
-                  ></TextInput>
+                  onChangeText={this.handleethnicity}
+                  placeholder="Ethnicity here"
+                  keyboardType="default"
+                  style={styles.input7}
+                ></TextInput>
               </View>
               <View style={styles.grp7}>
                 <Text style={styles.txt_adres}>Residential Address</Text>
                 <TextInput
                   onChangeText={this.handleAdd01}
-                  placeholder="placeholder"
+                  placeholder="Address Line 1"
                   keyboardType="default"
                   style={styles.input8}
                 ></TextInput>
                 <TextInput
                   onChangeText={this.handleAdd02}
-                  placeholder="placeholder"
+                  placeholder="Address Line 2"
                   keyboardType="default"
                   style={styles.input9}
                 ></TextInput>
                 <TextInput
                   onChangeText={this.handleAdd03}
-                  placeholder="placeholder"
+                  placeholder="Address Line 3"
                   keyboardType="default"
                   style={styles.input10}
                 ></TextInput>

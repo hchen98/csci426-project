@@ -65,64 +65,9 @@ class Category extends Component {
           >
             <TouchableOpacity
               onPress={() =>
-                navigation.navigate("ViewSubCate", {
-                  title: "Age List",
-                  itemKey: "Age",
-                })
-              }
-              style={styles.button}
-            >
-              <Text style={styles.placeHolder1}>Place{"\n"}Holder 1...</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() =>
-                navigation.navigate("ViewSubCate", {
-                  title: "Age List",
-                  itemKey: "Age",
-                })
-              }
-              style={styles.button2}
-            >
-              <Text style={styles.placeHolder2}>Place{"\n"}Holder 2...</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() =>
-                navigation.navigate("ViewSubCate", {
-                  title: "Age List",
-                  itemKey: "Age",
-                })
-              }
-              style={styles.button3}
-            >
-              <Text style={styles.placeHolder3}>Place{"\n"}Holder 3...</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() =>
-                navigation.navigate("ViewSubCate", {
-                  title: "Age List",
-                  itemKey: "Age",
-                })
-              }
-              style={styles.button4}
-            >
-              <Text style={styles.placeHolder4}>Place{"\n"}Holder 4...</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() =>
-                navigation.navigate("ViewSubCate", {
-                  title: "Age List",
-                  itemKey: "Age",
-                })
-              }
-              style={styles.button5}
-            >
-              <Text style={styles.placeHolder5}>Place{"\n"}Holder 5...</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() =>
-                navigation.navigate("ViewSubCate", {
-                  title: "Age List",
-                  itemKey: "Age",
+                navigation.navigate('ViewRecommendTbl', {
+                  title: "Recommended List",
+                  // itemKey: "Age",
                 })
               }
               style={styles.button6}
@@ -133,6 +78,7 @@ class Category extends Component {
               ></FontAwesomeIcon>
               <Text style={styles.viewAll1}>View All</Text>
             </TouchableOpacity>
+            
           </ScrollView>
         </View>
       </View>

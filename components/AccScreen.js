@@ -17,6 +17,7 @@ export default function AccScreen({ usr_info }) {
   // init things for the log in
   
 
+  // console.log("Acc Screen: " + usr_info.email);
   // const navigation = navigation;
   const user_info = usr_info;
   return (
@@ -35,7 +36,7 @@ export default function AccScreen({ usr_info }) {
           </View>
         </View>
 
-        <AddProfile email={user_info.email}/ >
+        <AddProfile emailer={user_info.email} />
 
         <TouchableOpacity
           // onPress={() => navigation.navigate("Untitled")}

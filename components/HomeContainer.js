@@ -16,65 +16,21 @@ import HomeRecommend from "../ui/HomeRecommend";
 export default class HomeContainer extends Component {
   constructor(props) {
     super(props);
-    this.firestoreRef = firebase
-      .firestore()
-      .collection("Users")
-      .where("Email", "==", this.props.email);
     this.state = {
-      isLoading: true,
-      isExist: true,
       email: this.props.email,
     };
   }
-
-  componentDidMount() {
-    this.unsubscribe = this.firestoreRef.onSnapshot(this.getDoc);
-  }
-
-  componentWillUnmount() {
-    this.unsubscribe();
-  }
-
-  getDoc = (querySnapshot) => {
-    if (querySnapshot.empty) {
-      // there's NO such user profile record
-      this.setState({
-        isExist: false,
-      });
-    } else {
-      // there's such user profile record
-      // a fetch() here where to retrive recommended info from the server.
-      // the fetch should display first 5 items as the grid cards
-    }
-  };
-
-  getAPIINFO = () => {
-    fetch("http://3.137.203.74:8080/api/v1/resources/books/all", {
-      method: "GET",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-    })
-      .then((response) => response.json())
-      .then((json) => {
-        console.log(json);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
 
   render() {
     return (
       <View style={styles.container}>
         <HomeCategory/>
 
-        {this.state.isExist ? (
+        {/* {this.state.isExist ? ( */}
           <HomeRecommend email={this.state.email}/>
-        ) : (
+        {/* ) : (
           <View></View>
-        )}
+        )} */}
       </View>
     );
   }

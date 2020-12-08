@@ -12,7 +12,7 @@ export default class InputScreen1 extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: this.props.email,
+      // email: this.props.emailx,
       gender: "",
       dob: "",
       zip: "",
@@ -49,6 +49,7 @@ export default class InputScreen1 extends React.Component {
   }
 
   render() {
+    // console.log("Input 1 Screen: " + JSON.stringify(this.props));
     return (
       <View style={styles.container}>
         {/* <StatusBar hidden /> */}
@@ -59,7 +60,7 @@ export default class InputScreen1 extends React.Component {
               <Text style={styles.txt_gender}>Gender</Text>
               <TextInput
                 onChangeText={this.handleGender}
-                placeholder="placeholder"
+                placeholder="Male"
                 style={styles.input1}
               ></TextInput>
             </View>
@@ -68,7 +69,7 @@ export default class InputScreen1 extends React.Component {
               <TextInput
                 onChangeText={this.handleDOB}
                 placeholder="mm/dd/yyyy"
-                keyboardType="numeric"
+                // keyboardType="phone-pad"
                 style={styles.input2}
               ></TextInput>
             </View>
@@ -76,7 +77,7 @@ export default class InputScreen1 extends React.Component {
               <Text style={styles.txt_zip}>Zip Code</Text>
               <TextInput
                 onChangeText={this.handleZip}
-                placeholder="00001"
+                placeholder="12345"
                 keyboardType="numeric"
                 style={styles.input3}
               ></TextInput>
@@ -94,7 +95,7 @@ export default class InputScreen1 extends React.Component {
               <TouchableOpacity
                 onPress={() =>
                   this.props.navigation.navigate('InputScreen2', {
-                    email: this.state.email,
+                    // email: this.state.email,
                     gender: this.state.gender,
                     dob: this.state.dob,
                     zip: this.state.zip,

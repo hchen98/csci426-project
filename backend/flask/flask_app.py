@@ -1,5 +1,7 @@
 from flask import Flask
 from flask import request, jsonify
+from ProfileUploadGeneral import *
+from Filtering_BinCosSim.py import *
 
 app = Flask(__name__)
 # app.config["DEBUG"] = True
@@ -12,10 +14,27 @@ profil_input = {
     'GPA': "",
     'Major': "",
     'Race': "",
+    'ethnicity': "",
     'Religion': "",
     'Disabilities': "",
     'SAT Score': "",
+    'Address 1': "",
+    'Address 2': "",
+    'Address 3': "",
+}
+
+profile_input = {
+    'Email': "",
+    'Gender': "",
+    'dob': "",
+    'Zip': "",
+    'GPA': "",
+    'Major': "",
+    'Race': "",
     'ethnicity': "",
+    'Religion': "",
+    'Disabilities': "",
+    'SAT Score': "",
     'Address 1': "",
     'Address 2': "",
     'Address 3': "",
@@ -24,16 +43,35 @@ profil_input = {
 
 @app.route('/api/v1/csci426/profileInput', methods=['POST'])
 def assignProfile():
-    global user_profile
     data = request.json
-    profil_input = data
+    global profile_input
+    profile_input = data
+    # set the info to FireStore
+    updtUser(profile_input["Email"], profile_input["Gender"],
+             profile_input["dob"], profile_input["Zip"], profile_input["GPA"],
+             major=profile_input["Major"], race=profile_input["Race"],
+             ethnicity=profile_input["ethnicity"], religion=profile_input["Religion"],
+             dissabilities=profile_input["Disabilities"], sat=profile_input["SAT Score"],
+             address1=profile_input["Address 1"], address2=profile_input["Address 2"],
+             address3=profile_input["Address 3"])
 
-    # AA01 profile set code used in RN
-    response = "AA01"
-    response = jsonify(response)
-    response.statue_code = 202
+    response = jsonify(profile_input)
+    response.status_code = 202
     return response
 
+@app.route('/api/v1/csci426/getRecommend', methods=['GET'])
+def getRecommendation():
+    response = ""
+    # check if the email is in the URL
+    if 'email' in request.args:
+        email = int(request.args['email'])
+        result = filter_results(email)
+        response = jsonify(rsult)
+        response.status_code = 202
+    else:
+        response = "Error due to AX002"
+        response.status_code = 500
+    return response
 
 
 # =========================== TEST ===========================

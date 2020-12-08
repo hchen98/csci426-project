@@ -6,13 +6,14 @@ from firebase_admin import firestore
 from numpy import dot
 from numpy.linalg import norm
 
-cred = credentials.Certificate("testing-845eb-firebase-adminsdk-cckoe-bf65029977.json")
+# cred = credentials.Certificate("testing-845eb-firebase-adminsdk-cckoe-bf65029977.json")
+cred = credentials.Certificate("/home/hui/Desktop/google-service-account_CSCI426.json")
 firebase_admin.initialize_app(cred)
 
-db = firestore.client()
+db2 = firestore.client()
 
-scholar_ref=db.collection(u"ScholarshipHub")
-user_ref = db.collection(u'Users')
+scholar_ref=db2.collection(u"ScholarshipHub")
+user_ref2 = db2.collection(u'Users')
 
 ##########################################     METHODS    #######################
 # Methods for binary filtering
@@ -47,7 +48,7 @@ def sortKey(e):
 #Output -> List of strings, these are id's that can be used to pull information  
 def filter_results(userId):
     filterVal = 0.4
-    user = user_ref.document(userId).get().to_dict()
+    user = user_ref2.document(userId).get().to_dict()
     userTerms = user.get('Terms')
     query  = scholar_ref.where(u'Terms', u'array_contains_any', userTerms).stream()
     filteredScholar = []
@@ -98,4 +99,4 @@ def getInfo(scholarId):
 
 
 #Example for comparisons 
-#print(filter_results('some email'))
+print(filter_results("hchen60@nyit.edu"))

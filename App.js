@@ -19,6 +19,8 @@ import ViewAllScholar from "./components/ViewAllScholar";
 import ViewSubCate from "./components/ViewSubCate";
 import ViewScholarTbl from "./components/ViewScholarTbl";
 import ViewScholarDetail from "./components/ViewScholarDetail";
+import ViewRecommendTbl from "./components/ViewRecommendTbl";
+import AddProfile from "./ui/AddProfile"
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -140,6 +142,7 @@ export default class App extends Component {
               name={"InputScreen2"}
               component={InputScreen2}
               options={{ title: "Optional Info" }}
+              initialParams={{ email: this.state.usrProfile.email }}
             />
             
             <Stack.Screen
@@ -165,6 +168,19 @@ export default class App extends Component {
               name={"ViewScholarDetail"}
               component={ViewScholarDetail}
               options={({ route }) => ({ title: route.params.title })}
+            />
+          
+            <Stack.Screen
+              name={"AddProfile"}
+              component={AddProfile}
+              options={({ route }) => ({ title: route.params.title })}
+            />
+          
+            <Stack.Screen
+              name={"ViewRecommendTbl"}
+              component={ViewRecommendTbl}
+              options={({ route }) => ({ title: route.params.title })}
+              initialParams={{ email: this.state.usrProfile.email }}
             />
           
           </Stack.Navigator>

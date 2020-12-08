@@ -6,13 +6,18 @@ from datetime import date
 from pyzipcode import ZipCodeDatabase
 zcdb = ZipCodeDatabase()
 
+# cred = credentials.Certificate(
+#     "testing-845eb-firebase-adminsdk-cckoe-bf65029977.json")
+
 cred = credentials.Certificate(
-    "testing-845eb-firebase-adminsdk-cckoe-bf65029977.json")
+    "/home/hui/Desktop/google-service-account_CSCI426.json")
+
+
 firebase_admin.initialize_app(cred)
 
 db = firestore.client()
 
-user_Ref = db.collection("User")
+user_Ref = db.collection("Users")
 table_Ref = db.collection("Index Table").document("Terms")
 refList = table_Ref.get().to_dict().get('Terms')
 
@@ -226,3 +231,4 @@ def setBin(list):
 #listA = table_Ref.get().to_dict().get('Terms')
 #print(setBin(['Accounting']))
 #updtUser('some email', 'Male', '5/11/1999', '10308', '3.6', sat='1400')
+updtUser('hchen60@nyit.edu', 'Male', '5/11/1999', '10308', '3.6', major='', sat='666', address1='')
