@@ -99,7 +99,7 @@ export default class App extends Component {
         androidClientId:
           "117030962609-9mblopptuccmm9fqhi2uv7eeea9bk1vh.apps.googleusercontent.com",
         // iosClientId: "<YOUR_CLIENT_ID_HERE>",
-        scopes: ["profile", "email"],
+        // scopes: ["profile", "email"],
       });
 
       if (result.type === "success") {

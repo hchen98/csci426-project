@@ -1,10 +1,10 @@
 {
   "devToolsPort": 19002,
-  "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 1528942,
-  "expoServerNgrokUrl": "https://p4-za2.hhc879099766.csci426-project.exp.direct",
-  "packagerNgrokUrl": "https://packager.p4-za2.hhc879099766.csci426-project.exp.direct",
-  "ngrokPid": 1529032,
+  "expoServerPort": null,
+  "packagerPort": null,
+  "packagerPid": null,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null,
   "webpackServerPort": null
 }

@@ -10,7 +10,7 @@ Team Member: Michael Trzaskoma, Wentao Yang, Francis Cheng, and Hui (Henry) Chen
 <br>
 
 ## Demo:
-* Coming Soon.
+* <a href="https://youtu.be/sVifrNOppzw">Here</a>
 
 <br>
 

@@ -204,8 +204,7 @@ def splitStr(word):
 #output -> array
 def toString(list):
     str = ""
-    str = "".join([str(i) for i in list])
-    return (str)
+    return (str.join(list))
 
 #Finds the index of the word based on a table generated from the driver
 #Input -> string, the word

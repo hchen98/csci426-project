@@ -1,7 +1,7 @@
 from flask import Flask
 from flask import request, jsonify
-from ProfileUploadGeneral import *
-from Filtering_BinCosSim.py import *
+from ProfileUploadGeneral_merged import *
+#from Filtering_BinCosSim.py import *
 
 app = Flask(__name__)
 # app.config["DEBUG"] = True
@@ -46,6 +46,7 @@ def assignProfile():
     data = request.json
     global profile_input
     profile_input = data
+    #profile_input = jsonify(profile_input)
     # set the info to FireStore
     updtUser(profile_input["Email"], profile_input["Gender"],
              profile_input["dob"], profile_input["Zip"], profile_input["GPA"],
@@ -59,19 +60,22 @@ def assignProfile():
     response.status_code = 202
     return response
 
+
 @app.route('/api/v1/csci426/getRecommend', methods=['GET'])
 def getRecommendation():
     response = ""
     # check if the email is in the URL
     if 'email' in request.args:
-        email = int(request.args['email'])
+        email = request.args['email']
         result = filter_results(email)
-        response = jsonify(rsult)
+        response = jsonify(result)
         response.status_code = 202
     else:
         response = "Error due to AX002"
         response.status_code = 500
     return response
+
+
 
 
 # =========================== TEST ===========================
