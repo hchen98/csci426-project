@@ -58,10 +58,10 @@ Backend
 React Native
 ```
 cd <directory of your project>
+
+# install all dependencies
 npm install
-npm start
-# or 
-npm run android
-# or 
+
+# start the project with expo support
 expo start
 ```
